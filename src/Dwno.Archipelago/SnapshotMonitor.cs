@@ -18,6 +18,8 @@ public sealed class SnapshotMonitor : MonoBehaviour
     private string? previousPanel;
     private string? slot;
     private long? previousMoney;
+    private string? previousTamer;
+    private int tamerFailures;
     private DateTime nextSample;
     private DateTime nextHeartbeat;
     private int failures;
@@ -47,10 +49,12 @@ public sealed class SnapshotMonitor : MonoBehaviour
                 previous = null;
                 previousPanel = null;
                 previousMoney = null;
+                previousTamer = null;
                 return;
             }
             var currentSlot = Scalar(Get(storageType!, null, "m_saveSlot"));
-            if (slot != currentSlot) { previous = null; previousPanel = null; previousMoney = null; slot = currentSlot; }
+            if (slot != currentSlot) { previous = null; previousPanel = null; previousMoney = null; previousTamer = null; slot = currentSlot; }
+            CaptureTamer(player, now);
             var moneyValue = Get(player.GetType(), player, "m_Money");
             if (moneyValue is not null)
             {
@@ -128,6 +132,36 @@ public sealed class SnapshotMonitor : MonoBehaviour
             category++;
         }
         return result;
+    }
+
+    private void CaptureTamer(object player, DateTime now)
+    {
+        if (tamerFailures >= 3) return;
+        try
+        {
+            var points = Get(player.GetType(), player, "m_skillPoint")
+                ?? throw new InvalidOperationException("m_skillPoint unavailable");
+            var level = Get(player.GetType(), player, "m_level");
+            var flags = Get(player.GetType(), player, "m_TamerSkillFlag");
+            if (flags is null) { previousTamer = null; return; }
+            var work = Get(flags.GetType(), flags, "m_BitFlagWork")
+                ?? throw new InvalidOperationException("m_BitFlagWork unavailable");
+            var words = Elements(work, 128).Select(w => Convert.ToUInt64(w, CultureInfo.InvariantCulture).ToString("X16")).ToArray();
+            var state = $"level={Scalar(level)} skillPoints={Scalar(points)} numFlags={Scalar(Get(flags.GetType(), flags, "m_NumFlags"))} flagWords=[{string.Join(",", words)}]";
+            if (state != previousTamer)
+            {
+                log?.LogInfo($"[SNAP] {now:O} TAMER{(previousTamer is null ? "_BASELINE" : "")} slot={slot} {state}");
+                if (previousTamer is not null) log?.LogInfo($"[SNAP] {now:O} TAMER_BEFORE {previousTamer}");
+                previousTamer = state;
+            }
+            tamerFailures = 0;
+        }
+        catch (Exception ex)
+        {
+            tamerFailures++;
+            log?.LogWarning($"[SNAP] TAMER_READ_FAILED count={tamerFailures} {ex.GetBaseException().Message}");
+            if (tamerFailures == 3) log?.LogError("[SNAP] TAMER_DISABLED; inventory and money monitoring continue.");
+        }
     }
 
     private static object? Get(Type type, object? instance, string name) =>
