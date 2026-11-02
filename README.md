@@ -4,6 +4,13 @@ Début d'intégration pour la version Windows IL2CPP. Le plugin actuel écrit se
 
 ## Compiler
 
+Pour préparer et utiliser l'environnement reproductible (SDK verrouillé, configuration locale, déploiement avec sauvegarde et contrôle des logs), suivre [DWNO-001 — Environnement](docs/DWNO-001-environnement.md).
+
+```powershell
+./scripts/dev.ps1 Doctor
+./scripts/dev.ps1 Build
+```
+
 SDK .NET avec ciblage .NET 6. BepInEx sélectionné : `6.0.0-be.791+b782da4`, Unity.IL2CPP-win-x64, téléchargé depuis les builds officielles.
 
 ```powershell

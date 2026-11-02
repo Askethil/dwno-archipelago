@@ -16,3 +16,11 @@ Date : 2 novembre 2026.
 Le critère de chargement et de journalisation est rempli. L'outil de capture de fenêtre a expiré (`FrameArrived timed out`) : l'affichage du menu n'a pas été vérifié visuellement. Aucune sauvegarde n'a été ouverte par l'agent. Les hooks de gameplay restent à valider.
 
 La génération IL2CPP signale des champs et méthodes impossibles à restaurer ; cela n'a pas empêché le chargement du plugin minimal. Ne pas en déduire que toutes les méthodes du jeu sont disponibles pour les futurs patches.
+
+## Revalidation de l'environnement reproductible
+
+Le 2 novembre 2026 : `Setup`, `Doctor`, `Build`, `Deploy` puis `Verify` exécutés avec succès. SDK effectivement sélectionné : `6.0.428`. Compilation : zéro erreur, zéro avertissement. Ancienne DLL sauvegardée localement avant remplacement. Jeu relancé via Steam ; nouvelle DLL identique au build et message de chargement retrouvé dans le nouveau journal, suivi de `Chainloader startup complete`.
+
+`Doctor` testé depuis Ubuntu WSL avec PowerShell 7 Windows. Windows PowerShell 5 refuse les scripts sur cette machine ; aucune politique d'exécution n'a été modifiée. Le guide utilise `pwsh.exe`.
+
+La capture de la fenêtre du jeu expire encore ; la confirmation visuelle du menu reste à faire par l'utilisateur.
