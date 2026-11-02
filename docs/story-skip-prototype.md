@@ -57,6 +57,17 @@ The initial trace masked all strings in CScenarioScript calls, including `_event
 
 Preserve the current scripted-scene snapshot, then record an ordinary NPC conversation after the tutorial. Compare movie events, TalkMain entry points, scenario requests/completion and choices. No automatic story/NPC classifier is established yet. For a reliable classification, collect event/block identifiers after redeployment and compare multiple examples rather than relying on text-method names alone.
 
+### Ordinary NPC samples: Koromon and Tokomon
+
+The player identified two conversations during the same session (times in Paris, 2026-11-02):
+
+| Player-identified NPC | Captured trace | Completion |
+| --- | --- | --- |
+| Koromon | `TalkMain.DispText` then `DispTextMain` at 20:03:34.175 | `CScenarioScript.TalkEventEndCB` at 20:03:35.589 |
+| Tokomon | `TalkMain.DispText` then `DispTextMain` at 20:03:52.459 | Not yet present in the first captured snapshot |
+
+The NPC names come from the player's reports, not decoded event identifiers. No movie, voice-text or choice command is recorded within these captured conversation intervals. No skip request appears in either captured interval; this is not an F8 behavior test. The earlier intro/scripted samples also used `DispText` / `DispTextMain`, and one ended through `TalkEventEndCB`. Consequently neither these display methods, the completion callback nor the absence of voice establishes an ordinary-NPC classifier. The running binary still masks `_eventId` / `_blockId`; the prepared identifier fix needs deployment before comparing those values. Raw snapshots are kept locally under `.local/observations/` and are excluded from Git.
+
 ## Tutorial windows: separate investigation (2026-11-02)
 
 The user reports that F8 does not advance the current illustrated tutorial window. During the earlier F8 test, the log records `TalkMain.IsSkip` requests at 19:53:01–02 (Paris), several text/voice commands and `TalkEventEndCB` at 19:53:06. These demonstrate dialogue processing, not that the illustrated tutorial was skipped. The existing running binary has no tutorial-specific hooks, so silence during the window cannot identify its implementation.
