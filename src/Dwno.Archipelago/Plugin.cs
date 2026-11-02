@@ -14,6 +14,9 @@ public sealed class Plugin : BasePlugin
     public override void Load()
     {
         Log.LogInfo($"[DWNO-001] {Name} {Version} loaded successfully.");
+        StorySkip.Install(Log, Config.Bind("Story", "EnableHoldToSkip", false,
+            "Prototype expérimental : F9 active/désactive pour la session ; maintenir F8 demande le passage natif. Désactivé par défaut.").Value);
+        AddComponent<StorySkipKeys>();
         if (Config.Bind("Catalog", "ExportItems", true, "Exporte une fois la table des objets et leurs noms localisés, sans modifier le jeu.").Value)
             AddComponent<ItemCatalogExporter>();
         if (Config.Bind("Catalog", "ExportWorld", true, "Exporte les tables ville, carte et flags en lecture seule.").Value)

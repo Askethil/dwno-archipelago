@@ -13,6 +13,10 @@
       <HintPath>$(GameInteropRoot)/UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(GameInteropRoot)/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="Il2Cppmscorlib">
       <HintPath>$(GameInteropRoot)/Il2Cppmscorlib.dll</HintPath>
       <Private>false</Private>
@@ -37,5 +41,6 @@
   <Target Name="CheckBepInEx" BeforeTargets="ResolveReferences">
     <Error Condition="!Exists('$(BepInExRoot)/core/BepInEx.Unity.IL2CPP.dll')" Text="BepInEx IL2CPP absent : fournir -p:BepInExRoot=CHEMIN/BepInEx." />
     <Error Condition="!Exists('$(GameInteropRoot)/UnityEngine.CoreModule.dll') Or !Exists('$(GameInteropRoot)/Il2Cppmscorlib.dll')" Text="Interop Unity absents : lancer le jeu avec BepInEx, puis scripts/dev.ps1 Setup -GamePath CHEMIN." />
+    <Error Condition="!Exists('$(GameInteropRoot)/UnityEngine.InputLegacyModule.dll')" Text="Interop InputLegacyModule absent : relancer scripts/dev.ps1 Setup après le premier lancement du jeu." />
   </Target>
 </Project>

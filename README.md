@@ -41,6 +41,8 @@ SHA-256 de l'archive téléchargée (empreinte locale de traçabilité, pas sign
 
 ## Organisation
 
+- [Story skip prototype](docs/story-skip-prototype.md) : traces de scènes et prototype F9/F8, désactivé par défaut et à valider sur une sauvegarde de test.
+
 - [Town, region and flag test reference](docs/world-catalog.en.md) : définitions anglaises de ville, carte et conditions ; [données](data/world-catalog.en.json), [liens d'améliorations](data/town-links.en.json).
 
 - [English game item catalogue](docs/game-items.en.md) : 740 entrées de la table générale, avec leurs IDs et noms lus dans le jeu ; [JSON](data/game-items.en.json).
