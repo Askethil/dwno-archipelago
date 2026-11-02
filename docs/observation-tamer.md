@@ -193,3 +193,19 @@ L'utilisateur confirme la fin de Marcheur avant de passer à Commandant → Ordr
 | `HALE` | 10 | 191 → 181 | 47 |
 
 Total Marcheur : 23 PC. Premier mot final `0000FFF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 47 compétences distinctes observées.
+
+## Commandant → Ordre : groupe acheté
+
+L'utilisateur confirme la fin d'Ordre avant de passer à Stratégie. Sept apprentissages capturés à 18:42:30–38 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `SECOND_ORDER` | 3 | 181 → 178 | 48 |
+| `DEFENSE_ORDER` | 3 | 178 → 175 | 49 |
+| `OP_GAIN` | 3 | 175 → 172 | 50 |
+| `THIRD_ORDER` | 7 | 172 → 165 | 51 |
+| `HIGH_DEFENSE` | 8 | 165 → 157 | 52 |
+| `NEXT_ORDER` | 10 | 157 → 147 | 53 |
+| `OP_MASTER` | 12 | 147 → 135 | 54 |
+
+Total Ordre : 46 PC. Premier mot final `007FFFF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 54 compétences distinctes observées.
