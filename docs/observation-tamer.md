@@ -148,3 +148,21 @@ L'utilisateur confirme la fin de Trouver puis annonce un nouveau reset pour expl
 | `INGREDIENTS_HUNTER` | 12 | 33 → 21 | 35 |
 
 Total Trouver : 34 PC. Premier mot final `0000000FFFFFFFFE`, second mot nul. Noms français individuels à relever dans l'interface. Cette première série après reset documente 35 compétences, pour 248 PC dépensés (269 → 21). Journal sauvegardé localement avant le reset suivant ; remboursement et nouvel état à vérifier sur les prochaines traces.
+
+## Deuxième reset observé
+
+À 18:38:57 (Paris), le nouvel appel à `AllResetLearningSkill` est suivi du remboursement : `21 → 269 PC` (+248), flags `[0000000FFFFFFFFE,0] → [0,0]`. Cette fois, le relevé confirme également la dépense annoncée : `435615 → 425615 Bits`, delta `-10000`. Le coût est confirmé pour ce deuxième reset, pas rétrospectivement pour le premier.
+
+## Survivant → Extracteur : groupe acheté
+
+L'utilisateur confirme la fin d'Extracteur avant de passer à Campeur. Cinq apprentissages capturés à 18:39:33–38 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `METAL_MAN` | 5 | 269 → 264 | 36 |
+| `STONE_MAN` | 5 | 264 → 259 | 37 |
+| `LIQUID_MAN` | 5 | 259 → 254 | 38 |
+| `WOOD_MAN` | 5 | 254 → 249 | 39 |
+| `MATERIAL_MASTER` | 20 | 249 → 229 | 40 |
+
+Total Extracteur : 40 PC. Premier mot final `000001F000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte désormais 40 compétences distinctes observées, réparties sur deux séries après reset.
