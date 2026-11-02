@@ -209,3 +209,18 @@ L'utilisateur confirme la fin d'Ordre avant de passer à Stratégie. Sept appren
 | `OP_MASTER` | 12 | 147 → 135 | 54 |
 
 Total Ordre : 46 PC. Premier mot final `007FFFF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 54 compétences distinctes observées.
+
+## Commandant → Stratégie : groupe acheté
+
+L'utilisateur confirme la fin de Stratégie avant de passer à Objet. Six apprentissages capturés à 18:43:28–34 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `ASSESS` | 3 | 135 → 132 | 55 |
+| `ABSOLUTELY_BLIND_SPOT` | 5 | 132 → 127 | 56 |
+| `BUFFER` | 3 | 127 → 124 | 57 |
+| `YELL` | 8 | 124 → 116 | 58 |
+| `DE_BUFFER` | 8 | 116 → 108 | 59 |
+| `ABSOLUTE_CONCENTRATION` | 12 | 108 → 96 | 60 |
+
+Total Stratégie : 39 PC. Premier mot final `1FFFFFF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 60 compétences distinctes observées.
