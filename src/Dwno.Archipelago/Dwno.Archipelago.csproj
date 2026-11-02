@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Dwno.Archipelago</AssemblyName>
+    <RootNamespace>Dwno.Archipelago</RootNamespace>
+    <Version>0.1.0</Version>
+    <Nullable>enable</Nullable>
+    <BepInExRoot Condition="'$(BepInExRoot)' == ''">$(MSBuildThisFileDirectory)../../.local/BepInEx-791/BepInEx</BepInExRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx.Core">
+      <HintPath>$(BepInExRoot)/core/BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>$(BepInExRoot)/core/BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckBepInEx" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(BepInExRoot)/core/BepInEx.Unity.IL2CPP.dll')" Text="BepInEx IL2CPP absent : fournir -p:BepInExRoot=CHEMIN/BepInEx." />
+  </Target>
+</Project>
