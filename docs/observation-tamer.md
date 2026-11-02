@@ -224,3 +224,16 @@ L'utilisateur confirme la fin de Stratégie avant de passer à Objet. Six appren
 | `ABSOLUTE_CONCENTRATION` | 12 | 108 → 96 | 60 |
 
 Total Stratégie : 39 PC. Premier mot final `1FFFFFF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 60 compétences distinctes observées.
+
+## Commandant → Objet : groupe acheté
+
+L'utilisateur confirme la fin d'Objet avant de passer à Gains. Quatre apprentissages capturés à 18:44:12–17 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé (index global) |
+| --- | --- | --- | --- |
+| `RANGE_EXPANSION` | 3 | 96 → 93 | 61 |
+| `QUICK_PITCHING` | 3 | 93 → 90 | 62 |
+| `DIFFERENT_DIMENSION_PITCHING` | 5 | 90 → 85 | 63 |
+| `SOUL_PITCHING` | 12 | 85 → 73 | 64 (bit 0 du deuxième mot) |
+
+Total Objet : 23 PC. Flags finaux `[FFFFFFF000000000,0000000000000001]`. Le franchissement du premier mot UInt64 est observé ; les index sont basés sur zéro. Noms français individuels à relever dans l'interface. Le catalogue compte 64 compétences distinctes observées.
