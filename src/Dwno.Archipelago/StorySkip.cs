@@ -103,7 +103,14 @@ internal static class StorySkip
             var parameters = __originalMethod.GetParameters();
             var values = __args.Select((v, i) => {
                 var key = i < parameters.Length ? parameters[i].Name : i.ToString();
-                if (v is string s) return name is "EventScene" or "PlayMovie" ? $"{key}={s.Substring(0, Math.Min(s.Length, 160))}" : $"{key}=<text omitted>";
+                if (v is string s)
+                {
+                    // Scenario IDs are identifiers, not dialogue text. Keep them for NPC/story comparisons.
+                    var identifier = name is "EventScene" or "PlayMovie" ||
+                        (__originalMethod.DeclaringType?.Name == "CScenarioScript" &&
+                         key is "_eventId" or "_blockId" or "_eventAfterCallBlock");
+                    return identifier ? $"{key}={s.Substring(0, Math.Min(s.Length, 160))}" : $"{key}=<text omitted>";
+                }
                 return $"{key}={(v is null ? "null" : v.GetType().IsPrimitive || v.GetType().IsEnum ? Convert.ToString(v, CultureInfo.InvariantCulture) : "<" + v.GetType().Name + ">")}";
             });
             log?.LogInfo($"[STORY] {DateTime.UtcNow:O} EVENT {__originalMethod.DeclaringType?.Name}.{name} {string.Join(" ", values)} choiceBlocked={choiceBlocked}");

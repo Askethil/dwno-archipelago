@@ -48,3 +48,11 @@ Next tests: a dialogue with choices, restored movement/camera after the complete
 ## Native Start feedback (2026-11-02)
 
 The user reports that videos can be skipped with Start. This corrects the earlier interpretation of `nativeSkipButton=0`: it must not be used to classify a movie as unskippable. `movie03` was captured with a zero value and `_PlayEnd` at 19:50:03 (Paris), but the log alone does not establish which input ended it. Prioritize dialogue and scripted-scene tests; use the game's native Start behavior for videos for now. The number of remaining videos has not been established.
+
+## Comparing scripted scenes and ordinary NPC dialogue
+
+At 19:50:11 (Paris), after movie03 ended, the current session records `TalkMain.DispText` and `DispTextMain` without a new movie start. This distinguishes text presentation from a video event, not story dialogue from optional NPC dialogue. The same text methods can be shared.
+
+The initial trace masked all strings in CScenarioScript calls, including `_eventId` and `_blockId`. The source is corrected to retain these bounded identifiers while still omitting dialogue text. This logging-only correction requires a later redeployment; it is not active in the ongoing tutorial session and cannot recover identifiers omitted from older logs.
+
+Preserve the current scripted-scene snapshot, then record an ordinary NPC conversation after the tutorial. Compare movie events, TalkMain entry points, scenario requests/completion and choices. No automatic story/NPC classifier is established yet. For a reliable classification, collect event/block identifiers after redeployment and compare multiple examples rather than relying on text-method names alone.
