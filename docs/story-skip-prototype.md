@@ -4,29 +4,30 @@
 
 Find a way to accelerate story presentation while keeping the game interpreter and completion callbacks. This feature is **not yet validated for story progression**. No new game is created and no save slot is selected by the mod.
 
-- Default: observation only, `Story.EnableHoldToSkip=false`.
-- F9: toggle the prototype for the current session (logged).
-- Hold F8: request skipping while enabled and the game is focused.
-- Release F8 or press F9 again: stop making skip requests. Disabling does not undo a scene already advanced.
+- New source defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSelectFirstChoice=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Automatic story mode enables the master switch at startup. Set AutoSkipStoryDialogue and EnableHoldToSkip false for an observation-only start.
+- F9: toggle the master skip switch for the session. Turning it off stops automatic story and held-key skip requests.
+- F8 held: manually request skip while the master is enabled and the game is focused, including contexts outside the observed story list.
+- F10: toggle automatic first responses for the session. Turning this off also pauses the master skip switch so the player can answer manually. F9 resumes dialogue skipping; F10 must be enabled separately to restore automatic responses.
+- Releasing F8 stops manual requests. Automatic story mode does not require F8; use F9 to stop it. Disabling does not undo a response already selected or a scene already advanced.
 
-These controls are a test prototype, not an automatic randomizer option. Use a separate test save created manually by the player. Story dialogue context has not yet been distinguished from every optional NPC conversation.
+These controls are an experimental prototype. **The new automatic story/choice source is compiled but not deployed or runtime-validated yet.** The current running binary still uses manual F8 and pauses at choices. Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game.
 
 ## Paths inspected
 
 `TalkMain` contains `IsSkip`, `DispTextMain`, `PlayVoiceText`, `DispText`, `DispChoices`, `PlayMovie` and `EventScene`. `Movie` contains `Play(movie_path, call_back, skipButton)`, `Update`, `Stop`, `_PlayEnd` and `OnDestroy`. `CScenarioScript` exposes `_RequestStartTalkEvent` and `TalkEventEndCB`.
 
-The dialogue prototype sets the result of `TalkMain.IsSkip` only while enabled and F8 is held. It does not remove commands from the scenario interpreter. `DispChoices` disables the prototype and blocks further requests. Choose manually, then press F9 to re-enable after the choice has completed. No automatic resume on text commands. This guard does not prove that every selection UI is protected; explicitly test choices and keep them manual. Normal native controls remain available.
+The new dialogue prototype sets `TalkMain.IsSkip` when the master switch is enabled, the game is focused, input has not failed, and either F8 is held or an explicitly observed story context is active with automatic mode enabled. It does not remove commands from the scenario interpreter. `DispChoices` blocks dialogue skip requests during selection. With the automatic-choice feature available and enabled, its native coroutine supplies first-response confirmation under the same request policy. Otherwise choices pause the master switch for a manual response and F9 resumes it. Text commands do not clear this guard; native choice completion does. Other selection UIs remain manual and unsupported.
 
 For movies, the prototype records the skip-button value passed to `Movie.Play`. It supplies that same button only within the synchronous native `Movie.Update` call, through `PadManager` queries. With a zero value, the prototype injects no button; **this does not establish that the movie is unskippable**. Other input paths may handle Start. This avoids calling `Stop`, `_PlayEnd`, callbacks or save/flag setters directly. Multiple concurrent movie players and other asynchronous input paths remain unsupported/unverified.
 
-All patches must install successfully; otherwise they are removed and the feature is unavailable for the session. `READY` means installation only, not successful skipping. Input errors disable skip requests. Text bodies are omitted from traces. Event IDs, movie paths, choice boundaries and completion events are logged.
+All core story patches must install successfully; otherwise they are removed and skipping is unavailable for the session. Optional first-choice installation failures leave choices manual. `READY` means installation only, not successful skipping. Input errors disable skip requests. Text bodies are omitted from traces. Event IDs, movie paths, choice boundaries and completion events are logged.
 
 ## Validation plan
 
 1. Confirm startup with feature disabled and no regression in normal controls.
 2. On a player-created test save, observe one normal dialogue and one normal movie to establish their native completion trace.
 3. Toggle F9, hold F8 during one dialogue, release, then verify control returns and expected story flags/rewards occur.
-4. Test a dialogue with a choice. Verify no choice is automatically confirmed and the selected branch is respected.
+4. Test automatic first response with an observed story choice, then a manually requested NPC choice. Verify index 0 selects the displayed first branch and the native interpreter follows it. Test F10, F9, focus loss, released F8 outside automatic story, and a repeated-answer loop requiring a different manual response. Menus, egg selection and other selection UIs must remain unaffected.
 5. Test a skippable movie. Verify native movie completion and scenario completion callbacks, then restored camera/input/audio.
 6. Test native Start on videos separately from F8. A zero recorded skip mask does not determine whether Start can skip the movie. Scripted 3D scenes are distinct from video playback and need separate validation.
 7. Save/reload the test slot and verify progression. Compare normal vs skipped paths before enabling an automatic mode.
@@ -187,3 +188,25 @@ The last observed tutorial (004) immediately follows the callback for `Event/Tal
 ### Additional intro animation evidence
 
 In `Event/Talk/EV_MIN_1000`, block EVENT2, the replay records `AnimationModel` with `time=-1` and `MoveModel` with `time=-0.5` (model IDs include PLAYR, MUGED, WOGUR and METAG), interleaved with fades, voice/text and positive Wait values. These concrete negative values must not be treated as ordinary positive durations or blindly clamped. No SceneMain call is recorded in this captured segment: these particular 3D character vignettes are being driven through TalkMain commands. This does not establish that SceneMain is unused elsewhere in the game.
+
+## Prepared automatic first response and story activation
+
+The player explicitly requested taking the first response automatically, a way to stop this if it loops, and automatic activation during story dialogue. The source now implements these policies; it is not installed in the ongoing session yet.
+
+`StoryChoiceSkip` resolves the generated `TalkMain._DispChoices_d__*` iterator by name, validates its bool MoveNext signature and expected owner/panel/cursor/count properties, and screens its native entry with InteropTraceGuard before patching. A typed closed-generic prefix/postfix is used for that exact iterator wrapper. During its synchronous native MoveNext step only, after the panel exists and the choice count is within 1–3, the owner's cursor is set to index 0 and native PadManager confirmation queries receive the game's `BUTTON.bOK` value (128 in current metadata). Directional queries are suppressed within that scope to keep the first response selected. No global button state, branch label, selection result or scenario callback is replaced. The native iterator remains responsible for input timing, branch selection and completion.
+
+Index 0 matching the displayed first response and successful native confirmation are hypotheses still requiring a game test. The guard does not establish absence of every shared native body. Unknown layouts/counts, concurrent armed iterators, exceptions or an input attempt exceeding ten seconds disable automatic choices for the session and pause skipping for manual recovery. A repeated completed dialogue loop is handled by F10/F9, not detected automatically by this timeout. F10 stops automatic confirmation immediately on the next input update, pauses master skipping and allows another answer. Already executed responses cannot be undone. Outside the choice coroutine's synchronous step, its synthetic input scope is restored even on exceptions.
+
+Automatic story activation is separate from generic skip mechanics. `StoryContextPolicy` recognizes these exact observed file/block pairs:
+
+| File under `Event/Talk/` | Allowed block(s) |
+| --- | --- |
+| `EV_START` | `EVENT010` |
+| `EV_MIN_1000` | `EVENT1`, `EVENT2` |
+| `EV_MIN_1001`, `EV_MIN_1010`, `EV_MIN_1020`, `EV_MIN_1021`, `EV_MIN_1030` | empty string only |
+
+The context is set by a core TalkMain.Initialize prefix independent of Observation.Enabled, and cleared by a matching event/block completion callback or replaced by the next initialization. Null and empty block IDs remain distinct. Ordinary NPCs, unknown story blocks, illustrated tutorials and `event/event_digitama_partner` are excluded from automatic activation. Holding F8 deliberately requests the generic path in other TalkMain dialogues. A filename prefix alone is not accepted as proof of story context.
+
+The replay also confirmed actual SceneMain use: `TalkMain.EventScene(event_name=EV3D_1010_01)` at 20:17:59.730 (Paris), followed by `SceneMain.Initialize` at 20:17:59.938 and StartScene at 20:18:00.054. This is distinct from the earlier TalkMain-driven vignettes. The source does not yet accelerate native SceneMain playback, camera/animation waits, illustrated tutorials or movies with zero skip masks.
+
+Validation completed before deployment: Release build with zero warnings/errors; `dotnet run --project tests/Dwno.Archipelago.PolicyTests -c Release` passed 26 checks covering observed intro pairs, ordinary NPC/tutorial/egg contexts, unknown contexts, null versus empty blocks, F9 master gating, manual F8, focus loss and input failure. These tests do not execute IL2CPP/Harmony or establish native choice behavior. Next required validation is startup installation followed by a test-save first-choice and F10 manual-recovery test. Preserve logs and confirm expected branch, progression and saved state before broadening automatic story coverage.

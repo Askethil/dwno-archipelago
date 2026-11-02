@@ -10,8 +10,10 @@ public sealed class StorySkipKeys : MonoBehaviour
     {
         try
         {
-            if (!Application.isFocused) { StorySkip.Held = false; return; }
+            StorySkip.Focused = Application.isFocused;
+            if (!StorySkip.Focused) { StorySkip.Held = false; return; }
             if (Input.GetKeyDown(KeyCode.F9)) StorySkip.Toggle();
+            if (Input.GetKeyDown(KeyCode.F10)) StoryChoiceSkip.Toggle();
             StorySkip.Held = Input.GetKey(KeyCode.F8);
         }
         catch (Exception ex) { StorySkip.InputFailed(ex); }

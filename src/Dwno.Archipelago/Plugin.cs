@@ -15,7 +15,11 @@ public sealed class Plugin : BasePlugin
     {
         Log.LogInfo($"[DWNO-001] {Name} {Version} loaded successfully.");
         StorySkip.Install(Log, Config.Bind("Story", "EnableHoldToSkip", false,
-            "Prototype expérimental : F9 active/désactive pour la session ; maintenir F8 demande le passage natif. Désactivé par défaut.").Value);
+            "Prototype expérimental : F9 active/désactive pour la session ; maintenir F8 demande le passage natif. Désactivé par défaut.").Value,
+            Config.Bind("Story", "AutoSelectFirstChoice", true,
+                "Pendant le skip actif, choisit la première réponse des dialogues TalkMain via leur traitement natif. F10 désactive ce choix automatique. Expérimental.").Value,
+            Config.Bind("Story", "AutoSkipStoryDialogue", true,
+                "Active automatiquement le skip du texte dans les contextes histoire explicitement identifiés. F9 coupe tout le skip. Les scènes inconnues restent manuelles.").Value);
         AddComponent<StorySkipKeys>();
         if (Config.Bind("Catalog", "ExportItems", true, "Exporte une fois la table des objets et leurs noms localisés, sans modifier le jeu.").Value)
             AddComponent<ItemCatalogExporter>();

@@ -16,14 +16,22 @@ internal static class StorySkip
     private static bool movieActive;
     private static uint movieButton;
     private static bool inputFailed;
+    private static bool automaticStory;
+    private static string? contextFile;
+    private static string? contextBlock;
     private static DateTime nextSkipLog;
     [ThreadStatic] private static int movieUpdateDepth;
     internal static bool Held;
+    internal static bool Focused;
+    internal static bool SkipRequested => StoryContextPolicy.ShouldSkip(enabled, Focused, inputFailed,
+        Held, automaticStory, contextFile, contextBlock);
 
-    internal static void Install(ManualLogSource logger, bool initiallyEnabled)
+    internal static void Install(ManualLogSource logger, bool initiallyEnabled, bool autoSelectFirstChoice,
+        bool autoSkipStoryDialogue)
     {
         log = logger;
-        enabled = initiallyEnabled;
+        automaticStory = autoSkipStoryDialogue;
+        enabled = initiallyEnabled || automaticStory;
         var assembly = Assembly.Load("Assembly-CSharp");
         var ok = 0;
         var failed = 0;
@@ -53,6 +61,7 @@ internal static class StorySkip
             catch (Exception ex) { failed++; logger.LogError($"[STORY] PATCH_FAILED {type}.{method}: {ex.GetBaseException().Message}"); return false; }
         }
         Patch("TalkMain", "IsSkip", postfix: nameof(DialogueSkip), returns: typeof(bool));
+        Patch("TalkMain", "Initialize", prefix: nameof(ContextStart));
         foreach (var method in new[] { "DispTextMain", "PlayVoiceText", "DispText", "DispChoices", "EventScene", "PlayMovie" })
             Patch("TalkMain", method, prefix: nameof(Trace));
         Patch("CScenarioScript", "_RequestStartTalkEvent", prefix: nameof(Trace));
@@ -73,7 +82,8 @@ internal static class StorySkip
             inputFailed = true;
             log.LogError("[STORY] DISABLED: incomplete patch set removed; prototype unavailable this session.");
         }
-        log.LogInfo($"[STORY] READY installed={ok} failed={failed} enabled={enabled}; F9 toggle, hold F8; progression callbacks are not replaced.");
+        else StoryChoiceSkip.Install(assembly, logger, autoSelectFirstChoice);
+        log.LogInfo($"[STORY] READY installed={ok} failed={failed} enabled={enabled} automaticKnownStory={automaticStory}; F9 master toggle, F8 manual, F10 choices; progression callbacks are not replaced.");
     }
 
     internal static void Toggle()
@@ -88,17 +98,36 @@ internal static class StorySkip
         if (!inputFailed) log?.LogError($"[STORY] INPUT_FAILED {ex.Message}; skipping disabled");
         inputFailed = true; enabled = false; Held = false;
     }
+    internal static void PauseForChoice(string reason)
+    {
+        choiceBlocked = true;
+        enabled = false;
+        Held = false;
+        log?.LogInfo($"[STORY] PAUSED_FOR_CHOICE: {reason}");
+    }
+    internal static void ChoiceFinished() => choiceBlocked = false;
+    private static void ContextStart(object[] __args)
+    {
+        contextFile = __args.Length > 0 ? __args[0] as string : null;
+        contextBlock = __args.Length > 1 ? __args[1] as string : null;
+        choiceBlocked = false;
+        log?.LogInfo($"[STORY] {DateTime.UtcNow:O} CONTEXT knownStory={StoryContextPolicy.IsKnownStory(contextFile, contextBlock)} automatic={automaticStory} file={contextFile} block={contextBlock ?? "<null>"}");
+    }
     private static void Trace(MethodBase __originalMethod, object[] __args)
     {
         try
         {
             var name = __originalMethod.Name;
+            if (name == "TalkEventEndCB" && __args.Length >= 2 &&
+                string.Equals(__args[0] as string, contextFile, StringComparison.Ordinal) &&
+                string.Equals(__args[1] as string, contextBlock, StringComparison.Ordinal))
+            { contextFile = null; contextBlock = null; }
             if (name == "DispChoices")
             {
                 choiceBlocked = true;
-                enabled = false;
-                Held = false;
-                log?.LogInfo("[STORY] PAUSED_FOR_CHOICE: choose manually, then F9 to resume prototype.");
+                if (enabled && StoryChoiceSkip.Available && StoryChoiceSkip.Enabled)
+                    log?.LogInfo("[STORY] CHOICE_PENDING: first response only during held F8 or a verified automatic story context; F10 stops choices.");
+                else PauseForChoice("choose manually, then F9 to resume prototype.");
             }
             var parameters = __originalMethod.GetParameters();
             var values = __args.Select((v, i) => {
@@ -119,7 +148,7 @@ internal static class StorySkip
     }
     private static void DialogueSkip(ref bool __result)
     {
-        if (!enabled || !Held || choiceBlocked || inputFailed) return;
+        if (!SkipRequested || choiceBlocked) return;
         __result = true;
         ReportSkip("TalkMain.IsSkip");
     }
@@ -140,12 +169,17 @@ internal static class StorySkip
     private static bool CanRequestMovie() => movieUpdateDepth > 0 && enabled && Held && movieActive && movieButton != 0 && !choiceBlocked && !inputFailed;
     private static void MovieButtonQuery(object[] __args, ref bool __result)
     {
+        if (__args.Length == 1 && __args[0] is not null && StoryChoiceSkip.FilterQuery(
+            unchecked((uint)Convert.ToInt64(__args[0], CultureInfo.InvariantCulture)), ref __result)) return;
         if (CanRequestMovie() && __args.Length == 1 && __args[0] is not null &&
             unchecked((uint)Convert.ToInt64(__args[0], CultureInfo.InvariantCulture)) == movieButton)
         { __result = true; ReportSkip("Movie native button query"); }
     }
     private static void MovieButtonBits<T>(ref T __result) where T : struct, Enum
     {
+        var original = unchecked((uint)Convert.ToInt64(__result, CultureInfo.InvariantCulture));
+        var filtered = StoryChoiceSkip.FilterButtons(original);
+        if (filtered != original) __result = (T)Enum.ToObject(typeof(T), filtered);
         if (CanRequestMovie())
         {
             var bits = unchecked((uint)Convert.ToInt64(__result, CultureInfo.InvariantCulture));
