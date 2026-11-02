@@ -23,11 +23,6 @@ internal static class Observation
             var targets = new[] {
                 ("ItemStorageData", "AddItemPlayer"),
                 ("ItemStorageData", "_AddMaterialOrKeyItem"),
-                ("ItemStorageData", "ListAdd"),
-                ("ItemStorageData", "LisAddBase"),
-                ("ItemStorageData", "SaveItemData"),
-                ("ItemStorageData", "SaveItemDataBase"),
-                ("ItemPickPointBase", "PickItem"),
                 ("uItemPickPanel", "PickItem"),
                 ("uItemPickPanel", "PickDefault"),
                 ("uItemPickPanel", "PickMaterial")
@@ -54,12 +49,12 @@ internal static class Observation
                     catch (Exception ex) { failed++; log.LogError($"[OBS] PATCH_FAILED {typeName}.{methodName}: {ex}"); }
                 }
             }
-            log.LogInfo($"[OBS] READY revision=2 installed={installed} failed={failed}; timestamps=UTC; no gameplay changes.");
+            log.LogInfo($"[OBS] READY revision=5 installed={installed} failed={failed}; timestamps=UTC; no gameplay changes.");
         }
         catch (Exception ex) { log.LogError($"[OBS] INIT_FAILED {ex}"); }
     }
 
-    private static void Before(MethodBase __originalMethod, object? __instance, object[] __args, out long __state)
+    private static void Before(MethodBase __originalMethod, object[] __args, out long __state)
     {
         __state = Interlocked.Increment(ref sequence);
         try
@@ -67,7 +62,7 @@ internal static class Observation
             var parameters = __originalMethod.GetParameters();
             var values = __args.Select((value, index) =>
                 $"{(index < parameters.Length ? parameters[index].Name : index.ToString())}={Format(value)}");
-            log?.LogInfo($"[OBS] {DateTime.UtcNow:O} ENTER #{__state} {Describe(__originalMethod)} {string.Join(" ", values)}{Context(__originalMethod, __instance)}");
+            log?.LogInfo($"[OBS] {DateTime.UtcNow:O} ENTER #{__state} {Describe(__originalMethod)} {string.Join(" ", values)}");
         }
         catch (Exception ex) { log?.LogWarning($"[OBS] Trace failed: {ex.Message}"); }
     }
@@ -81,23 +76,6 @@ internal static class Observation
 
     private static string Describe(MethodBase method) =>
         $"{method.DeclaringType?.Name}.{method.Name}({string.Join(",", method.GetParameters().Select(p => p.ParameterType.Name))})";
-
-    private static string Context(MethodBase method, object? instance)
-    {
-        if (instance is null) return "";
-        try
-        {
-            object? point = method.DeclaringType?.Name == "uItemPickPanel"
-                ? Read(instance, "m_targetItemPickPoint")
-                : method.DeclaringType?.Name == "ItemPickPointBase" ? instance : null;
-            if (point is null) return "";
-            return $" point.id={Format(Read(point, "id"))} point.itemId={Format(Read(point, "itemId"))} point.isMaterial={Format(Read(point, "isMaterial"))}";
-        }
-        catch (Exception ex) { return $" context_unavailable={ex.GetType().Name}"; }
-    }
-
-    private static object? Read(object value, string property) =>
-        value.GetType().GetProperty(property, BindingFlags.Public | BindingFlags.Instance)?.GetValue(value);
 
     private static string Format(object? value)
     {

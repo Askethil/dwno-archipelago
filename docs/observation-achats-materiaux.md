@@ -1,5 +1,19 @@
 # Essai : achats et ramassage de matériaux
 
+## Révision active : 5
+
+La configuration actuelle conserve les quatre cibles de la première session et `uItemPickPanel.PickItem`, avec horodatages UTC et signatures. Attendu : `READY revision=5 installed=5 failed=0`. L'injection `__instance` et la lecture de contexte ont été retirées après les crashs ; aucune donnée de point n'est actuellement collectée.
+
+La révision 3 se fermait également. La révision 4, sans injection d'instance, a produit des milliers d'appels à `ItemPickPointBase.PickItem` dès le démarrage, avec des arguments incohérents. Cette cible est retirée en révision 5. Une cible native partagée ou une incompatibilité de patch constitue une piste, pas un diagnostic établi. Ne pas utiliser les traces de révision 4 comme preuve de gameplay.
+
+### Historique des essais de démarrage
+
+La révision 2 a installé 16 patches, puis le processus s'est fermé avec une violation d'accès dans `coreclr.dll` lors de deux lancements. L'installation des patches et `Chainloader startup complete` ne suffisent donc pas à valider la stabilité du jeu.
+
+La révision 3 retire `ListAdd`, `LisAddBase`, `SaveItemData` et `SaveItemDataBase` pour isoler le problème. Leur responsabilité précise n'est pas démontrée. Elle conserve les quatre cibles initiales et les deux nouvelles méthodes `ItemPickPointBase.PickItem` et `uItemPickPanel.PickItem`, avec horodatages et contexte. Attendu : `READY revision=3 installed=6 failed=0`. Vérifier également que le processus reste ouvert et que le menu est accessible avant les essais.
+
+Les descriptions de la révision 2 ci-dessous sont historiques ; ses hooks d'inventaire supplémentaires sont désactivés.
+
 Plugin d'observation uniquement. Quatre cibles : `ItemStorageData.AddItemPlayer`, `ItemStorageData._AddMaterialOrKeyItem`, `uItemPickPanel.PickDefault` et `uItemPickPanel.PickMaterial`. Aucun argument ni retour n'est modifié. Les objets du jeu ne sont pas sérialisés ; seuls les arguments primitifs, noms d'énumérations et types d'objets sont tracés.
 
 La révision 2 ajoute `ItemPickPointBase.PickItem`, `uItemPickPanel.PickItem`, `ItemStorageData.ListAdd`, `LisAddBase`, `SaveItemData` et `SaveItemDataBase`, y compris leurs surcharges. Les noms de types des paramètres distinguent les surcharges ; chaque entrée et retour porte un horodatage UTC. Pour les méthodes de ramassage, les propriétés publiques `id`, `itemId` et `isMaterial` du point ciblé sont lues si disponibles. Aucune collection ni sauvegarde n'est parcourue.
