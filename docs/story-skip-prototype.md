@@ -56,3 +56,21 @@ At 19:50:11 (Paris), after movie03 ended, the current session records `TalkMain.
 The initial trace masked all strings in CScenarioScript calls, including `_eventId` and `_blockId`. The source is corrected to retain these bounded identifiers while still omitting dialogue text. This logging-only correction requires a later redeployment; it is not active in the ongoing tutorial session and cannot recover identifiers omitted from older logs.
 
 Preserve the current scripted-scene snapshot, then record an ordinary NPC conversation after the tutorial. Compare movie events, TalkMain entry points, scenario requests/completion and choices. No automatic story/NPC classifier is established yet. For a reliable classification, collect event/block identifiers after redeployment and compare multiple examples rather than relying on text-method names alone.
+
+## Tutorial windows: separate investigation (2026-11-02)
+
+The user reports that F8 does not advance the current illustrated tutorial window. During the earlier F8 test, the log records `TalkMain.IsSkip` requests at 19:53:01–02 (Paris), several text/voice commands and `TalkEventEndCB` at 19:53:06. These demonstrate dialogue processing, not that the illustrated tutorial was skipped. The existing running binary has no tutorial-specific hooks, so silence during the window cannot identify its implementation.
+
+Local interop metadata exposes these candidates:
+
+| Candidate | Evidence from metadata | Runtime status |
+| --- | --- | --- |
+| `TutorialMain.Initialize(command_csv_name, block_name)` | Dedicated type derived from TalkMain; also declares its own `IsSkip` | Unverified for the current illustrated window |
+| `CScenarioScript.CmdExeStartTutorialUI(_vrec)` | Dedicated scenario command | Unverified |
+| `CScenarioScript.TutorialUiEndCB()` | Dedicated completion callback | Unverified; do not invoke manually |
+| `PlayerData.SetTutorialAlreadyFlag(_flag, _value)` / `IsTutorialAlreadyFlag(_flag)` | Persistent seen-state accessors; `m_TutorialAlready` bitset | Scope and effect unverified; do not set flags to suppress tutorials yet |
+| `AppInfo.m_battleTutorialType` | Separate battle tutorial state | Not established as relevant to illustrated help windows |
+
+`TutorialObservation` prepares five observation-only prefixes: Initialize, OnDisable, the two scenario methods above, and SetTutorialAlreadyFlag. It logs bounded script/block identifiers and scalar arguments, without reading native objects, changing skip results, changing flags or calling completion callbacks. Install failures are reported independently from the dialogue prototype. It is gated by `Observation.Enabled`. This source change requires a later deployment/restart and is **not active in the ongoing session**.
+
+For a future `SkipTutorials` option, first match opening, manual completion and seen-flag traces for the same window. Determine whether native completion can be requested while preserving scenario continuation and input restoration. Distinguish illustrated help from interactive battle/training tutorials. Merely hiding an interface, bypassing its command or marking all tutorials as seen has not been validated and is not implemented.

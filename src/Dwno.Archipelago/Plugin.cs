@@ -24,6 +24,7 @@ public sealed class Plugin : BasePlugin
         if (Config.Bind("Observation", "Enabled", true, "Trace les appels ciblés sans modifier le gameplay.").Value)
         {
             Observation.Install(Log);
+            TutorialObservation.Install(Log);
             SnapshotMonitor.Initialize(Log);
             AddComponent<SnapshotMonitor>();
         }
