@@ -107,3 +107,17 @@ L'utilisateur confirme la fin de Professeur avant de passer à Soins vitaux. Six
 | `MASTER_TRAINER` | 15 | 127 → 112 | 19 |
 
 Total Professeur : 40 PC. Premier mot final `00000000003FFFFE`, second mot nul. L'ordre d'achat ne correspond pas strictement à l'ordre des bits. Noms français individuels à relever dans l'interface.
+
+## Entraîneur → Soins vitaux : groupe acheté
+
+L'utilisateur confirme la fin de Soins vitaux avant de passer à Évolution. Cinq apprentissages capturés à 18:36:25–30 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `EAT_CARE` | 3 | 112 → 109 | 22 |
+| `TOILET_CARE` | 3 | 109 → 106 | 23 |
+| `SLEEP_CARE` | 3 | 106 → 103 | 24 |
+| `AFFECTION` | 3 | 103 → 100 | 25 |
+| `LIFE_MASTER` | 12 | 100 → 88 | 26 |
+
+Total Soins vitaux : 24 PC. Premier mot final `0000000007FFFFFE`, second mot nul. Noms français individuels à relever dans l'interface.
