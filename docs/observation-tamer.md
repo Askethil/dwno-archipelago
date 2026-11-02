@@ -155,6 +155,8 @@ Total Trouver : 34 PC. Premier mot final `0000000FFFFFFFFE`, second mot nul. Nom
 
 ## Survivant → Extracteur : groupe acheté
 
+Précision sur le deuxième reset : juste après le retour de `AllResetLearningSkill`, un appel à `PlayerData.AddMoney(money=-10000)` est capturé, puis le solde diminue de 10 000 Bits. Le chemin `AddMoney` est ainsi observé pour cette dépense, distinct des appels à `SetMoney` des essais précédents.
+
 L'utilisateur confirme la fin d'Extracteur avant de passer à Campeur. Cinq apprentissages capturés à 18:39:33–38 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
 
 | Nom interne | Coût PC | PC avant → après | Bit activé |
@@ -166,3 +168,15 @@ L'utilisateur confirme la fin d'Extracteur avant de passer à Campeur. Cinq appr
 | `MATERIAL_MASTER` | 20 | 249 → 229 | 40 |
 
 Total Extracteur : 40 PC. Premier mot final `000001F000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte désormais 40 compétences distinctes observées, réparties sur deux séries après reset.
+
+## Survivant → Campeur : trois compétences achetées
+
+L'utilisateur annonce trois compétences de Campeur avant de passer à Marcheur. Trois apprentissages capturés à 18:40:29–32 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `COOKING_BOY` | 5 | 229 → 224 | 41 |
+| `MR_CUISINE` | 8 | 224 → 216 | 42 |
+| `ULTIMATE_COOK` | 12 | 216 → 204 | 43 |
+
+Total observé Campeur : 25 PC. Premier mot final `00000FF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 43 compétences distinctes observées ; ne pas déduire d'achats réussis que toutes les compétences possibles du jeu sont couvertes.
