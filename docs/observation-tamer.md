@@ -66,3 +66,16 @@ L'utilisateur confirme la fin de Vie avant de passer à Porteur. Trois apprentis
 | `LIFE_LARGE_UP` | 15 | 239 → 224 | 7 |
 
 Total Vie : 21 PC. Premier mot final `00000000000000FE`, second mot nul. Noms français individuels à relever dans l'interface.
+
+## Basique → Porteur : groupe acheté
+
+L'utilisateur confirme la fin de Porteur avant de passer à Inverse. Quatre apprentissages capturés à 18:33:30–34 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `HIGH_CARRY` | 5 | 224 → 219 | 8 |
+| `MEGA_CARRY` | 8 | 219 → 211 | 9 |
+| `GIGA_CARRY` | 12 | 211 → 199 | 10 |
+| `MAX_CARRY` | 15 | 199 → 184 | 11 |
+
+Total Porteur : 40 PC. Premier mot final `0000000000000FFE`, second mot nul. Noms français individuels à relever dans l'interface.
