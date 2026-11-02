@@ -1,0 +1,4117 @@
+{
+  "schemaVersion": 1,
+  "source": "world-catalog.en.json",
+  "status": "ID joins only; slot semantics and gameplay behavior unverified",
+  "buildings": [
+    {
+      "id": 1943318422,
+      "nameEn": "All Central Grade Up",
+      "kind": 0,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 4011245244,
+          "found": true,
+          "rawFlags": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1664772913,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772036,
+              "nameEn": "DigiDeepwater",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216894,
+              "nameEn": "DigiSand",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439178,
+              "nameEn": "DigiBamboo",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1943318421,
+      "nameEn": "Jijimon's House",
+      "kind": 1,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 4011245244,
+          "found": true,
+          "rawFlags": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1664772913,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772036,
+              "nameEn": "DigiDeepwater",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216894,
+              "nameEn": "DigiSand",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439178,
+              "nameEn": "DigiBamboo",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1664772914,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772033,
+              "nameEn": "DigiSap",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772034,
+              "nameEn": "DigiIonwater",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216892,
+              "nameEn": "DigiRock",
+              "quantity": 50
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3695661593,
+              "nameEn": "DigiGodwood",
+              "quantity": 50
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1943318420,
+      "nameEn": "Square",
+      "kind": 2,
+      "rawGradeUpTime": 0,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 4011245244,
+          "found": true,
+          "rawFlags": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1748660972,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772044,
+              "nameEn": "DigiLightningwater",
+              "quantity": 25
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994454,
+              "nameEn": "DigiGold",
+              "quantity": 50
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3745994453,
+              "nameEn": "Chrome Digizoit",
+              "quantity": 25
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3729216887,
+              "nameEn": "DigiEmerald",
+              "quantity": 25
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439173,
+              "nameEn": "DigiStarwood",
+              "quantity": 25
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1748660971,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772036,
+              "nameEn": "DigiDeepwater",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772045,
+              "nameEn": "DigiRainbowdrop",
+              "quantity": 25
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216895,
+              "nameEn": "Blue Digizoit",
+              "quantity": 25
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439180,
+              "nameEn": "DigiDiamond",
+              "quantity": 25
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439183,
+              "nameEn": "DigiPalm",
+              "quantity": 25
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1748660970,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772032,
+              "nameEn": "DigiLatex",
+              "quantity": 25
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994458,
+              "nameEn": "Black Digizoit",
+              "quantity": 25
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216890,
+              "nameEn": "DigiNight",
+              "quantity": 50
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3729216888,
+              "nameEn": "DigiOnyx",
+              "quantity": 25
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439178,
+              "nameEn": "DigiBamboo",
+              "quantity": 25
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1748660969,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994450,
+              "nameEn": "DigiHolywater",
+              "quantity": 25
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994459,
+              "nameEn": "Red Digizoit",
+              "quantity": 25
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216886,
+              "nameEn": "DigiRuby",
+              "quantity": 25
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439176,
+              "nameEn": "DigiSnowwood",
+              "quantity": 50
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439173,
+              "nameEn": "DigiStarwood",
+              "quantity": 25
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1943318419,
+      "nameEn": "Warehouse",
+      "kind": 3,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 4212119345,
+          "found": true,
+          "rawFlags": [
+            1000,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1664772915,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1664772916,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3712439182,
+              "nameEn": "DigiBlackwood",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1664772917,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3712439177,
+              "nameEn": "DigiGreatwood",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1664772918,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3712439173,
+              "nameEn": "DigiStarwood",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3695661593,
+              "nameEn": "DigiGodwood",
+              "quantity": 50
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1943318418,
+      "nameEn": "Sender",
+      "kind": 4,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 635112489,
+          "found": true,
+          "rawFlags": [
+            1104,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1664772919,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994451,
+              "nameEn": "DigiCopper",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439183,
+              "nameEn": "DigiPalm",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1664772920,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994458,
+              "nameEn": "Black Digizoit",
+              "quantity": 5
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994459,
+              "nameEn": "Red Digizoit",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216895,
+              "nameEn": "Blue Digizoit",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439182,
+              "nameEn": "DigiBlackwood",
+              "quantity": 50
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439177,
+              "nameEn": "DigiGreatwood",
+              "quantity": 20
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1943318417,
+      "nameEn": "Builder",
+      "kind": 5,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 1039752471,
+          "found": true,
+          "rawFlags": [
+            1036,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 288582549,
+          "found": true,
+          "rawFlags": [
+            52,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1664772921,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994451,
+              "nameEn": "DigiCopper",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216894,
+              "nameEn": "DigiSand",
+              "quantity": 50
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 50
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1681550499,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994452,
+              "nameEn": "Mithril",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216890,
+              "nameEn": "DigiNight",
+              "quantity": 50
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439172,
+              "nameEn": "DigiFelwood",
+              "quantity": 50
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1943318416,
+      "nameEn": "Item Shop",
+      "kind": 6,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 2272649181,
+          "found": true,
+          "rawFlags": [
+            1006,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1691011400,
+          "found": true,
+          "rawFlags": [
+            1043,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 3395249699,
+          "found": true,
+          "rawFlags": [
+            1045,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1681550498,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994451,
+              "nameEn": "DigiCopper",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216893,
+              "nameEn": "DigiStone",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1681550497,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994449,
+              "nameEn": "DigiSilver",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216891,
+              "nameEn": "DigiLight",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439182,
+              "nameEn": "DigiBlackwood",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1681550496,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994454,
+              "nameEn": "DigiGold",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216889,
+              "nameEn": "DigiQuartz",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439173,
+              "nameEn": "DigiStarwood",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1681550503,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994458,
+              "nameEn": "Black Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439180,
+              "nameEn": "DigiDiamond",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3695661593,
+              "nameEn": "DigiGodwood",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1943318431,
+      "nameEn": "Hospital",
+      "kind": 7,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 3225944759,
+          "found": true,
+          "rawFlags": [
+            1116,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1681550502,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772032,
+              "nameEn": "DigiLatex",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216889,
+              "nameEn": "DigiQuartz",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1681550501,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994450,
+              "nameEn": "DigiHolywater",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216895,
+              "nameEn": "Blue Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439180,
+              "nameEn": "DigiDiamond",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1943318430,
+      "nameEn": "Restaurant",
+      "kind": 8,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 752831598,
+          "found": true,
+          "rawFlags": [
+            1111,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1681550500,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772036,
+              "nameEn": "DigiDeepwater",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1681550507,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772039,
+              "nameEn": "DigiAcid",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439183,
+              "nameEn": "DigiPalm",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1681550506,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772038,
+              "nameEn": "DigiOil",
+              "quantity": 40
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439178,
+              "nameEn": "DigiBamboo",
+              "quantity": 40
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1698328086,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772032,
+              "nameEn": "DigiLatex",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439179,
+              "nameEn": "DigiFirewood",
+              "quantity": 50
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1926540836,
+      "nameEn": "Stock Market",
+      "kind": 9,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 906108610,
+          "found": true,
+          "rawFlags": [
+            1396,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1698328087,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3729216891,
+              "nameEn": "DigiLight",
+              "quantity": 10
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216890,
+              "nameEn": "DigiNight",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 30
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1698328084,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3729216888,
+              "nameEn": "DigiOnyx",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439183,
+              "nameEn": "DigiPalm",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1926540837,
+      "nameEn": "Advanced Item Shop",
+      "kind": 10,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 3278533120,
+          "found": true,
+          "rawFlags": [
+            1386,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 4062113854,
+          "found": true,
+          "rawFlags": [
+            1206,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1698328085,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994454,
+              "nameEn": "DigiGold",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216890,
+              "nameEn": "DigiNight",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216889,
+              "nameEn": "DigiQuartz",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3729216888,
+              "nameEn": "DigiOnyx",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1698328082,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994455,
+              "nameEn": "DigiWhitegold",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216887,
+              "nameEn": "DigiEmerald",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216886,
+              "nameEn": "DigiRuby",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439180,
+              "nameEn": "DigiDiamond",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1926540838,
+      "nameEn": "Field",
+      "kind": 11,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 4011245244,
+          "found": true,
+          "rawFlags": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1698328083,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772036,
+              "nameEn": "DigiDeepwater",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772039,
+              "nameEn": "DigiAcid",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216894,
+              "nameEn": "DigiSand",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1698328080,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772038,
+              "nameEn": "DigiOil",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772033,
+              "nameEn": "DigiSap",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216893,
+              "nameEn": "DigiStone",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439177,
+              "nameEn": "DigiGreatwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1698328081,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772033,
+              "nameEn": "DigiSap",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772032,
+              "nameEn": "DigiLatex",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216892,
+              "nameEn": "DigiRock",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439178,
+              "nameEn": "DigiBamboo",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1698328094,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772034,
+              "nameEn": "DigiIonwater",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772045,
+              "nameEn": "DigiRainbowdrop",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216891,
+              "nameEn": "DigiLight",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3695661593,
+              "nameEn": "DigiGodwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1926540839,
+      "nameEn": "Lab",
+      "kind": 12,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 854107969,
+          "found": true,
+          "rawFlags": [
+            100,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1784734470,
+          "found": true,
+          "rawFlags": [
+            1296,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1698328095,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772039,
+              "nameEn": "DigiAcid",
+              "quantity": 10
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994448,
+              "nameEn": "DigiIron",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216893,
+              "nameEn": "DigiStone",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439182,
+              "nameEn": "DigiBlackwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1715105673,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772038,
+              "nameEn": "DigiOil",
+              "quantity": 10
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994449,
+              "nameEn": "DigiSilver",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216892,
+              "nameEn": "DigiRock",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439172,
+              "nameEn": "DigiFelwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1715105672,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772035,
+              "nameEn": "DigiMercury",
+              "quantity": 10
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994452,
+              "nameEn": "Mithril",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216891,
+              "nameEn": "DigiLight",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439173,
+              "nameEn": "DigiStarwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1715105675,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772044,
+              "nameEn": "DigiLightningwater",
+              "quantity": 10
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994453,
+              "nameEn": "Chrome Digizoit",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216890,
+              "nameEn": "DigiNight",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3695661593,
+              "nameEn": "DigiGodwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1926540832,
+      "nameEn": "Digivolution Dojo",
+      "kind": 13,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 1573395465,
+          "found": true,
+          "rawFlags": [
+            1050,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1715105674,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3729216893,
+              "nameEn": "DigiStone",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216892,
+              "nameEn": "DigiRock",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439181,
+              "nameEn": "DigiWhitewood",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439177,
+              "nameEn": "DigiGreatwood",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1715105677,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3729216891,
+              "nameEn": "DigiLight",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3712439179,
+              "nameEn": "DigiFirewood",
+              "quantity": 50
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439172,
+              "nameEn": "DigiFelwood",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1926540833,
+      "nameEn": "Training Hall",
+      "kind": 14,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 4011245244,
+          "found": true,
+          "rawFlags": [
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1715105676,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994451,
+              "nameEn": "DigiCopper",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994448,
+              "nameEn": "DigiIron",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3745994452,
+              "nameEn": "Mithril",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3745994453,
+              "nameEn": "Chrome Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439176,
+              "nameEn": "DigiSnowwood",
+              "quantity": 20
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1715105679,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994455,
+              "nameEn": "DigiWhitegold",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994458,
+              "nameEn": "Black Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3745994459,
+              "nameEn": "Red Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3729216895,
+              "nameEn": "Blue Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439179,
+              "nameEn": "DigiFirewood",
+              "quantity": 20
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1926540834,
+      "nameEn": "Fishing Hole",
+      "kind": 15,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 2779022360,
+          "found": true,
+          "rawFlags": [
+            1236,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1715105678,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772036,
+              "nameEn": "DigiDeepwater",
+              "quantity": 70
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216894,
+              "nameEn": "DigiSand",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439183,
+              "nameEn": "DigiPalm",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1715105665,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772034,
+              "nameEn": "DigiIonwater",
+              "quantity": 70
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216893,
+              "nameEn": "DigiStone",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439176,
+              "nameEn": "DigiSnowwood",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1715105664,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772045,
+              "nameEn": "DigiRainbowdrop",
+              "quantity": 70
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216892,
+              "nameEn": "DigiRock",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439178,
+              "nameEn": "DigiBamboo",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1731883388,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994450,
+              "nameEn": "DigiHolywater",
+              "quantity": 70
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216889,
+              "nameEn": "DigiQuartz",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3712439172,
+              "nameEn": "DigiFelwood",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1926540835,
+      "nameEn": "Colosseum",
+      "kind": 16,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 3264186736,
+          "found": true,
+          "rawFlags": [
+            1161,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1573395465,
+          "found": true,
+          "rawFlags": [
+            1050,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1902619063,
+          "found": true,
+          "rawFlags": [
+            3197,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1731883389,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994448,
+              "nameEn": "DigiIron",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994449,
+              "nameEn": "DigiSilver",
+              "quantity": 10
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216894,
+              "nameEn": "DigiSand",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1731883390,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994454,
+              "nameEn": "DigiGold",
+              "quantity": 30
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994455,
+              "nameEn": "DigiWhitegold",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3745994459,
+              "nameEn": "Red Digizoit",
+              "quantity": 10
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3729216893,
+              "nameEn": "DigiStone",
+              "quantity": 30
+            },
+            {
+              "slot": 5,
+              "gameItemId": 3712439180,
+              "nameEn": "DigiDiamond",
+              "quantity": 20
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1926540844,
+      "nameEn": "Arena",
+      "kind": 17,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 2627274218,
+          "found": true,
+          "rawFlags": [
+            1356,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 941079076,
+          "found": true,
+          "rawFlags": [
+            1326,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1731883391,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772038,
+              "nameEn": "DigiOil",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3762772035,
+              "nameEn": "DigiMercury",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3745994449,
+              "nameEn": "DigiSilver",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3729216887,
+              "nameEn": "DigiEmerald",
+              "quantity": 10
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1731883384,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772044,
+              "nameEn": "DigiLightningwater",
+              "quantity": 20
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994454,
+              "nameEn": "DigiGold",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 3729216886,
+              "nameEn": "DigiRuby",
+              "quantity": 20
+            },
+            {
+              "slot": 4,
+              "gameItemId": 3712439180,
+              "nameEn": "DigiDiamond",
+              "quantity": 20
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1926540845,
+      "nameEn": "Museum",
+      "kind": 18,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 2240259585,
+          "found": true,
+          "rawFlags": [
+            1211,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1441010315,
+          "found": true,
+          "rawFlags": [
+            1381,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 2,
+          "flagSetId": 3156220330,
+          "found": true,
+          "rawFlags": [
+            1093,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1731883385,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3729216889,
+              "nameEn": "DigiQuartz",
+              "quantity": 40
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216888,
+              "nameEn": "DigiOnyx",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1731883386,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3729216887,
+              "nameEn": "DigiEmerald",
+              "quantity": 40
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3729216886,
+              "nameEn": "DigiRuby",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1976873725,
+      "nameEn": "Treasure Hunter",
+      "kind": 19,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 3204214985,
+          "found": true,
+          "rawFlags": [
+            1052,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1731883387,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994451,
+              "nameEn": "DigiCopper",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994458,
+              "nameEn": "Black Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1731883380,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3745994448,
+              "nameEn": "DigiIron",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994459,
+              "nameEn": "Red Digizoit",
+              "quantity": 20
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        },
+        {
+          "slot": 4,
+          "recipeId": 84696367,
+          "found": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 1976873724,
+      "nameEn": "Spacetime Transporter",
+      "kind": 20,
+      "rawGradeUpTime": 1,
+      "conditionSlots": [
+        {
+          "slot": 0,
+          "flagSetId": 101904181,
+          "found": true,
+          "rawFlags": [
+            3604,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096,
+            4096
+          ]
+        },
+        {
+          "slot": 1,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 2,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 3,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 4,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 5,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 6,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        },
+        {
+          "slot": 7,
+          "flagSetId": 1402660926,
+          "found": false,
+          "rawFlags": null
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": 1,
+          "recipeId": 1731883381,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772039,
+              "nameEn": "DigiAcid",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994448,
+              "nameEn": "DigiIron",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 2,
+          "recipeId": 1748660975,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772038,
+              "nameEn": "DigiOil",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994449,
+              "nameEn": "DigiSilver",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 3,
+          "recipeId": 1748660974,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772035,
+              "nameEn": "DigiMercury",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994452,
+              "nameEn": "Mithril",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "slot": 4,
+          "recipeId": 1748660973,
+          "found": true,
+          "materials": [
+            {
+              "slot": 1,
+              "gameItemId": 3762772044,
+              "nameEn": "DigiLightningwater",
+              "quantity": 50
+            },
+            {
+              "slot": 2,
+              "gameItemId": 3745994453,
+              "nameEn": "Chrome Digizoit",
+              "quantity": 30
+            },
+            {
+              "slot": 3,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 4,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 5,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            },
+            {
+              "slot": 6,
+              "gameItemId": 84696367,
+              "nameEn": null,
+              "quantity": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -41,6 +41,8 @@ SHA-256 de l'archive téléchargée (empreinte locale de traçabilité, pas sign
 
 ## Organisation
 
+- [Town, region and flag test reference](docs/world-catalog.en.md) : définitions anglaises de ville, carte et conditions ; [données](data/world-catalog.en.json), [liens d'améliorations](data/town-links.en.json).
+
 - [English game item catalogue](docs/game-items.en.md) : 740 entrées de la table générale, avec leurs IDs et noms lus dans le jeu ; [JSON](data/game-items.en.json).
 - [Exporteur du catalogue](docs/export-item-catalog.md) : procédure, compteurs de couverture et séparation avec le futur pool Archipelago.
 
