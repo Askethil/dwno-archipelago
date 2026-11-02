@@ -92,3 +92,18 @@ L'utilisateur confirme la fin d'Inverse avant de passer à Entraîneur → Profe
 | `BLESSING_HEAVEN` | 12 | 164 → 152 | 15 |
 
 Total Inverse : 32 PC. Premier mot final `000000000000FFFE`, second mot nul. Noms français individuels à relever dans l'interface. Les quatre groupes Basique observés totalisent 117 PC dépensés, de 269 à 152 PC.
+
+## Entraîneur → Professeur : groupe acheté
+
+L'utilisateur confirme la fin de Professeur avant de passer à Soins vitaux. Six apprentissages capturés à 18:35:32–37 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `POWER_TRAINER` | 3 | 152 → 149 | 16 |
+| `INTELLIGENT_TRAINER` | 3 | 149 → 146 | 17 |
+| `TOUGHNESS_TRAINER` | 3 | 146 → 143 | 18 |
+| `CHANCE_UP` | 8 | 143 → 135 | 20 |
+| `FATIGUE_CARE` | 8 | 135 → 127 | 21 |
+| `MASTER_TRAINER` | 15 | 127 → 112 | 19 |
+
+Total Professeur : 40 PC. Premier mot final `00000000003FFFFE`, second mot nul. L'ordre d'achat ne correspond pas strictement à l'ordre des bits. Noms français individuels à relever dans l'interface.
