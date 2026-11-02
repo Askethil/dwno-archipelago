@@ -54,3 +54,15 @@ L'utilisateur confirme avoir tout acheté dans ce sous-groupe. Quatre apprentiss
 | 4 | `MIND_MASTER` | À relever dans l'interface | 15 | 260 → 245 | 4 |
 
 Total : 24 PC, état final du premier mot de flags `000000000000001E`, second mot nul. Les bits sont déduits des instantanés successifs. Les noms internes ne doivent pas être traduits arbitrairement comme s'il s'agissait des libellés français ou anglais officiels.
+
+## Basique → Vie : groupe acheté
+
+L'utilisateur confirme la fin de Vie avant de passer à Porteur. Trois apprentissages capturés à 18:32:49–52 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `LONGEVITY_EVOLUTION` | 3 | 245 → 242 | 5 |
+| `LIFE_UP` | 3 | 242 → 239 | 6 |
+| `LIFE_LARGE_UP` | 15 | 239 → 224 | 7 |
+
+Total Vie : 21 PC. Premier mot final `00000000000000FE`, second mot nul. Noms français individuels à relever dans l'interface.
