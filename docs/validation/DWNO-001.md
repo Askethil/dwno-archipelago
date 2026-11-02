@@ -2,6 +2,8 @@
 
 Date : 2 novembre 2026.
 
+Statut : **validé**. Compilation, déploiement et chargement confirmés par les outils ; arrivée au menu confirmée visuellement par l'utilisateur le 2 novembre 2026. Le plugin minimal n'active aucun changement de gameplay.
+
 - Installation : `C:\Program Files (x86)\Steam\steamapps\common\Digimon World Next Order`.
 - Jeu Windows x64, Unity `2019.4.11f1` selon BepInEx.
 - BepInEx `6.0.0-be.791+b782da4ac54e1072d2857f4a2f77c80c3ef08005`, runtime embarqué .NET `6.0.7`.
@@ -23,4 +25,4 @@ Le 2 novembre 2026 : `Setup`, `Doctor`, `Build`, `Deploy` puis `Verify` exécut�
 
 `Doctor` testé depuis Ubuntu WSL avec PowerShell 7 Windows. Windows PowerShell 5 refuse les scripts sur cette machine ; aucune politique d'exécution n'a été modifiée. Le guide utilise `pwsh.exe`.
 
-La capture de la fenêtre du jeu expire encore ; la confirmation visuelle du menu reste à faire par l'utilisateur.
+La capture de la fenêtre du jeu a expiré côté agent. L'utilisateur a ensuite confirmé être bien dans le menu du jeu le 2 novembre 2026 : le dernier critère d'acceptation de DWNO-001 est rempli.
