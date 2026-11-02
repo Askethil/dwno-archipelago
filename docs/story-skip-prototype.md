@@ -170,6 +170,20 @@ The dedicated TutorialMain initializer and TutorialUiEndCB distinguish this samp
 
 This provides a baseline for a future tutorial skip option: identify this context, find a safe native advancement path, retain normal tutorial completion and verify control/scenario continuation. Directly invoking TutorialUiEndCB, hiding the UI, or marking all tutorials seen remains unimplemented. The observed end callback is from the current unmodified tutorial flow, not evidence that skipping works.
 
+### Additional illustrated tutorial files
+
+The same replay captured four more tutorial files, each using `CmdExeStartTutorialUI` → `TutorialMain.Initialize` → inherited `TalkMain.Initialize` → `TutorialUiEndCB`. All initialized with `block_name=null`. Times are Paris, 2026-11-02:
+
+| File under `event/tutorial/` | TutorialMain.Initialize | TutorialUiEndCB |
+| --- | --- | --- |
+| `EV_TUTORIAL_000` | 20:14:46.183 | 20:15:09.451 |
+| `EV_TUTORIAL_001` | 20:15:19.682 | 20:15:22.869 |
+| `EV_TUTORIAL_002` | 20:15:27.349 | 20:15:33.141 |
+| `EV_TUTORIAL_003` | 20:15:36.457 | 20:15:39.963 |
+| `EV_TUTORIAL_004` | 20:16:32.921 | 20:16:37.470 |
+
+The last observed tutorial (004) immediately follows the callback for `Event/Talk/EV_MIN_1001`, with an empty string block ID, at 20:16:32.914. Preserve the distinction between an empty story block and a null tutorial block. No `SetTutorialAlreadyFlag` call is present in the captured sequence. These are five observed script identifiers, not an exhaustive tutorial list; their player-facing subjects have not been recorded. The repeated dedicated lifecycle supports identifying these tutorial windows separately from NPC dialogue, but no suppression/fast-forward behavior is validated.
+
 ### Additional intro animation evidence
 
 In `Event/Talk/EV_MIN_1000`, block EVENT2, the replay records `AnimationModel` with `time=-1` and `MoveModel` with `time=-0.5` (model IDs include PLAYR, MUGED, WOGUR and METAG), interleaved with fades, voice/text and positive Wait values. These concrete negative values must not be treated as ordinary positive durations or blindly clamped. No SceneMain call is recorded in this captured segment: these particular 3D character vignettes are being driven through TalkMain commands. This does not establish that SceneMain is unused elsewhere in the game.
