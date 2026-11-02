@@ -2,6 +2,8 @@
 
 Analyse du code source le 2 novembre 2026. Les dépôts de référence sont téléchargés dans `research/` et exclus de Git. Aucun hook de gameplay n'est activé dans notre plugin.
 
+Statut : analyse approfondie prête à relire ; validation des hooks en jeu hors de ce ticket. La comparaison locale ci-dessous complète l'étude des trois dépôts.
+
 ## Sources figées
 
 | Dépôt | Commit étudié | Rôle |
@@ -57,3 +59,65 @@ Les hooks sont attestés dans les sources historiques, pas encore validés sur l
 ## Documentation d'installation
 
 [BepInEx : installation IL2CPP](https://docs.bepinex.dev/master/articles/user_guide/installation/unity_il2cpp.html) et [builds officielles](https://builds.bepinex.dev/projects/bepinex_be).
+
+## Preuves dans les sources
+
+| Sujet | Fichiers de référence |
+| --- | --- |
+| Installation Windows IL2CPP | [Guide](https://github.com/Yasha-jin/DWNOModdingGuides/blob/0d6523cf3ae6e4cfdd94a7b8d69db20da806ad83/Guides/HowToInstallBepInExForDWNO.md) |
+| Dépendances C# et point d'entrée | [FastPickup.csproj](https://github.com/SydMontague/DWNO-Mod-FastPickup/blob/0b973316f1b39eaa043d2d236abf2779e88e77bf/FastPickup.csproj), [Plugin.cs](https://github.com/SydMontague/DWNO-Mod-FastPickup/blob/0b973316f1b39eaa043d2d236abf2779e88e77bf/Plugin.cs) |
+| Trois patches de ramassage | [Patches.cs](https://github.com/SydMontague/DWNO-Mod-FastPickup/blob/0b973316f1b39eaa043d2d236abf2779e88e77bf/Patches.cs) |
+| Détours, original et état des partenaires | [helper.cpp](https://github.com/AthosArantes/DWNOHelper/blob/9e25e5b43d1c82b0e86dfe5ca4b5e8231f563acf/src/helper.cpp) |
+| RVA et relocalisation | [GameAssembly.h](https://github.com/AthosArantes/DWNOHelper/blob/9e25e5b43d1c82b0e86dfe5ca4b5e8231f563acf/src/GameAssembly.h), [GameAssembly.cpp](https://github.com/AthosArantes/DWNOHelper/blob/9e25e5b43d1c82b0e86dfe5ca4b5e8231f563acf/src/GameAssembly.cpp) |
+| Pont managé / natif | [BepInExLoader/Plugin.cs](https://github.com/AthosArantes/DWNOHelper/blob/9e25e5b43d1c82b0e86dfe5ca4b5e8231f563acf/BepInExLoader/Plugin.cs) |
+
+## Comparaison avec les interop de notre installation
+
+Lecture statique de `BepInEx/interop/Assembly-CSharp.dll`, sans chargement ni exécution de l'assembly. Installation Windows décrite dans [la validation DWNO-001](validation/DWNO-001.md), Unity 2019.4.11f1, BepInEx 791. Les noms et paramètres ci-dessous proviennent des métadonnées locales ; ils ne démontrent ni l'ordre des appels, ni leurs effets, ni la compatibilité Harmony à l'exécution.
+
+| Méthode ou accès | Constat local | Conséquence |
+| --- | --- | --- |
+| `uItemPickPanel.PickDefault()` et `Update()` | Présents | Les cibles FastPickup existent encore |
+| `PlayerCtrl.StartFeelingAndChangeFace` | Paramètres `_animId, _animSpeed, _playTime, _target, _isLoop` | Un prefix recevant seulement `_animId` ne décrit pas toute la signature ; sélectionner explicitement la cible lors du futur patch |
+| `MainGameManager.Update()` et `GetPartnerCtrl(_idx)` | Présents | Pistes pour observer le cycle du jeu et les partenaires |
+| `PartnerCtrl.IsPossibleMiracle(isLose)` | Présent | Piste historique confirmée comme symbole, aucun déverrouillage ExE prévu |
+| `uFieldPanel.StartDigimonMessage(id, message, time)` | Présent | Candidat pour un futur retour visuel |
+| `CommonMessageWindowManager.Get00/Get01`, `uCommonMessageWindow.SetMessage(str, window_pos)` | Présents | Informations d'interface ; ne pas copier une signature native incomplète |
+| `StorageData.m_playerData` | Accesseurs présents | Ne pas supposer que le nom natif historique `StorageData_get_PlayerData` est le nom C# actuel |
+| `PlayerData.m_isUseExe`, `PartnerData.m_lifetime` | Accesseurs présents | Confirme les noms des données ; ne justifie aucune écriture |
+
+## Nouvelles pistes issues de l'installation locale
+
+Ces découvertes complètent les mods, elles ne leur sont pas attribuées. Les paramètres sont des noms, pas des signatures typées complètes. Plusieurs méthodes sont surchargées : inspecter les types exacts avant de configurer Harmony.
+
+| Type | Symboles observés | Question à vérifier en jeu |
+| --- | --- | --- |
+| `ItemStorageData` | `AddItemPlayer(_itemId, _addNum)` ; `_AddMaterialOrKeyItem(_itemData, _addNum, _type)` | L'ajout est-il effectué ici pour les objets, matériaux et objets-clés ? Quel résultat en cas de sac plein ? |
+| `ItemStorageData` | `IsHaveEmpty`, `IsHaveFull`, `GetItemData`, `IsGetItem`, `IsAllGetItemList`, `ListAdd`, `LisAddBase` | Quels appels contrôlent la capacité, et lesquels modifient réellement l'inventaire ? Le nom `LisAddBase` est bien celui observé |
+| `ItemPickPointBase` | `id`, `itemId`, `GetItemId(index)`, `PickItem(requestPickCount, rarityRevision)` | L'identifiant est-il stable après changement de zone et rechargement ? |
+| `ItemPickPointData` | `m_id`, `m_itemDatas`, `ReadSaveData`, `WriteSaveData` | Quels états de ramassage sont persistés ? |
+| `ItemPickPointManager` | `TargetPoint`, `PickingPoint`, `GetItemPickPoint(id)`, `EnableItemPickPoint(id, enable)` | Comment relier zone, point et réussite d'un ramassage ? |
+| `uItemPickPanel` | `PickItem`, `PickMaterial`, `m_targetItemPickPoint`, `m_itemIds`, `m_itemPickCallback`, `_PickDefault_b__36_0` | Le callback intervient-il après le crédit d'objet ? Nom généré fragile, à éviter comme contrat permanent |
+| `StorageData` | `GetCurrentSaveSlot`, `IsBusySaveLoad`, `AutoLoadGameData`, `_ReadGameData`, `_WriteGameData` | Quand l'état est-il disponible et quand interdire les opérations entrantes ? |
+
+La présence de `ReadSaveData` / `WriteSaveData` ne nous autorise pas à ajouter des octets à une sauvegarde. Commencer par observer ; concevoir ensuite une persistance indépendante indexée par slot et session Archipelago, avec reprise et déduplication.
+
+## Ordre proposé pour le prochain ticket d'instrumentation
+
+1. Observer `ItemStorageData.AddItemPlayer` et `uItemPickPanel.PickDefault/PickMaterial` sans modifier arguments ni résultat. Corréler les appels d'un ramassage connu ; limiter les logs aux événements, sans spam dans `Update`.
+2. Relever le point, la carte/zone et l'objet ; comparer avant/après le nombre détenu et le retour de l'opération. Ne pas émettre de check sur une simple entrée dans le panneau.
+3. Tester objet ordinaire, matériau, sac plein, annulation, ramassage répété, changement de zone et rechargement. Distinguer un point réapparaissant d'un check unique.
+4. Observer les transitions de chargement et le slot. Aucune attribution distante pendant un chargement ; aucune écriture dans les sauvegardes à ce stade.
+
+Choix recommandé : garder BepInEx IL2CPP C# et Harmony pour l'instrumentation. Utiliser les mods comme cartographie initiale, les wrappers locaux comme preuve de présence, puis les traces du jeu comme preuve de comportement. Aucun RVA fixe ni DLL native tierce n'est nécessaire à cette étape.
+
+## Reproduire la lecture statique
+
+L'utilitaire du dépôt lit uniquement les tables de métadonnées PE avec `System.Reflection.Metadata`, sans exécuter de code du jeu. Il affiche les types, noms de méthodes et noms des paramètres ; il ne décode pas leurs types, ne désassemble pas le code natif et ne prouve pas qu'une méthode est appelée.
+
+```powershell
+dotnet run --project tools/InspectInterop -- 'C:/chemin/du/jeu/BepInEx/interop/Assembly-CSharp.dll'
+dotnet run --project tools/InspectInterop -- 'C:/chemin/du/jeu/BepInEx/interop/Assembly-CSharp.dll' ItemStorageData ItemPickPointBase ItemPickPointData ItemPickPointManager PartnerData
+```
+
+Code de sortie 0 si tous les types demandés sont présents, 2 si au moins un est absent. Les noms des types imbriqués ne sont pas qualifiés par l'utilitaire ; demander des noms uniques et contrôler le contexte avant d'en tirer une conclusion. Aucune DLL interop, dump intégral ou donnée de sauvegarde n'est ajouté à Git.
