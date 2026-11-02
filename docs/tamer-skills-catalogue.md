@@ -193,4 +193,3 @@ Le [manuel officiel anglais](https://d1vtv52f4vjbmu.cloudfront.net/manuals/dwno/
 - Le mod observe uniquement. Attribution forcée, retrait individuel, effets sur les partenaires, prérequis et persistance après rechargement ne sont pas validés.
 - Pour confirmer les noms anglais sur PC : sauvegarder, passer la langue des textes en anglais dans les réglages disponibles du jeu/Steam, puis relever les libellés sans racheter les compétences. Aucun changement de langue effectué pendant cette collecte.
 - Données réutilisables : [JSON](../data/tamer-skills.json). Détails chronologiques et soldes avant/après : [rapport des essais](observation-tamer.md). Les journaux bruts restent locaux et les fichiers du jeu ne sont pas publiés.
-
