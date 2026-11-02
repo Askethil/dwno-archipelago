@@ -237,3 +237,16 @@ L'utilisateur confirme la fin d'Objet avant de passer à Gains. Quatre apprentis
 | `SOUL_PITCHING` | 12 | 85 → 73 | 64 (bit 0 du deuxième mot) |
 
 Total Objet : 23 PC. Flags finaux `[FFFFFFF000000000,0000000000000001]`. Le franchissement du premier mot UInt64 est observé ; les index sont basés sur zéro. Noms français individuels à relever dans l'interface. Le catalogue compte 64 compétences distinctes observées.
+
+## Commandant → Gains : groupe acheté
+
+L'utilisateur confirme la fin de Gains avant de passer à Apprentissage. Quatre apprentissages capturés à 18:44:53–57 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé (index global) |
+| --- | --- | --- | --- |
+| `ITEM_GETTER` | 5 | 73 → 68 | 65 |
+| `BIT_GETTER` | 5 | 68 → 63 | 66 |
+| `EXPLORER` | 8 | 63 → 55 | 67 |
+| `DROP_MASTER` | 15 | 55 → 40 | 68 |
+
+Total Gains : 33 PC. Flags finaux `[FFFFFFF000000000,000000000000001F]`. Noms français individuels à relever dans l'interface. Le catalogue compte 68 compétences distinctes observées.
