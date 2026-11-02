@@ -134,3 +134,17 @@ L'utilisateur confirme la fin d'Évolution. Quatre apprentissages capturés à 1
 | `GREAT_EVOLUTION` | 15 | 70 → 55 | 30 |
 
 Total Évolution : 33 PC. Premier mot final `000000007FFFFFFE`, second mot nul. Noms français individuels à relever dans l'interface. Depuis le reset, 30 apprentissages sont documentés, pour 214 PC dépensés (269 → 55).
+
+## Survivant → Trouver : groupe acheté
+
+L'utilisateur confirme la fin de Trouver puis annonce un nouveau reset pour explorer les autres compétences. Cinq apprentissages capturés à 18:38:12–17 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `WILD_FINDER` | 3 | 55 → 52 | 31 |
+| `FISHERMAN` | 3 | 52 → 49 | 32 |
+| `GURANDA` | 8 | 49 → 41 | 34 |
+| `WILD_SCOUTER` | 8 | 41 → 33 | 33 |
+| `INGREDIENTS_HUNTER` | 12 | 33 → 21 | 35 |
+
+Total Trouver : 34 PC. Premier mot final `0000000FFFFFFFFE`, second mot nul. Noms français individuels à relever dans l'interface. Cette première série après reset documente 35 compétences, pour 248 PC dépensés (269 → 21). Journal sauvegardé localement avant le reset suivant ; remboursement et nouvel état à vérifier sur les prochaines traces.
