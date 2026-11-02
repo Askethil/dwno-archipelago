@@ -19,9 +19,9 @@ internal static class TutorialObservation
         var assembly = Assembly.Load("Assembly-CSharp");
         var installed = 0;
         var failed = 0;
+        var skipped = 0;
         foreach (var (typeName, methodName) in new[] {
             ("TutorialMain", "Initialize"),
-            ("TutorialMain", "OnDisable"),
             ("CScenarioScript", "CmdExeStartTutorialUI"),
             ("CScenarioScript", "TutorialUiEndCB"),
             ("PlayerData", "SetTutorialAlreadyFlag") })
@@ -33,6 +33,12 @@ internal static class TutorialObservation
                     BindingFlags.DeclaredOnly).Where(m => m.Name == methodName).ToArray();
                 if (methods.Length != 1)
                     throw new InvalidOperationException($"Expected one method, got {methods.Length}");
+                if (!InteropTraceGuard.CanTrace(methods[0], out var reason))
+                {
+                    skipped++;
+                    logger.LogWarning($"[TUTORIAL] SKIPPED {typeName}.{methodName}: {reason}");
+                    continue;
+                }
                 harmony.Patch(methods[0], prefix: new HarmonyMethod(typeof(TutorialObservation), nameof(Trace)));
                 installed++;
                 logger.LogInfo($"[TUTORIAL] PATCHED {typeName}.{methodName}");
@@ -43,7 +49,7 @@ internal static class TutorialObservation
                 logger.LogWarning($"[TUTORIAL] PATCH_FAILED {typeName}.{methodName}: {ex.GetBaseException().Message}");
             }
         }
-        logger.LogInfo($"[TUTORIAL] READY installed={installed} failed={failed}; observation only; no tutorial suppression.");
+        logger.LogInfo($"[TUTORIAL] READY installed={installed} skipped={skipped} failed={failed}; observation only; no tutorial suppression.");
     }
 
     private static void Trace(MethodBase __originalMethod, object[] __args)

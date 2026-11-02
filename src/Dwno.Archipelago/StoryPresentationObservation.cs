@@ -18,6 +18,7 @@ internal static class StoryPresentationObservation
         var assembly = Assembly.Load("Assembly-CSharp");
         var installed = 0;
         var failed = 0;
+        var skipped = 0;
         // Command entry points only. Never hook shared coroutine MoveNext stubs or unit AI.
         foreach (var (typeName, methodName) in new[] {
             ("TalkMain", "Initialize"),
@@ -31,7 +32,6 @@ internal static class StoryPresentationObservation
             ("TalkMain", "Wait"),
             ("SceneMain", "Initialize"),
             ("SceneMain", "StartScene"),
-            ("SceneMain", "EndScene"),
             ("SceneMain", "AnimationModel"),
             ("SceneMain", "DispText"),
             ("SceneMain", "PlayVoiceText") })
@@ -43,6 +43,12 @@ internal static class StoryPresentationObservation
                     BindingFlags.DeclaredOnly).Where(m => m.Name == methodName).ToArray();
                 if (methods.Length != 1)
                     throw new InvalidOperationException($"Expected one method, got {methods.Length}");
+                if (!InteropTraceGuard.CanTrace(methods[0], out var reason))
+                {
+                    skipped++;
+                    logger.LogWarning($"[PRESENTATION] SKIPPED {typeName}.{methodName}: {reason}");
+                    continue;
+                }
                 harmony.Patch(methods[0], prefix: new HarmonyMethod(typeof(StoryPresentationObservation), nameof(Trace)));
                 installed++;
                 logger.LogInfo($"[PRESENTATION] PATCHED {typeName}.{methodName}");
@@ -53,7 +59,7 @@ internal static class StoryPresentationObservation
                 logger.LogWarning($"[PRESENTATION] PATCH_FAILED {typeName}.{methodName}: {ex.GetBaseException().Message}");
             }
         }
-        logger.LogInfo($"[PRESENTATION] READY installed={installed} failed={failed}; command calls only, not coroutine completion; no acceleration.");
+        logger.LogInfo($"[PRESENTATION] READY installed={installed} skipped={skipped} failed={failed}; command calls only, not coroutine completion; no acceleration.");
     }
 
     private static void Trace(MethodBase __originalMethod, object[] __args)
