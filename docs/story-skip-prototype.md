@@ -70,6 +70,22 @@ The NPC names come from the player's reports, not decoded event identifiers. The
 
 No movie or voice-text command is recorded within these captured conversation intervals. No skip request appears in either captured interval; this is not an F8 behavior test. The earlier intro/scripted samples also used `DispText` / `DispTextMain`, and one ended through `TalkEventEndCB`. Consequently neither these display methods, the completion callback, choices nor the absence of voice establishes an ordinary-NPC classifier. The running binary still masks `_eventId` / `_blockId`; the prepared identifier fix needs deployment before comparing those values. Raw snapshots are kept locally under `.local/observations/` and are excluded from Git.
 
+### Identifiers captured after deployment: Tokomon and Nyaromon
+
+With the corrected tracing DLL active, the player reported speaking to Tokomon and Nyaromon, in that order. The following mapping is correlated with that reported order; names are not read from the game's NPC data. Times are Paris, 2026-11-02.
+
+| Reported NPC | Event / command file | Block | Captured interval |
+| --- | --- | --- | --- |
+| Tokomon | `Event/Talk/EV_TOWN_B003` | `TALK_S06` | Initialize 20:10:24.503; matching TalkEventEndCB 20:10:26.243 |
+| Nyaromon | `Event/Talk/EV_TOWN_B011` | `TALK_000` | Initialize 20:10:30.168; choice 20:10:32.989; matching callback 20:10:34.976 |
+| Nyaromon, following block | `Event/Talk/EV_TOWN_B011` | `TALK_002` | Initialize 20:10:35.027; matching callback 20:10:35.936 |
+
+Each initial block contains two `TalkMain.RotationGameModel` calls with `time=0.2`: unit 12 and player unit 0 turn toward each other in B003; unit 8 and player unit 0 turn toward each other in B011. Consecutive rotation calls are about 0.217 seconds apart. This is evidence of presentation commands inside ordinary NPC interactions; the presence of character motion alone cannot classify a story scene. The time unit and acceleration behavior still need native/runtime testing before modifying durations.
+
+Both use `TalkMain.DispText` / `DispTextMain`. No SceneMain call, movie event, tutorial event, voice-text call or skip request is recorded within these intervals. The choice disables the F8 prototype as designed. Importantly, B011 emits a completion callback for TALK_000 and then starts TALK_002: `TalkEventEndCB` can mark a block boundary within one interaction, not necessarily the end of the whole NPC conversation.
+
+The same event/block strings are now visible at initialization and completion. This validates identifier logging for these examples. It does not prove an exhaustive NPC-to-event mapping: story state and dialogue choices may select other blocks. Do not classify every `Event/Talk/` file as optional dialogue without scripted-story comparison samples. Inventory deltas immediately before these interactions coincide with loading the save and must not be interpreted as new conversation rewards.
+
 ## Tutorial windows: separate investigation (2026-11-02)
 
 The user reports that F8 does not advance the current illustrated tutorial window. During the earlier F8 test, the log records `TalkMain.IsSkip` requests at 19:53:01–02 (Paris), several text/voice commands and `TalkEventEndCB` at 19:53:06. These demonstrate dialogue processing, not that the illustrated tutorial was skipped. The existing running binary has no tutorial-specific hooks, so silence during the window cannot identify its implementation.
