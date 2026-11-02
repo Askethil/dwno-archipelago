@@ -14,5 +14,7 @@ public sealed class Plugin : BasePlugin
     public override void Load()
     {
         Log.LogInfo($"[DWNO-001] {Name} {Version} loaded successfully.");
+        if (Config.Bind("Observation", "Enabled", true, "Trace les appels ciblés sans modifier le gameplay.").Value)
+            Observation.Install(Log);
     }
 }

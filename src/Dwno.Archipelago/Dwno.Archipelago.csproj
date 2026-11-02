@@ -8,6 +8,10 @@
     <BepInExRoot Condition="'$(BepInExRoot)' == ''">$(MSBuildThisFileDirectory)../../.local/BepInEx-791/BepInEx</BepInExRoot>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExRoot)/core/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="BepInEx.Core">
       <HintPath>$(BepInExRoot)/core/BepInEx.Core.dll</HintPath>
       <Private>false</Private>
