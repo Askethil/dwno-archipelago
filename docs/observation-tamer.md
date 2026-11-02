@@ -180,3 +180,16 @@ L'utilisateur annonce trois compétences de Campeur avant de passer à Marcheur.
 | `ULTIMATE_COOK` | 12 | 216 → 204 | 43 |
 
 Total observé Campeur : 25 PC. Premier mot final `00000FF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 43 compétences distinctes observées ; ne pas déduire d'achats réussis que toutes les compétences possibles du jeu sont couvertes.
+
+## Survivant → Marcheur : groupe acheté
+
+L'utilisateur confirme la fin de Marcheur avant de passer à Commandant → Ordre. Quatre apprentissages capturés à 18:41:18–23 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `HEALTH_RUNNER` | 3 | 204 → 201 | 44 |
+| `MENTAL_TRAINING` | 3 | 201 → 198 | 45 |
+| `REFRESHING_RUNNER` | 7 | 198 → 191 | 46 |
+| `HALE` | 10 | 191 → 181 | 47 |
+
+Total Marcheur : 23 PC. Premier mot final `0000FFF000000000`, second mot nul. Noms français individuels à relever dans l'interface. Le catalogue compte 47 compétences distinctes observées.
