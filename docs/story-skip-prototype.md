@@ -74,3 +74,28 @@ Local interop metadata exposes these candidates:
 `TutorialObservation` prepares five observation-only prefixes: Initialize, OnDisable, the two scenario methods above, and SetTutorialAlreadyFlag. It logs bounded script/block identifiers and scalar arguments, without reading native objects, changing skip results, changing flags or calling completion callbacks. Install failures are reported independently from the dialogue prototype. It is gated by `Observation.Enabled`. This source change requires a later deployment/restart and is **not active in the ongoing session**.
 
 For a future `SkipTutorials` option, first match opening, manual completion and seen-flag traces for the same window. Determine whether native completion can be requested while preserving scenario continuation and input restoration. Distinguish illustrated help from interactive battle/training tutorials. Merely hiding an interface, bypassing its command or marking all tutorials as seen has not been validated and is not implemented.
+
+## Movement and animation waits (2026-11-02)
+
+The user requests skipping the pauses caused by characters moving or animating during scripted scenes. The existing F8 implementation changes `TalkMain.IsSkip` only. The current log contains requests and subsequent dialogue commands, but does not trace movement or animation commands, so it cannot attribute gaps between lines to a particular action.
+
+Local interop metadata identifies these presentation paths:
+
+| Command | Available arguments | What remains unknown |
+| --- | --- | --- |
+| `TalkMain.MoveModel` | id, pos, roty, time, no, key | Time unit, interpolation and completion behavior |
+| `TalkMain.AnimationModel` | id, mtn, time, dummy3–5 | Whether time is a duration, sentinel or wait control |
+| `TalkMain.MoveGameModel` | unit_id, pos, dummy2–5 | No explicit duration; field movement completion needs investigation |
+| `TalkMain.RotationGameModel` | unit_id, target_id, time, dummy3–5 | Completion and interaction with field actors |
+| `TalkMain.MoveGameCamera` | target_id, pos, rot, time, dummy4–5 | Camera restoration and final transform |
+| `TalkMain.CameraZoom` / `FadeModel` | z/time or id/alpha/time | Presentation timing and interaction with parallel tasks |
+| `TalkMain.Wait` | dummy0–5 | Which argument encodes the wait and in what units |
+| `SceneMain` | Initialize, StartScene, EndScene, AnimationModel | Separate 3D scene player, with cut/frame/Animator fields; no dedicated IsSkip found in its declared methods |
+
+The dump also shows `TalkMain.MoveModel` as a coroutine state machine with a string `time` field. Method signatures and field names do not establish native behavior. A command-call timestamp is not the start/end time of its coroutine. Do not replace an enumerator with an empty one: that could omit final positions or cleanup. Do not zero durations or signal completion without understanding the command.
+
+`StoryPresentationObservation` prepares 15 observation-only prefixes for these paths plus `TalkMain.Initialize` to retain command-file/block context, and `SceneMain.DispText` / `PlayVoiceText` to identify the dialogue player in use. It records bounded, single-line presentation arguments and omits string arguments for these two dialogue methods. No dialogue bodies, per-frame updates, shared coroutine stubs, field actor AI or native object contents are logged. It is enabled with `Observation.Enabled`; patch failures are reported separately from the dialogue prototype. It changes neither arguments nor return values. **The source is compiled but requires a later deployment/restart; these hooks are not in the ongoing session.**
+
+The user describes animated 3D character vignettes with dialogue overlays. This is compatible with SceneMain, but TalkMain also has 3D actor/camera commands. Visual appearance alone cannot establish which player handles this particular scene. Compare the new entry-point traces before selecting an acceleration strategy.
+
+Next comparison: enter the same scene normally and with F8, correlate presentation calls with dialogue and scenario completion, identify timed versus condition-based waits, then test a narrowly scoped acceleration path. Verify final actor/camera positions, returned controls, choices, expected rewards/flags and save/reload. No movement/animation acceleration option is implemented or runtime-validated yet; global timeScale acceleration is not part of this experiment.

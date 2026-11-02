@@ -25,6 +25,7 @@ public sealed class Plugin : BasePlugin
         {
             Observation.Install(Log);
             TutorialObservation.Install(Log);
+            StoryPresentationObservation.Install(Log);
             SnapshotMonitor.Initialize(Log);
             AddComponent<SnapshotMonitor>();
         }
