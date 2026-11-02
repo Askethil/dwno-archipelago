@@ -16,6 +16,8 @@ public sealed class Plugin : BasePlugin
         Log.LogInfo($"[DWNO-001] {Name} {Version} loaded successfully.");
         if (Config.Bind("Catalog", "ExportItems", true, "Exporte une fois la table des objets et leurs noms localisés, sans modifier le jeu.").Value)
             AddComponent<ItemCatalogExporter>();
+        if (Config.Bind("Catalog", "ExportWorld", true, "Exporte les tables ville, carte et flags en lecture seule.").Value)
+            AddComponent<WorldCatalogExporter>();
         if (Config.Bind("Observation", "Enabled", true, "Trace les appels ciblés sans modifier le gameplay.").Value)
         {
             Observation.Install(Log);
