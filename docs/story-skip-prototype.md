@@ -36,3 +36,11 @@ Recruitments and region unlocks are deliberately outside this prototype. No prom
 ## Installation checks (2026-11-02)
 
 Release build passed with zero warnings/errors. The first attempt detected that `PadManager.GetInput/GetTrigger` return the native `BUTTON` enum rather than UInt32; the incomplete patch set was removed automatically. The corrected version closes a typed generic postfix over the actual enum and validates signatures. Startup then reported `installed=18 failed=0 enabled=False`; the process remained responding. This validates installation only. Native skip behavior, callbacks, input restoration and save progression still require user tests.
+
+## First dialogue test (2026-11-02)
+
+The user reports that holding F8 appeared to advance the dialogue. Logs correlate with this observation: prototype enabled at 19:48:50 (Paris), `REQUEST_SKIP via=TalkMain.IsSkip` at 19:48:52 and 19:48:55, followed by `CScenarioScript.TalkEventEndCB` at 19:48:56. Dialogue progression and a scenario completion callback are therefore observed for this test. This does not yet validate every dialogue, choice, reward, story flag or save/reload result.
+
+The preceding `movie02` sequence used `nativeSkipButton=0`. The prototype did not force it; `_PlayEnd` occurred at 19:48:11 and `TalkEventEndCB` at 19:48:14. This is evidence of natural completion, not successful video skipping. A separate path for this sequence remains to be studied.
+
+Next tests: a dialogue with choices, restored movement/camera after the completed dialogue, and persistence of expected story progress. Keep videos with zero skip masks unsupported until their completion path has been validated.
