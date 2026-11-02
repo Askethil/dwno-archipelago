@@ -136,3 +136,16 @@ After the player saved and closed the game, the previous session log was preserv
 Both `TutorialMain.OnDisable` and `SceneMain.EndScene` are excluded. Optional tutorial/presentation traces now use `InteropTraceGuard`: resolve a unique generated MethodInfo pointer field, require a native entry inside GameAssembly.dll, reject recognized trivial return stubs and entries already reserved by another optional trace. This screening is tied to this Unity 2019 IL2CPP layout and is conservative, not a complete shared-entry/ABI verification. A method that cannot be resolved is skipped rather than patched. The excluded EndScene method was not reintroduced to test the guard.
 
 The corrected deployment built with zero warnings/errors and started at 20:08:42 (Paris). Logs reported `STORY installed=18 failed=0`, `TUTORIAL installed=4 skipped=0 failed=0`, and `PRESENTATION installed=14 skipped=0 failed=0`, followed by chainloader completion, snapshot heartbeat and successful catalogue exports. The process was responding. These are startup/installation checks, not validation of every hook during gameplay or animation skipping. Scenario identifiers, tutorial observation and the 14 presentation traces are now deployed; older sections referring to masked identifiers describe the previous session. F8 acceleration of animations and suppression of tutorial windows remain unimplemented.
+
+## Intro replay: timed camera commands and waits (2026-11-02)
+
+The player restarted the intro with the corrected tracing DLL. Times below are Paris:
+
+- 20:13:17.881: `TalkMain.Initialize(Event/Talk/EV_MIN_1000, EVENT1)`, followed by movie02 at 20:13:18.604. Movie completion at 20:13:32.849, then `TalkMain.Wait(dummy0=1)` and a matching scenario callback for EVENT1 at 20:13:36.007.
+- 20:13:36.057: `TalkMain.Initialize(Event/Talk/EV_START, EVENT010)`. This is a confirmed intro context inside TalkMain, not proof of SceneMain involvement.
+- 20:13:36.311: `MoveGameCamera(time=2)`, next `Wait(dummy0=1)` at 20:13:38.329; then another camera command at 20:13:39.331 with `time=3`, followed by `Wait(dummy0=2)` at 20:13:42.349 and dialogue at 20:13:44.354.
+- 20:13:48.208: `REQUEST_SKIP via=TalkMain.IsSkip`, followed by `MoveGameCamera(time=1)` at 20:13:48.210 and `Wait(dummy0=1)` at 20:13:49.225. The prototype is toggled off at 20:13:50.004 and back on at 20:13:53.601. More camera commands follow with times 2, 0.2, 0.5 and 0.15.
+
+The player reports F8 appearing ineffective. The trace confirms at least one dialogue skip request, while presentation commands still consume time. For these sampled commands, observed intervals closely match seconds encoded in camera `time` and Wait `dummy0`; this supports a timed-wait hypothesis for these examples, not every argument value or command variant. Do not reinterpret existing zero durations or negative/special values without investigation. A future scoped duration adjustment could target these commands, but no adjustment has been implemented or tested yet.
+
+Both ordinary NPC files and this intro use the `Event/Talk/` directory and TalkMain. Neither directory prefix, 3D presentation nor TalkMain alone is a story/NPC classifier. Retain full file/block identifiers and explicitly verified contexts when designing automatic behavior. The running session is left uninterrupted for further tutorial and animation observations.
