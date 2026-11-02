@@ -6,6 +6,15 @@ Ajoute des traces sur `PlayerData.AddMoney` et `SetMoney` et une lecture de `Pla
 
 Ces méthodes peuvent être appelées pendant un chargement ; leur nom ne prouve ni un gain de récompense, ni une transaction boutique. Aucun ajout/retrait d'argent n'est effectué par le plugin.
 
+### Essai Bits confirmé le 2 novembre 2026
+
+L'utilisateur annonce successivement 435 615, 434 615 puis 437 465 Bits. Le journal concorde :
+
+- 18:19:30 (Paris) : `SetMoney(UInt32) money=434615`, puis relevé `435615 → 434615`, delta `-1000`.
+- 18:20:01 (Paris) : `SetMoney(UInt32) money=437465`, puis relevé `434615 → 437465`, delta `+2850`.
+
+`SetMoney` est donc effectivement appelé lors de ces deux changements de solde. Aucun appel à `AddMoney` n'est capturé pour ces opérations. Leur origine exacte n'a pas été déclarée : ne pas les qualifier automatiquement d'achat ou de vente. Le relevé antérieur `0 → 435615` correspond à l'apparition du solde après le menu/chargement, pas à un gain validé de 435 615 Bits. La valeur de référence initiale de 433 740 Bits n'a pas été observée dans cette session.
+
 ## Relevés enrichis actifs
 
 Un composant Unity effectue une lecture toutes les 500 ms sur le thread principal. Il compare les listes de `StorageData.m_ItemStorageData.m_itemDataListTbl` et journalise uniquement les différences par catégorie de stockage et ID d'objet (`before`, `after`, `delta`). Le panneau de ramassage est relevé lorsqu'il change : état, point ciblé, ID du point et liste des récompenses. Aucun patch d'inventaire supplémentaire, aucune écriture dans les données du jeu.
