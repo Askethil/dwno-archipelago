@@ -79,3 +79,16 @@ L'utilisateur confirme la fin de Porteur avant de passer à Inverse. Quatre appr
 | `MAX_CARRY` | 15 | 199 → 184 | 11 |
 
 Total Porteur : 40 PC. Premier mot final `0000000000000FFE`, second mot nul. Noms français individuels à relever dans l'interface.
+
+## Basique → Inverse : groupe acheté
+
+L'utilisateur confirme la fin d'Inverse avant de passer à Entraîneur → Professeur. Quatre apprentissages capturés à 18:34:20–24 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `DEJITAMA_SHINE` | 3 | 184 → 181 | 12 |
+| `PASSION_INJECTION` | 7 | 181 → 174 | 13 |
+| `LOVE_INJECTION` | 10 | 174 → 164 | 14 |
+| `BLESSING_HEAVEN` | 12 | 164 → 152 | 15 |
+
+Total Inverse : 32 PC. Premier mot final `000000000000FFFE`, second mot nul. Noms français individuels à relever dans l'interface. Les quatre groupes Basique observés totalisent 117 PC dépensés, de 269 à 152 PC.
