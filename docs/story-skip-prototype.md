@@ -149,3 +149,27 @@ The player restarted the intro with the corrected tracing DLL. Times below are P
 The player reports F8 appearing ineffective. The trace confirms at least one dialogue skip request, while presentation commands still consume time. For these sampled commands, observed intervals closely match seconds encoded in camera `time` and Wait `dummy0`; this supports a timed-wait hypothesis for these examples, not every argument value or command variant. Do not reinterpret existing zero durations or negative/special values without investigation. A future scoped duration adjustment could target these commands, but no adjustment has been implemented or tested yet.
 
 Both ordinary NPC files and this intro use the `Event/Talk/` directory and TalkMain. Neither directory prefix, 3D presentation nor TalkMain alone is a story/NPC classifier. Retain full file/block identifiers and explicitly verified contexts when designing automatic behavior. The running session is left uninterrupted for further tutorial and animation observations.
+
+## Illustrated tutorial: opening and normal completion captured
+
+During the intro replay, the player identified the illustrated tutorial window. The same-session trace now establishes a dedicated path (Paris times, 2026-11-02):
+
+| Time | Observed call |
+| --- | --- |
+| 20:14:46.175 | `CScenarioScript.TalkEventEndCB(Event/Talk/EV_MIN_1000, EVENT2)` |
+| 20:14:46.179 | `CScenarioScript.CmdExeStartTutorialUI(_vrec=<SCsvbVRecAccessInfo>)` |
+| 20:14:46.183 | `TutorialMain.Initialize(command_csv_name=event/tutorial/EV_TUTORIAL_000, block_name=null)` |
+| 20:14:46.185 | Inherited `TalkMain.Initialize` with the same file and null block |
+| 20:14:46.312 | `TalkMain.Wait(dummy0=1)` |
+| 20:14:47.348 onward | `TalkMain.DispText` / `DispTextMain`, repeated as tutorial pages advance |
+| 20:15:09.451 | `CScenarioScript.TutorialUiEndCB()` |
+
+No `SetTutorialAlreadyFlag` call or tutorial skip request is present within this captured interval. Do not assume that a seen flag was written through the monitored method. The command record is intentionally opaque, so a numeric tutorial UI ID is not decoded. The file identifier is available and usable as an observed example; the mapping is not a complete tutorial catalogue.
+
+The dedicated TutorialMain initializer and TutorialUiEndCB distinguish this sample from the ordinary NPC interactions captured earlier. The shared text methods alone do not. Metadata shows that TutorialMain declares its own IsSkip override, while the prototype currently patches TalkMain.IsSkip only. This is a plausible explanation for F8 failing on this window, but the override's native implementation and whether it shares a native stub have not been verified. Do not patch it blindly, especially after the EndScene trampoline failure.
+
+This provides a baseline for a future tutorial skip option: identify this context, find a safe native advancement path, retain normal tutorial completion and verify control/scenario continuation. Directly invoking TutorialUiEndCB, hiding the UI, or marking all tutorials seen remains unimplemented. The observed end callback is from the current unmodified tutorial flow, not evidence that skipping works.
+
+### Additional intro animation evidence
+
+In `Event/Talk/EV_MIN_1000`, block EVENT2, the replay records `AnimationModel` with `time=-1` and `MoveModel` with `time=-0.5` (model IDs include PLAYR, MUGED, WOGUR and METAG), interleaved with fades, voice/text and positive Wait values. These concrete negative values must not be treated as ordinary positive durations or blindly clamped. No SceneMain call is recorded in this captured segment: these particular 3D character vignettes are being driven through TalkMain commands. This does not establish that SceneMain is unused elsewhere in the game.
