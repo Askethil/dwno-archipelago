@@ -121,3 +121,16 @@ L'utilisateur confirme la fin de Soins vitaux avant de passer à Évolution. Cin
 | `LIFE_MASTER` | 12 | 100 → 88 | 26 |
 
 Total Soins vitaux : 24 PC. Premier mot final `0000000007FFFFFE`, second mot nul. Noms français individuels à relever dans l'interface.
+
+## Entraîneur → Évolution : groupe acheté
+
+L'utilisateur confirme la fin d'Évolution. Quatre apprentissages capturés à 18:37:26–30 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé |
+| --- | --- | --- | --- |
+| `GOOD_EVOLUTION` | 5 | 88 → 83 | 27 |
+| `EVOLUTION_PROMOTION` | 5 | 83 → 78 | 28 |
+| `EVOLUTION_VETERAN` | 8 | 78 → 70 | 29 |
+| `GREAT_EVOLUTION` | 15 | 70 → 55 | 30 |
+
+Total Évolution : 33 PC. Premier mot final `000000007FFFFFFE`, second mot nul. Noms français individuels à relever dans l'interface. Depuis le reset, 30 apprentissages sont documentés, pour 214 PC dépensés (269 → 55).
