@@ -64,9 +64,11 @@ The player identified two conversations during the same session (times in Paris,
 | Player-identified NPC | Captured trace | Completion |
 | --- | --- | --- |
 | Koromon | `TalkMain.DispText` then `DispTextMain` at 20:03:34.175 | `CScenarioScript.TalkEventEndCB` at 20:03:35.589 |
-| Tokomon | `TalkMain.DispText` then `DispTextMain` at 20:03:52.459 | Not yet present in the first captured snapshot |
+| Tokomon | `TalkMain.DispText` then `DispTextMain` at 20:03:52.459; later text at 20:04:28.162 and `DispChoices` at 20:04:28.956 | Next `CScenarioScript.TalkEventEndCB` at 20:04:31.769 |
 
-The NPC names come from the player's reports, not decoded event identifiers. No movie, voice-text or choice command is recorded within these captured conversation intervals. No skip request appears in either captured interval; this is not an F8 behavior test. The earlier intro/scripted samples also used `DispText` / `DispTextMain`, and one ended through `TalkEventEndCB`. Consequently neither these display methods, the completion callback nor the absence of voice establishes an ordinary-NPC classifier. The running binary still masks `_eventId` / `_blockId`; the prepared identifier fix needs deployment before comparing those values. Raw snapshots are kept locally under `.local/observations/` and are excluded from Git.
+The NPC names come from the player's reports, not decoded event identifiers. The Tokomon interval is correlated by timing, with no intervening recorded completion before 20:04:31.769. A choice disables the prototype at 20:04:28.956, then text continues. At 20:04:32.794, `ItemStorageData.AddItemPlayer(2278877539, 10)` is followed by an inventory delta 0→10 at 20:04:33.047. The English catalogue resolves this ID to **Meat**. This establishes an item grant following the dialogue; it does not by itself establish a unique NPC/reward trigger.
+
+No movie or voice-text command is recorded within these captured conversation intervals. No skip request appears in either captured interval; this is not an F8 behavior test. The earlier intro/scripted samples also used `DispText` / `DispTextMain`, and one ended through `TalkEventEndCB`. Consequently neither these display methods, the completion callback, choices nor the absence of voice establishes an ordinary-NPC classifier. The running binary still masks `_eventId` / `_blockId`; the prepared identifier fix needs deployment before comparing those values. Raw snapshots are kept locally under `.local/observations/` and are excluded from Git.
 
 ## Tutorial windows: separate investigation (2026-11-02)
 
