@@ -23,6 +23,8 @@ internal static class Observation
             var targets = new[] {
                 ("ItemStorageData", "AddItemPlayer"),
                 ("ItemStorageData", "_AddMaterialOrKeyItem"),
+                ("PlayerData", "AddMoney"),
+                ("PlayerData", "SetMoney"),
                 ("uItemPickPanel", "PickItem"),
                 ("uItemPickPanel", "PickDefault"),
                 ("uItemPickPanel", "PickMaterial")
@@ -49,7 +51,7 @@ internal static class Observation
                     catch (Exception ex) { failed++; log.LogError($"[OBS] PATCH_FAILED {typeName}.{methodName}: {ex}"); }
                 }
             }
-            log.LogInfo($"[OBS] READY revision=5 installed={installed} failed={failed}; timestamps=UTC; no gameplay changes.");
+            log.LogInfo($"[OBS] READY revision=6 installed={installed} failed={failed}; timestamps=UTC; no gameplay changes.");
         }
         catch (Exception ex) { log.LogError($"[OBS] INIT_FAILED {ex}"); }
     }

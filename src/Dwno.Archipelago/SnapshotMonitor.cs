@@ -17,6 +17,7 @@ public sealed class SnapshotMonitor : MonoBehaviour
     private Dictionary<string, long>? previous;
     private string? previousPanel;
     private string? slot;
+    private long? previousMoney;
     private DateTime nextSample;
     private DateTime nextHeartbeat;
     private int failures;
@@ -45,10 +46,21 @@ public sealed class SnapshotMonitor : MonoBehaviour
             {
                 previous = null;
                 previousPanel = null;
+                previousMoney = null;
                 return;
             }
             var currentSlot = Scalar(Get(storageType!, null, "m_saveSlot"));
-            if (slot != currentSlot) { previous = null; previousPanel = null; slot = currentSlot; }
+            if (slot != currentSlot) { previous = null; previousPanel = null; previousMoney = null; slot = currentSlot; }
+            var moneyValue = Get(player.GetType(), player, "m_Money");
+            if (moneyValue is not null)
+            {
+                var money = Convert.ToInt64(moneyValue, CultureInfo.InvariantCulture);
+                if (previousMoney is null)
+                    log?.LogInfo($"[SNAP] {now:O} MONEY_BASELINE slot={slot} bits={money}");
+                else if (money != previousMoney.Value)
+                    log?.LogInfo($"[SNAP] {now:O} MONEY slot={slot} before={previousMoney.Value} after={money} delta={money - previousMoney.Value}");
+                previousMoney = money;
+            }
             var current = Inventory(inventory);
             if (previous is null)
                 log?.LogInfo($"[SNAP] {now:O} BASELINE slot={slot} entries={current.Count}");

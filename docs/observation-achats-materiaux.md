@@ -1,5 +1,11 @@
 # Essai : achats et ramassage de matériaux
 
+## Suivi des Bits — révision 6
+
+Ajoute des traces sur `PlayerData.AddMoney` et `SetMoney` et une lecture de `PlayerData.m_Money` par le moniteur. `MONEY_BASELINE` contient le solde initial ; `MONEY` les variations constatées. Les hooks indiquent le montant passé à la méthode ; seule la comparaison du solde montre la variation nette. Au déploiement, attendre `READY revision=6 installed=7 failed=0`, puis confirmer le solde après chargement de la sauvegarde. Valeur de référence déclarée par l'utilisateur avant déploiement : **433 740 Bits**.
+
+Ces méthodes peuvent être appelées pendant un chargement ; leur nom ne prouve ni un gain de récompense, ni une transaction boutique. Aucun ajout/retrait d'argent n'est effectué par le plugin.
+
 ## Relevés enrichis actifs
 
 Un composant Unity effectue une lecture toutes les 500 ms sur le thread principal. Il compare les listes de `StorageData.m_ItemStorageData.m_itemDataListTbl` et journalise uniquement les différences par catégorie de stockage et ID d'objet (`before`, `after`, `delta`). Le panneau de ramassage est relevé lorsqu'il change : état, point ciblé, ID du point et liste des récompenses. Aucun patch d'inventaire supplémentaire, aucune écriture dans les données du jeu.

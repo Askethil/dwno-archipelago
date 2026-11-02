@@ -4,6 +4,7 @@ Les symboles ci-dessous sont repérés statiquement dans les interop locaux. Ils
 
 | Besoin | Symboles / données repérés | Validation nécessaire |
 | --- | --- | --- |
+| Bits du joueur | `PlayerData.GetMoney`, `SetMoney(money)`, `AddMoney(money)`, `m_Money` | Comparer le solde lu à l'écran, puis un gain et une dépense ; distinguer chargement, montant demandé et montant réellement appliqué |
 | Objets et matériaux du joueur | `StorageData.m_ItemStorageData`, `ItemStorageData.m_itemDataListTbl`, `ItemData.m_itemID/m_itemNum` | Identifier les catégories joueur, réserve, matériaux et objets-clés ; capacités et limites |
 | Ramassage | `uItemPickPanel.PickItem/PickDefault/PickMaterial`, `m_targetItemPickPoint`, `m_itemIds` | Point stable et crédit réussi ; une source peut donner plusieurs récompenses |
 | Achats et ventes | `uShopPanel.Open/Close`, `Setup(open_shop_type, seller_no)`, `uShopPanelItem`, `uShopPanelNumChange` | Identifier la confirmation de transaction, le prix et les cas d'annulation ; corréler avec les deltas d'inventaire |
