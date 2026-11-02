@@ -5,9 +5,22 @@
     <RootNamespace>Dwno.Archipelago</RootNamespace>
     <Version>0.1.0</Version>
     <Nullable>enable</Nullable>
+    <GameInteropRoot Condition="'$(GameInteropRoot)' == ''">$(MSBuildThisFileDirectory)../../.local/interop</GameInteropRoot>
     <BepInExRoot Condition="'$(BepInExRoot)' == ''">$(MSBuildThisFileDirectory)../../.local/BepInEx-791/BepInEx</BepInExRoot>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameInteropRoot)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(GameInteropRoot)/Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(BepInExRoot)/core/Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="0Harmony">
       <HintPath>$(BepInExRoot)/core/0Harmony.dll</HintPath>
       <Private>false</Private>
@@ -23,5 +36,6 @@
   </ItemGroup>
   <Target Name="CheckBepInEx" BeforeTargets="ResolveReferences">
     <Error Condition="!Exists('$(BepInExRoot)/core/BepInEx.Unity.IL2CPP.dll')" Text="BepInEx IL2CPP absent : fournir -p:BepInExRoot=CHEMIN/BepInEx." />
+    <Error Condition="!Exists('$(GameInteropRoot)/UnityEngine.CoreModule.dll') Or !Exists('$(GameInteropRoot)/Il2Cppmscorlib.dll')" Text="Interop Unity absents : lancer le jeu avec BepInEx, puis scripts/dev.ps1 Setup -GamePath CHEMIN." />
   </Target>
 </Project>

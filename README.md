@@ -6,6 +6,8 @@ Début d'intégration pour la version Windows IL2CPP. Le plugin actuel écrit se
 
 Pour préparer et utiliser l'environnement reproductible (SDK verrouillé, configuration locale, déploiement avec sauvegarde et contrôle des logs), suivre [DWNO-001 — Environnement](docs/DWNO-001-environnement.md).
 
+La branche d'observation nécessite aussi les interop Unity locaux : après le premier lancement BepInEx, relancer `./scripts/dev.ps1 Setup` pour les copier dans `.local/interop`. Le plugin d'observation relève les variations d'inventaire et les changements du panneau sur le thread Unity. Voir [les essais](docs/observation-achats-materiaux.md) et [le périmètre des hooks](docs/perimetre-hooks.md).
+
 ```powershell
 ./scripts/dev.ps1 Doctor
 ./scripts/dev.ps1 Build

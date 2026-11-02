@@ -1,5 +1,17 @@
 # Essai : achats et ramassage de matériaux
 
+## Relevés enrichis actifs
+
+Un composant Unity effectue une lecture toutes les 500 ms sur le thread principal. Il compare les listes de `StorageData.m_ItemStorageData.m_itemDataListTbl` et journalise uniquement les différences par catégorie de stockage et ID d'objet (`before`, `after`, `delta`). Le panneau de ramassage est relevé lorsqu'il change : état, point ciblé, ID du point et liste des récompenses. Aucun patch d'inventaire supplémentaire, aucune écriture dans les données du jeu.
+
+`BASELINE` marque la première lecture ou un changement de slot ; `HEARTBEAT` toutes les 30 secondes confirme le fonctionnement. Trois erreurs de lecture consécutives désactivent le relevé pour la session avec `DISABLED`. Limites : une variation aller-retour dans les 500 ms peut être invisible ; les différences lors d'un chargement ne doivent pas être interprétées comme une récompense. Un ajout/retrait ne prouve pas une origine boutique. Les index de stockage ne sont pas encore nommés. Le relevé ne garantit pas que les matériaux déposés ailleurs soient couverts.
+
+Le moniteur nécessite les interop locaux `UnityEngine.CoreModule.dll` et `Il2Cppmscorlib.dll` dans `.local/interop`, copiés par `Setup` après le premier lancement BepInEx. Ils ne sont pas publiés. Les hooks d'événement restent ceux de la révision 5 ci-dessous.
+
+### Essai enrichi confirmé
+
+Le 2 novembre 2026 à 17:52:38 (Paris), après `PickItem → PickMaterial`, le relevé indique `storage=2 itemId=3712439181 before=0 after=4 delta=4`. Le point ciblé est `3514050198` ; `itemIds` contient quatre occurrences de `3712439181`. L'utilisateur confirme avoir ramassé **4 Digibois blancs**. L'association ID/nom est donc corrélée à cet essai ; elle reste à confirmer sur d'autres occurrences. Le `point.itemId` observé était différent (`3712439177`) : ne pas le confondre avec la récompense finale.
+
 ## Révision active : 5
 
 La configuration actuelle conserve les quatre cibles de la première session et `uItemPickPanel.PickItem`, avec horodatages UTC et signatures. Attendu : `READY revision=5 installed=5 failed=0`. L'injection `__instance` et la lecture de contexte ont été retirées après les crashs ; aucune donnée de point n'est actuellement collectée.
