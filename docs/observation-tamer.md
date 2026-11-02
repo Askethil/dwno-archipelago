@@ -35,3 +35,9 @@ Cette branche est basée sur `codex/observation-achats-materiaux` et sa PR doit 
 Le reset et le remboursement sont donc observés sur cet essai. Aucun appel à `SetLearningSkillFlag` ni `SetSkillPoint` n'est nécessairement impliqué : les traces du reset montrent surtout les remboursements via `AddSkillPoint` et l'effacement final des flags. L'apprentissage reste à tester.
 
 Le coût annoncé de 10 000 Bits n'apparaît pas dans le journal capturé à cette étape : le solde chargé était 435 615 Bits, sans nouvelle variation `MONEY` ni appel d'argent pendant le reset. Ne pas déclarer le paiement confirmé.
+
+## Apprentissage observé : Hausse d'humeur
+
+À 18:29:49 (Paris), l'utilisateur apprend **Basique → Friandises → Hausse d'humeur**, coût déclaré 3 PC. Les traces montrent successivement `SetLearningSkillFlag(skill=MOOD_UP, flag=True)` puis `AddSkillPoint(addPoint=-3)`. Le relevé confirme `269 → 266 PC`, niveau 41 inchangé, flags `[0,0] → [0000000000000002,0]` (bit 1 du premier mot activé).
+
+La correspondance `Hausse d'humeur ↔ MOOD_UP` et la dépense de 3 PC sont corrélées à cet essai. L'apprentissage observé comporte deux opérations distinctes : activer le flag puis dépenser les points. Le mod ne déclenche aucune de ces opérations. Une future attribution Archipelago devra définir explicitement si elle consomme des PC et comment elle gère prérequis, effets et doublons.
