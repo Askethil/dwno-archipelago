@@ -1,5 +1,7 @@
 # Observation des compétences du dresseur
 
+Le [catalogue consolidé](tamer-skills-catalogue.md) présente les 71 compétences observées par arbre et sous-groupe. Ce document conserve les détails chronologiques des essais ; les données structurées sont dans `data/tamer-skills.json`.
+
 Objectif : cartographier les événements et leurs effets, sans modifier les compétences, points ou Bits depuis le mod.
 
 ## Candidats repérés dans les interop locaux
@@ -250,3 +252,15 @@ L'utilisateur confirme la fin de Gains avant de passer à Apprentissage. Quatre 
 | `DROP_MASTER` | 15 | 55 → 40 | 68 |
 
 Total Gains : 33 PC. Flags finaux `[FFFFFFF000000000,000000000000001F]`. Noms français individuels à relever dans l'interface. Le catalogue compte 68 compétences distinctes observées.
+
+## Commandant → Apprentissage : groupe acheté
+
+L'utilisateur confirme la fin d'Apprentissage. Trois apprentissages capturés à 18:45:33–36 (Paris), chacun par activation du flag puis dépense via `AddSkillPoint` :
+
+| Nom interne | Coût PC | PC avant → après | Bit activé (index global) |
+| --- | --- | --- | --- |
+| `OBSERVATION_TRICKS` | 3 | 40 → 37 | 69 |
+| `KNOWLEDGE_EXPERIENCE` | 5 | 37 → 32 | 70 |
+| `RESEARCH_SKILLS` | 15 | 32 → 17 | 71 |
+
+Total Apprentissage : 23 PC. Flags finaux `[FFFFFFF000000000,00000000000000FF]`. Noms français individuels à relever dans l'interface. Le catalogue compte 71 compétences distinctes observées, pour un coût cumulé de 500 PC sur deux séries de reset (248 + 252). Le solde final de cette deuxième série est de 17 PC.

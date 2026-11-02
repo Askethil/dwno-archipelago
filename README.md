@@ -41,6 +41,9 @@ SHA-256 de l'archive téléchargée (empreinte locale de traçabilité, pas sign
 
 ## Organisation
 
+- [Catalogue du dresseur](docs/tamer-skills-catalogue.md) : 71 compétences observées, noms internes, coûts, flags et correspondances FR/EN des arbres.
+- [Données structurées](data/tamer-skills.json) et [journal des essais](docs/observation-tamer.md).
+
 - `src/` : plugin C#.
 - `docs/DWNO-002-recherche.md` : rapport sourcé et premières pistes.
 - `.local/` et `research/` : dépendances et références locales ignorées.
