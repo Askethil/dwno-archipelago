@@ -11,3 +11,17 @@ Observations du 2 novembre 2026, version française du jeu. Les noms sont décla
 | `2240728254` | Disque moyen | À relever | Vente de 5 : 20 → 15 |
 
 Les catégories `storage=0` et `storage=2` sont des index de listes encore à cartographier complètement. Les observations correspondent respectivement aux objets et matériaux de ces essais, sans garantir que tous les cas soient couverts.
+
+## Correspondances anglaises extraites
+
+L'export de la table générale en anglais confirme les noms associés aux mêmes IDs :
+
+| ID | Nom anglais du jeu |
+| --- | --- |
+| `3712439181` | DigiWhitewood |
+| `2228544683` | Rolly Fruit |
+| `3561916298` | Attack Plugin S |
+| `3561916297` | Attack Plugin |
+| `2240728254` | Medium Recovery Disk |
+
+Ces libellés proviennent de `ParameterItemData.GetName()` en langue `_en`, sans traduction manuelle. Voir le [catalogue complet](game-items.en.md).

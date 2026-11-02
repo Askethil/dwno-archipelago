@@ -1,0 +1,6692 @@
+{
+  "schemaVersion": 1,
+  "exportedAtUtc": "2026-11-02T18:00:08.6598841Z",
+  "languageCode": "en",
+  "sourceLanguageCode": "_en",
+  "source": "AppMainScript.parameterManager.itemData.m_params",
+  "coverage": "Loaded base item table only; pool eligibility and full coverage require review.",
+  "poolStatus": "unreviewed; not an Archipelago reward pool",
+  "kindLabels": [
+    "Battle",
+    "Evolution",
+    "Other",
+    "Recovery",
+    "Food",
+    "Material",
+    "KeyItem"
+  ],
+  "classLabels": [
+    "Battle",
+    "Usually",
+    "GeneralPurpose",
+    "Meal"
+  ],
+  "counts": {
+    "rows": 740,
+    "missingNames": 0,
+    "uniqueIds": 740,
+    "duplicateIds": 0
+  },
+  "items": [
+    {
+      "gameId": 354103372,
+      "nameEn": "ランゲージが見つかりません！！",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": -9999,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3561916288,
+      "nameEn": "Utility Plugin S",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 35,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 3561916289,
+      "nameEn": "Utility Plugin X",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 36,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 3561916297,
+      "nameEn": "Attack Plugin",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 28,
+      "basePrice": 100
+    },
+    {
+      "gameId": 3561916298,
+      "nameEn": "Attack Plugin S",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 29,
+      "basePrice": 500
+    },
+    {
+      "gameId": 3561916299,
+      "nameEn": "Attack Plugin X",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 30,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 3561916300,
+      "nameEn": "Defense Plugin",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 31,
+      "basePrice": 100
+    },
+    {
+      "gameId": 3561916301,
+      "nameEn": "Defense Plugin S",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 32,
+      "basePrice": 500
+    },
+    {
+      "gameId": 3561916302,
+      "nameEn": "Defense Plugin X",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 33,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 3561916303,
+      "nameEn": "Utility Plugin",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 34,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 3578694008,
+      "nameEn": "Defense Booster X",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 40,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 3578694009,
+      "nameEn": "Defense Booster S",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 39,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 3578694010,
+      "nameEn": "Attack Booster X",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 38,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 3578694011,
+      "nameEn": "Attack Booster S",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 37,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 3578694014,
+      "nameEn": "Utility Booster X",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 42,
+      "basePrice": 7500
+    },
+    {
+      "gameId": 3578694015,
+      "nameEn": "Utility Booster S",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 41,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 3595471590,
+      "nameEn": "Full Remedy Holo-Disk",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 25,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 3595471591,
+      "nameEn": "Regen Disk",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 26,
+      "basePrice": 500
+    },
+    {
+      "gameId": 3595471592,
+      "nameEn": "Full Remedy Disk",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 23,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 3595471593,
+      "nameEn": "Remedy Holo-Disk",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 24,
+      "basePrice": 500
+    },
+    {
+      "gameId": 3595471595,
+      "nameEn": "Remedy Disk",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 22,
+      "basePrice": 250
+    },
+    {
+      "gameId": 3612249153,
+      "nameEn": "Super Regen Disk",
+      "kindValue": 0,
+      "kind": "Battle",
+      "classValue": 0,
+      "sortId": 27,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 182364374,
+      "nameEn": "Pernicite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 249,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 199141952,
+      "nameEn": "Dracoferocetine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 233,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141953,
+      "nameEn": "Draconite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 232,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141960,
+      "nameEn": "Lunadivine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 228,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141961,
+      "nameEn": "Swordivine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 227,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141962,
+      "nameEn": "Heropotentatine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 230,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141963,
+      "nameEn": "Shadracotine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 229,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141964,
+      "nameEn": "Crenasolarine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 246,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 199141965,
+      "nameEn": "Sollupusine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 231,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 199141966,
+      "nameEn": "Eddimansine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 248,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 199141967,
+      "nameEn": "Crenaspine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 247,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2346824354,
+      "nameEn": "Machinimarine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 201,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2346824355,
+      "nameEn": "Magiforcepine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 202,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2346824357,
+      "nameEn": "Incurimagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 204,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2346824358,
+      "nameEn": "Fortimagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 205,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2346824359,
+      "nameEn": "Dracaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 206,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2346824360,
+      "nameEn": "Larvidivine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 207,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2346824361,
+      "nameEn": "Duraesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 208,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601936,
+      "nameEn": "Negrilupine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 212,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601937,
+      "nameEn": "Purinegrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 211,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601938,
+      "nameEn": "Cranaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 210,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601939,
+      "nameEn": "Arcaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 209,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601940,
+      "nameEn": "Supersimine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 216,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601941,
+      "nameEn": "Auctimaline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 215,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601942,
+      "nameEn": "Hederafoline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 214,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601943,
+      "nameEn": "Immiscechaosine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 213,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601946,
+      "nameEn": "Locicoeline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 218,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2363601947,
+      "nameEn": "Impudentine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 217,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379520,
+      "nameEn": "Justivine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 185,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379522,
+      "nameEn": "Tenebrivirine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 183,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379523,
+      "nameEn": "Cupidimagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 184,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379525,
+      "nameEn": "Indicaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 182,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379526,
+      "nameEn": "Veneficiflorine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 179,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379527,
+      "nameEn": "Umbrilunine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 180,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379534,
+      "nameEn": "Pulcineline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 187,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2380379535,
+      "nameEn": "Superbimagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 188,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157232,
+      "nameEn": "Iramagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 198,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157233,
+      "nameEn": "Hatchetrambine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 197,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157240,
+      "nameEn": "Censurexine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 190,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157241,
+      "nameEn": "Hebetimpetine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 189,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157242,
+      "nameEn": "Impetimagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 192,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157243,
+      "nameEn": "Infinitine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 191,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157244,
+      "nameEn": "Supermyriadine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 194,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157246,
+      "nameEn": "Candescaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 196,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397157247,
+      "nameEn": "Invidimagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 195,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2397304272,
+      "nameEn": "Dirumpimpetice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 129,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2397304273,
+      "nameEn": "Tenebrossice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 130,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2397304274,
+      "nameEn": "Nigeribrachice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 131,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2397304275,
+      "nameEn": "Dracobrachice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 132,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2397304276,
+      "nameEn": "Blancorexice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 133,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2397304277,
+      "nameEn": "Pugnusice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 134,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2397304280,
+      "nameEn": "Caerulignice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 137,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413934820,
+      "nameEn": "Phoenixine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 167,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2413934821,
+      "nameEn": "Archangeline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 168,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2413934824,
+      "nameEn": "Fortidracine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 163,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2413934825,
+      "nameEn": "Solluxine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 164,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2413934826,
+      "nameEn": "Tormentilupine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 165,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2413934828,
+      "nameEn": "Amorostice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 159,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413934829,
+      "nameEn": "Pugnilignice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 160,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413934830,
+      "nameEn": "Mortiperditice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 161,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413934831,
+      "nameEn": "Felimagice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 162,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081856,
+      "nameEn": "Noxipretiosice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 122,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081857,
+      "nameEn": "Bellatoralice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 121,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081859,
+      "nameEn": "Extimicelerice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 119,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081860,
+      "nameEn": "Parvularmice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 126,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081861,
+      "nameEn": "Parvuliplumbice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 125,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081863,
+      "nameEn": "Nymphalice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 123,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2414081866,
+      "nameEn": "Sacramagice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 128,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2430712406,
+      "nameEn": "Sophicoeline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 178,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712407,
+      "nameEn": "Gravivestitine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 177,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712408,
+      "nameEn": "Lanceaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 176,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712410,
+      "nameEn": "Armaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 174,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712411,
+      "nameEn": "Oceadivine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 173,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712412,
+      "nameEn": "Sacradracine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 172,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712413,
+      "nameEn": "Bellaspinine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 171,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712414,
+      "nameEn": "Stiriacine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 170,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2430712415,
+      "nameEn": "Ferrigaleatine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 169,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2447490096,
+      "nameEn": "Malisarculice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 141,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2447490099,
+      "nameEn": "Tonitrulaminice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 140,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2447490101,
+      "nameEn": "Quantice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 146,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2447490107,
+      "nameEn": "Lapsapraecepice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 148,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267680,
+      "nameEn": "Auriferinice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 154,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267681,
+      "nameEn": "Arcanalaminice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 153,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267682,
+      "nameEn": "Viaplenice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 156,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267683,
+      "nameEn": "Quinquelementice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 155,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267684,
+      "nameEn": "Lupumbrice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 150,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267685,
+      "nameEn": "Machinindicice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 149,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267686,
+      "nameEn": "Lutelaminice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 152,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267687,
+      "nameEn": "Caerulicornice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 151,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267692,
+      "nameEn": "Risicoelice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 158,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2464267693,
+      "nameEn": "Malicoluberice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 157,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2531525184,
+      "nameEn": "Tonitrumagusite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 58,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525185,
+      "nameEn": "Magusalaite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 59,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525193,
+      "nameEn": "Frumentadgressite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 52,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525194,
+      "nameEn": "Porphyrinite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 53,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525195,
+      "nameEn": "Armacanisite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 54,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525196,
+      "nameEn": "Leporobscurite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 55,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525197,
+      "nameEn": "Campanavulpesite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 56,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2531525198,
+      "nameEn": "Bestiapugnite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 57,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302898,
+      "nameEn": "Dracocursite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 51,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302899,
+      "nameEn": "Felideusite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 50,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302904,
+      "nameEn": "Flagralacite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 45,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302905,
+      "nameEn": "Lupargentite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 44,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302906,
+      "nameEn": "Onychauxite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 43,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302908,
+      "nameEn": "Spinaviridite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 49,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302909,
+      "nameEn": "Cornargentite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 48,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302910,
+      "nameEn": "Galeamite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 47,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2548302911,
+      "nameEn": "Sacravestite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 46,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2565080486,
+      "nameEn": "Reliquite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 77,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2565080487,
+      "nameEn": "Pilagelumite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 78,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2565080489,
+      "nameEn": "Inanarborite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 76,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2565080490,
+      "nameEn": "Armaferrite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 73,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2565080492,
+      "nameEn": "Mareserpensite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 71,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2565080493,
+      "nameEn": "Caesaforfexite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 72,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581711010,
+      "nameEn": "Salicelerine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 234,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2581711016,
+      "nameEn": "Bestaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 221,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581711017,
+      "nameEn": "Justitaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 222,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581711018,
+      "nameEn": "Imperadracine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 219,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581711020,
+      "nameEn": "Studaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 225,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581711021,
+      "nameEn": "Magicoeline",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 226,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581711022,
+      "nameEn": "Misericordisenexine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 223,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581711023,
+      "nameEn": "Negraesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 224,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2581858048,
+      "nameEn": "Displodungulite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 61,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581858049,
+      "nameEn": "Virtumilitite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 60,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581858050,
+      "nameEn": "Animossisite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 62,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581858052,
+      "nameEn": "Ignisite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 64,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581858053,
+      "nameEn": "Leorectite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 63,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581858054,
+      "nameEn": "Holusagerite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 66,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2581858056,
+      "nameEn": "Belluite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 68,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598488596,
+      "nameEn": "Mutatinegrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 243,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488597,
+      "nameEn": "Ministerine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 242,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488600,
+      "nameEn": "Rufaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 239,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488601,
+      "nameEn": "Interitine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 238,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488602,
+      "nameEn": "Summanegrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 241,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488603,
+      "nameEn": "Summaesquetrine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 240,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488604,
+      "nameEn": "Sacrimperine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 236,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488605,
+      "nameEn": "Imperapugnine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 235,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598488607,
+      "nameEn": "Septamagine",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 237,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2598635760,
+      "nameEn": "Luparcanite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 93,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635761,
+      "nameEn": "Holurufite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 94,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635762,
+      "nameEn": "Grandimagite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 95,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635763,
+      "nameEn": "Crystallumagite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 96,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635764,
+      "nameEn": "Rubemilitite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 89,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635765,
+      "nameEn": "Aurimilitite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 90,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635766,
+      "nameEn": "Aliquaestite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 91,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635767,
+      "nameEn": "Indicungulite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 92,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635772,
+      "nameEn": "Perdepupite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 97,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2598635773,
+      "nameEn": "Ossoculite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 98,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413344,
+      "nameEn": "Ventanimite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 86,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413346,
+      "nameEn": "Felitenebrite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 84,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413347,
+      "nameEn": "Umbralaite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 83,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413348,
+      "nameEn": "Fremilupusite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 82,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413349,
+      "nameEn": "Catullargentite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 81,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413350,
+      "nameEn": "Caelamorite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 80,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413351,
+      "nameEn": "Frigusanimite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 79,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413358,
+      "nameEn": "Nymphavulpesite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 88,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2615413359,
+      "nameEn": "Protegaurite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 87,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2632190930,
+      "nameEn": "Altisolumice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 117,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190931,
+      "nameEn": "Fortunice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 118,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190936,
+      "nameEn": "Lilice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 111,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190937,
+      "nameEn": "Sacrarcice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 112,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190938,
+      "nameEn": "Rexicornice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 109,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190939,
+      "nameEn": "Maripecusice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 110,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190940,
+      "nameEn": "Geminalaminice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 115,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190941,
+      "nameEn": "Scitiferinice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 116,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2632190942,
+      "nameEn": "Dracobestiolice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 113,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2648968516,
+      "nameEn": "Argentalice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 108,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2648968517,
+      "nameEn": "Caelumagnice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 107,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2648968520,
+      "nameEn": "Feliprudentite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 104,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2648968521,
+      "nameEn": "Dracoturbidite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 103,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2648968522,
+      "nameEn": "Lupugnice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 106,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2648968523,
+      "nameEn": "Ferrumachinice",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 105,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2648968524,
+      "nameEn": "Verteconligite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 100,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2648968525,
+      "nameEn": "Extracaptivite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 99,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2648968526,
+      "nameEn": "Dracocatullite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 102,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2648968527,
+      "nameEn": "Vertecandescite",
+      "kindValue": 1,
+      "kind": "Evolution",
+      "classValue": 1,
+      "sortId": 101,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 6946658,
+      "nameEn": "DigiPate",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 849,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946659,
+      "nameEn": "Myobrella",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 848,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946664,
+      "nameEn": "Holey Chalice",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 843,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946665,
+      "nameEn": "Digi-Battery",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 842,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946666,
+      "nameEn": "Virtual Mem. Foam Pillow",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 841,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946667,
+      "nameEn": "ToyAgu Block",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 840,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946668,
+      "nameEn": "Stingmon's Letter",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 847,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946669,
+      "nameEn": "Magnamon's Autograph",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 846,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946670,
+      "nameEn": "Platinum Poop Medal",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 845,
+      "basePrice": 0
+    },
+    {
+      "gameId": 6946671,
+      "nameEn": "SkullGrey Ring",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 844,
+      "basePrice": 0
+    },
+    {
+      "gameId": 23724246,
+      "nameEn": "Stamina Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 267,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 23724247,
+      "nameEn": "Wisdom Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 268,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 23724248,
+      "nameEn": "MP Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 265,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 23724249,
+      "nameEn": "Strength Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 266,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 23724250,
+      "nameEn": "Medicine",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 3,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 23724251,
+      "nameEn": "HP Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 264,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 23724252,
+      "nameEn": "Auto-Pilot",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 1,
+      "basePrice": 800
+    },
+    {
+      "gameId": 23724253,
+      "nameEn": "Bandage",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 2,
+      "basePrice": 300
+    },
+    {
+      "gameId": 23724255,
+      "nameEn": "Portable Toilet",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 0,
+      "basePrice": 150
+    },
+    {
+      "gameId": 40501936,
+      "nameEn": "Devil Chip A",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 270,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501937,
+      "nameEn": "Speed Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 269,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 40501938,
+      "nameEn": "Devil Chip E",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 272,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501939,
+      "nameEn": "Devil Chip D",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 271,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501940,
+      "nameEn": "MP Chip Mini",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 274,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501941,
+      "nameEn": "HP Chip Mini",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 273,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501942,
+      "nameEn": "Stamina Chip Mini",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 276,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501943,
+      "nameEn": "Strength Chip Mini",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 275,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501944,
+      "nameEn": "Speed Chip Mini",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 278,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 40501945,
+      "nameEn": "Wisdom Chip Mini",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 277,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 57279520,
+      "nameEn": "Heart Ring",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 874,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279521,
+      "nameEn": "Bent Spoon",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 875,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279522,
+      "nameEn": "Red Gift Box",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 876,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279523,
+      "nameEn": "Green Gift Box",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 877,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279524,
+      "nameEn": "Shopping List 2",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 870,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279525,
+      "nameEn": "Shopping List 3",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 871,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279526,
+      "nameEn": "Pretty Stone",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 872,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279527,
+      "nameEn": "Old Telescope",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 873,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279532,
+      "nameEn": "Dianamon's Letter",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 878,
+      "basePrice": 0
+    },
+    {
+      "gameId": 57279533,
+      "nameEn": "Blue Gift Box",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 879,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057104,
+      "nameEn": "Supermassive Machine Parts G",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 887,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057105,
+      "nameEn": "Supermassive Machine Parts F",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 886,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057106,
+      "nameEn": "Supermassive Machine Parts E",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 885,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057107,
+      "nameEn": "Supermassive Machine Parts D",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 884,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057108,
+      "nameEn": "Supermassive Machine Parts C",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 883,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057109,
+      "nameEn": "Supermassive Machine Parts B",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 882,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057110,
+      "nameEn": "Supermassive Machine Parts A",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 881,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057111,
+      "nameEn": "Thorny Ivy",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 880,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057118,
+      "nameEn": "Supermassive Machine Parts I",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 889,
+      "basePrice": 0
+    },
+    {
+      "gameId": 74057119,
+      "nameEn": "Supermassive Machine Parts H",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 888,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834690,
+      "nameEn": "BomberNanimon Left Leg",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 858,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834691,
+      "nameEn": "Red Pirate Flag",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 859,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834696,
+      "nameEn": "Rapidmon's Cellphone",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 852,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834698,
+      "nameEn": "Royal Digijelly",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 850,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834699,
+      "nameEn": "Haguru Gear",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 851,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834700,
+      "nameEn": "BomberNanimon Left Arm",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 856,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834701,
+      "nameEn": "BomberNanimon Right Leg",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 857,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834702,
+      "nameEn": "BomberNanimon Body",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 854,
+      "basePrice": 0
+    },
+    {
+      "gameId": 90834703,
+      "nameEn": "BomberNanimon Right Arm",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 855,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612404,
+      "nameEn": "Shopping List 1",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 869,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612405,
+      "nameEn": "Gold Pirate Mug",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 868,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612408,
+      "nameEn": "Blue Pirate Flag",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 865,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612409,
+      "nameEn": "Dark Pirate Rope",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 864,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612410,
+      "nameEn": "Blue Pirate Bottle",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 867,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612411,
+      "nameEn": "Blue Pirate Shirt",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 866,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612412,
+      "nameEn": "Red Pirate Bandanna",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 861,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612413,
+      "nameEn": "Red Pirate Glove",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 860,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612414,
+      "nameEn": "Dark Pirate Box",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 863,
+      "basePrice": 0
+    },
+    {
+      "gameId": 107612415,
+      "nameEn": "Dark Pirate Flag",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 862,
+      "basePrice": 0
+    },
+    {
+      "gameId": 124537031,
+      "nameEn": "Ultramassive Dark Matter T",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 910,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470624,
+      "nameEn": "Ultramassive Dark Matter F",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 896,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470625,
+      "nameEn": "Ultramassive Dark Matter G",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 897,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470626,
+      "nameEn": "Ultramassive Dark Matter D",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 894,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470627,
+      "nameEn": "Ultramassive Dark Matter E",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 895,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470628,
+      "nameEn": "Ultramassive Dark Matter B",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 892,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470629,
+      "nameEn": "Ultramassive Dark Matter C",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 893,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470630,
+      "nameEn": "Supermassive Machine Parts J",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 890,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470631,
+      "nameEn": "Ultramassive Dark Matter A",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 891,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470638,
+      "nameEn": "Ultramassive Dark Matter H",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 898,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4184470639,
+      "nameEn": "Ultramassive Dark Matter I",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 899,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248208,
+      "nameEn": "Ultramassive Dark Matter S",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 909,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248209,
+      "nameEn": "Ultramassive Dark Matter R",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 908,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248216,
+      "nameEn": "Ultramassive Dark Matter K",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 901,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248217,
+      "nameEn": "Ultramassive Dark Matter J",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 900,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248218,
+      "nameEn": "Ultramassive Dark Matter M",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 903,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248219,
+      "nameEn": "Ultramassive Dark Matter L",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 902,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248220,
+      "nameEn": "Ultramassive Dark Matter O",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 905,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248221,
+      "nameEn": "Ultramassive Dark Matter N",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 904,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248222,
+      "nameEn": "Ultramassive Dark Matter Q",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 907,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4201248223,
+      "nameEn": "Ultramassive Dark Matter P",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 906,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4285136368,
+      "nameEn": "MegaSea Fishy Picture",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 838,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4285136369,
+      "nameEn": "Magma Lozenge",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 839,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4285136376,
+      "nameEn": "Stealth Chip",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 279,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 4285136380,
+      "nameEn": "Strong Branch",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 834,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4285136381,
+      "nameEn": "Cyber Grease",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 835,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4285136382,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 836,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4285136383,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 2,
+      "kind": "Other",
+      "classValue": 1,
+      "sortId": 837,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2240728245,
+      "nameEn": "MP Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 12,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2240728248,
+      "nameEn": "Super Recovery Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 7,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2240728249,
+      "nameEn": "Large Recovery Holo-Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 8,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2240728250,
+      "nameEn": "Super Recovery Holo-Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 9,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2240728253,
+      "nameEn": "Recovery Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 4,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2240728254,
+      "nameEn": "Medium Recovery Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 5,
+      "basePrice": 250
+    },
+    {
+      "gameId": 2240728255,
+      "nameEn": "Large Recovery Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 6,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2257505831,
+      "nameEn": "Super Double Holo-Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 21,
+      "basePrice": 5500
+    },
+    {
+      "gameId": 2257505832,
+      "nameEn": "Super Double Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 20,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2257505833,
+      "nameEn": "Large Double Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 19,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2257505834,
+      "nameEn": "Double Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 18,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2257505837,
+      "nameEn": "Large MP Holo-Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 15,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2257505838,
+      "nameEn": "Large MP Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 14,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2257505839,
+      "nameEn": "Medium MP Disk",
+      "kindValue": 3,
+      "kind": "Recovery",
+      "classValue": 2,
+      "sortId": 13,
+      "basePrice": 250
+    },
+    {
+      "gameId": 13604774,
+      "nameEn": "Cherry Pie",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 578,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604775,
+      "nameEn": "Frozen Orange",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 577,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604776,
+      "nameEn": "Ham and Melon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 576,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604777,
+      "nameEn": "Tropical Parfait",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 575,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604778,
+      "nameEn": "Chestnut Glace",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 574,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604779,
+      "nameEn": "Sweet Chestnut Jelly",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 573,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604780,
+      "nameEn": "Strawberry Sweet Rice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 572,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604781,
+      "nameEn": "Snacking Nuts",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 571,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604782,
+      "nameEn": "Candy Apple",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 570,
+      "basePrice": 0
+    },
+    {
+      "gameId": 13604783,
+      "nameEn": "Barbeque",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 569,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382336,
+      "nameEn": "Pumpkin Pudding",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 581,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382337,
+      "nameEn": "Fried Pumpkin",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 582,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382338,
+      "nameEn": "Fresh Salad",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 579,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382339,
+      "nameEn": "Wild Salad",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 580,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382340,
+      "nameEn": "Clever Potato",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 585,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382341,
+      "nameEn": "Eggplant and Meat Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 586,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382342,
+      "nameEn": "Tomato Pizza",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 583,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382343,
+      "nameEn": "Sun Salad",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 584,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382346,
+      "nameEn": "Sweet Aubergine",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 587,
+      "basePrice": 0
+    },
+    {
+      "gameId": 30382347,
+      "nameEn": "Plain Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 588,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160048,
+      "nameEn": "Mushrooms and Rice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 594,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160049,
+      "nameEn": "Mushroom Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 593,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160050,
+      "nameEn": "Pot Luck",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 596,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160051,
+      "nameEn": "Neptune Juice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 595,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160052,
+      "nameEn": "Mushroom Skewer",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 590,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160053,
+      "nameEn": "Mountain Sweets",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 589,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160054,
+      "nameEn": "Dark Pot",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 592,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160055,
+      "nameEn": "Egg Custard",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 591,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160060,
+      "nameEn": "Sweet Love",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 598,
+      "basePrice": 0
+    },
+    {
+      "gameId": 47160061,
+      "nameEn": "Herb Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 597,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937632,
+      "nameEn": "Boiled Tofu",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 607,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937633,
+      "nameEn": "Steamed Bun",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 608,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937640,
+      "nameEn": "Egg and Rice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 599,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937641,
+      "nameEn": "Fried Egg",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 600,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937642,
+      "nameEn": "Sweet Bean Paste",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 601,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937643,
+      "nameEn": "Cold Pasta",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 602,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937644,
+      "nameEn": "Acorn Bread",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 603,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937645,
+      "nameEn": "Anchovy Ramen",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 604,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937646,
+      "nameEn": "Meat and Tofu",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 605,
+      "basePrice": 0
+    },
+    {
+      "gameId": 63937647,
+      "nameEn": "Tofu Miso Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 606,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715218,
+      "nameEn": "Banana Milk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 618,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715219,
+      "nameEn": "Strawberry Milk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 617,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715224,
+      "nameEn": "Salted Kelp",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 612,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715225,
+      "nameEn": "Shaved Ice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 611,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715226,
+      "nameEn": "Fake Filled Pancake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 610,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715227,
+      "nameEn": "Jelly and Syrup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 609,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715228,
+      "nameEn": "Dark Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 616,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715229,
+      "nameEn": "Lemon Squash",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 615,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715230,
+      "nameEn": "Apple Soda",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 614,
+      "basePrice": 0
+    },
+    {
+      "gameId": 80715231,
+      "nameEn": "Sangria",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 613,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509456,
+      "nameEn": "Minced Fish in Miso",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 642,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509457,
+      "nameEn": "Devil's Supper",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 641,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509458,
+      "nameEn": "Boiled Tropical Fish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 640,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509459,
+      "nameEn": "Fried Catfish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 639,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509460,
+      "nameEn": "Oily Tuna",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 646,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509461,
+      "nameEn": "Tuna Tartare",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 645,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509462,
+      "nameEn": "Giant Fish Meuniere",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 644,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509463,
+      "nameEn": "King's Dish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 643,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2144509467,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 733,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287040,
+      "nameEn": "Boiled Fish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 635,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287041,
+      "nameEn": "Sweet Eel",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 636,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287042,
+      "nameEn": "Fried Black Fish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 633,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287043,
+      "nameEn": "Fish Stew",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 634,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287044,
+      "nameEn": "Radish and Fish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 631,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287045,
+      "nameEn": "Trout Sushi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 632,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287046,
+      "nameEn": "Salmon in Sauce",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 629,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287047,
+      "nameEn": "Red Salmon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 630,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287054,
+      "nameEn": "Egg and Eel",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 637,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2161287055,
+      "nameEn": "Fish Pot",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 638,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064752,
+      "nameEn": "Fish in Miso",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 628,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064753,
+      "nameEn": "Fish Grilled with Salt",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 627,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064760,
+      "nameEn": "Life Drop",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 620,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064761,
+      "nameEn": "Kelp Tea",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 619,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064762,
+      "nameEn": "Carp Sushi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 622,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064763,
+      "nameEn": "Baby Fish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 621,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064764,
+      "nameEn": "Pickled Side",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 624,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064765,
+      "nameEn": "Boiled Kelp",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 623,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064766,
+      "nameEn": "Golden Carp",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 626,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178064767,
+      "nameEn": "Candied Chestnuts",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 625,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2178211793,
+      "nameEn": "Digital Ion Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 380,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2178211794,
+      "nameEn": "Neon Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 381,
+      "basePrice": 200
+    },
+    {
+      "gameId": 2178211795,
+      "nameEn": "File Soda",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 382,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2178211796,
+      "nameEn": "Infini-Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 383,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2178211797,
+      "nameEn": "Hot Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 384,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2178211798,
+      "nameEn": "Absolute Zero Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 385,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2178211799,
+      "nameEn": "Triangular Milk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 386,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2178211800,
+      "nameEn": "Deep Sea Essence",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 387,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2178211801,
+      "nameEn": "Phantom Nectar",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 388,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2194842340,
+      "nameEn": "Lop Latte",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 446,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2194842341,
+      "nameEn": "Lop Fruit Pie",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 447,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2194842344,
+      "nameEn": "Absolute Cheeseburger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 442,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2194842345,
+      "nameEn": "Multi-burger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 443,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 2194842346,
+      "nameEn": "Lop Soda",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 444,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2194842347,
+      "nameEn": "Lop Shake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 445,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2194842348,
+      "nameEn": "Juicy Fried Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 438,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2194842349,
+      "nameEn": "ABC Burger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 439,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2194842350,
+      "nameEn": "Fried Food Bucket",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 440,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2194842351,
+      "nameEn": "Bullet Burger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 441,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2194989376,
+      "nameEn": "Digifry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 392,
+      "basePrice": 200
+    },
+    {
+      "gameId": 2194989380,
+      "nameEn": "Digibitterling",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 396,
+      "basePrice": 800
+    },
+    {
+      "gameId": 2194989381,
+      "nameEn": "Digicarp",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 395,
+      "basePrice": 800
+    },
+    {
+      "gameId": 2194989382,
+      "nameEn": "Digikoi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 394,
+      "basePrice": 600
+    },
+    {
+      "gameId": 2194989383,
+      "nameEn": "Digicrucian",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 393,
+      "basePrice": 400
+    },
+    {
+      "gameId": 2194989386,
+      "nameEn": "Digitrout",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 398,
+      "basePrice": 800
+    },
+    {
+      "gameId": 2194989387,
+      "nameEn": "Digisalmon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 397,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2211619926,
+      "nameEn": "Curly Fries",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 437,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2211619927,
+      "nameEn": "Morning Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 436,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2211619928,
+      "nameEn": "Sushi Platter",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 435,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2211619929,
+      "nameEn": "Colorful Mushroom Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 434,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2211619930,
+      "nameEn": "Local Udon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 433,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 2211767090,
+      "nameEn": "Coriander",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 363,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2211767091,
+      "nameEn": "Scratchy Grass",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 364,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2211767092,
+      "nameEn": "Fighty Fungus",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 361,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2211767093,
+      "nameEn": "Celebration Nameko",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 362,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2211767094,
+      "nameEn": "Unlucky Shroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 359,
+      "basePrice": 500
+    },
+    {
+      "gameId": 2211767095,
+      "nameEn": "Deluxe Mushroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 360,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2211767103,
+      "nameEn": "Salty Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 368,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2228544680,
+      "nameEn": "Acrid Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 370,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2228544681,
+      "nameEn": "Quick Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 369,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2228544682,
+      "nameEn": "Duty Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 372,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2228544683,
+      "nameEn": "Rolly Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 371,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2228544684,
+      "nameEn": "Az Nut",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 374,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2228544685,
+      "nameEn": "Dozy Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 373,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2228544686,
+      "nameEn": "Oily Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 376,
+      "basePrice": 500
+    },
+    {
+      "gameId": 2228544687,
+      "nameEn": "Cobb Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 375,
+      "basePrice": 500
+    },
+    {
+      "gameId": 2228691712,
+      "nameEn": "Kamon Aubergine Side",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 509,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691713,
+      "nameEn": "Mandrake Essence",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 510,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691714,
+      "nameEn": "Baked Digistalk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 511,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691715,
+      "nameEn": "Baked Green Digistalk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 512,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691716,
+      "nameEn": "Baked Frostcut Mushroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 513,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691717,
+      "nameEn": "Baked Unlucky Shroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 514,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691718,
+      "nameEn": "Baked Deluxe Mushroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 515,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691719,
+      "nameEn": "Baked Fighty Fungus",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 516,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691720,
+      "nameEn": "Baked Nutty Mushroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 517,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2228691721,
+      "nameEn": "Coriander Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 518,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245322260,
+      "nameEn": "Drizzle Cabbage",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 347,
+      "basePrice": 800
+    },
+    {
+      "gameId": 2245322261,
+      "nameEn": "Soft Gold Pumpkin",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 348,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2245322265,
+      "nameEn": "Ginseng",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 344,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2245322266,
+      "nameEn": "Sakura Bird Radish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 345,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2245322267,
+      "nameEn": "Obscure Onion",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 346,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2245322268,
+      "nameEn": "Cloudy Orange",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 339,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2245322269,
+      "nameEn": "Confusion Cherry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 340,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2245469424,
+      "nameEn": "Ginseng Stick",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 502,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469425,
+      "nameEn": "Confusion Cherry Jam",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 501,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469426,
+      "nameEn": "Dry Cloudy Orange",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 500,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469427,
+      "nameEn": "Cut Rotting Melon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 499,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469428,
+      "nameEn": "Soft Gold Pumpkin Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 506,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469429,
+      "nameEn": "Drizzle Cabbage Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 505,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469430,
+      "nameEn": "Obscure Onion Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 504,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469431,
+      "nameEn": "Sakura Bird Radish Stick",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 503,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469434,
+      "nameEn": "Jaguar Potato Chips",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 508,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2245469435,
+      "nameEn": "Spotted Tomato Slices",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 507,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2262099846,
+      "nameEn": "Frostcut Mushroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 358,
+      "basePrice": 500
+    },
+    {
+      "gameId": 2262099847,
+      "nameEn": "Green Digistalk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 357,
+      "basePrice": 200
+    },
+    {
+      "gameId": 2262099848,
+      "nameEn": "Digistalk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 356,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2262099852,
+      "nameEn": "Mandrake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 352,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2262099853,
+      "nameEn": "Kamon Aubergine",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 351,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2262099854,
+      "nameEn": "Jaguar Potato",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 350,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2262099855,
+      "nameEn": "Spotted Tomato",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 349,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2278877536,
+      "nameEn": "Hunk of Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 321,
+      "basePrice": 300
+    },
+    {
+      "gameId": 2278877537,
+      "nameEn": "Best Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 322,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2278877539,
+      "nameEn": "Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 320,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2278877540,
+      "nameEn": "Marbled Beef",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 325,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2278877541,
+      "nameEn": "Cube Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 326,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 2278877542,
+      "nameEn": "Well Done Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 323,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2278877543,
+      "nameEn": "Rotten Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 324,
+      "basePrice": 50
+    },
+    {
+      "gameId": 2278877546,
+      "nameEn": "Steel Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 327,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2278877547,
+      "nameEn": "Colorful Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 328,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2295508094,
+      "nameEn": "Luxury Stew",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 458,
+      "basePrice": 25000
+    },
+    {
+      "gameId": 2295508095,
+      "nameEn": "Heaven's Gem Sweets",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 459,
+      "basePrice": 50000
+    },
+    {
+      "gameId": 2295655120,
+      "nameEn": "Golden Acorn",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 334,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2295655121,
+      "nameEn": "Conductor Lemon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 333,
+      "basePrice": 200
+    },
+    {
+      "gameId": 2295655122,
+      "nameEn": "Celestial Chestnut",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 336,
+      "basePrice": 500
+    },
+    {
+      "gameId": 2295655123,
+      "nameEn": "Baby Strawberry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 335,
+      "basePrice": 500
+    },
+    {
+      "gameId": 2295655126,
+      "nameEn": "Cheerful Apple",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 332,
+      "basePrice": 100
+    },
+    {
+      "gameId": 2295655132,
+      "nameEn": "Rotting Melon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 338,
+      "basePrice": 30000
+    },
+    {
+      "gameId": 2295655133,
+      "nameEn": "Orange Banana",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 337,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2312285648,
+      "nameEn": "Carefree Stick",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 449,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2312285649,
+      "nameEn": "Amazing Chocolate",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 448,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2312285650,
+      "nameEn": "Snowy Rice Cake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 451,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 2312285651,
+      "nameEn": "Parade Biscuit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 450,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2312285652,
+      "nameEn": "Pure White Salad",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 453,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2312285653,
+      "nameEn": "Rainbow Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 452,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 2312285654,
+      "nameEn": "Nice Mushroom Pasta",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 455,
+      "basePrice": 15000
+    },
+    {
+      "gameId": 2312285655,
+      "nameEn": "Paradise Fruit Basket",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 454,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2312285656,
+      "nameEn": "Dazzling Carpaccio",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 457,
+      "basePrice": 25000
+    },
+    {
+      "gameId": 2312285657,
+      "nameEn": "Gold Sauce Terrine",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 456,
+      "basePrice": 15000
+    },
+    {
+      "gameId": 2362912752,
+      "nameEn": "Curly Fries",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 437,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2362912753,
+      "nameEn": "Juicy Fried Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 438,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2362912760,
+      "nameEn": "Tofu Sushi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 429,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2362912761,
+      "nameEn": "Catch of the Day",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 430,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2362912762,
+      "nameEn": "Seasonal Fruit Platter",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 431,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2362912763,
+      "nameEn": "Marinated Forest Veg",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 432,
+      "basePrice": 6000
+    },
+    {
+      "gameId": 2362912764,
+      "nameEn": "Local Udon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 433,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2362912765,
+      "nameEn": "Colorful Mushroom Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 434,
+      "basePrice": 8000
+    },
+    {
+      "gameId": 2362912766,
+      "nameEn": "Sushi Platter",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 435,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2362912767,
+      "nameEn": "Morning Soup",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 436,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2379690338,
+      "nameEn": "Mellow Rock Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 428,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2379690339,
+      "nameEn": "Thick Hot Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 427,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2379690344,
+      "nameEn": "Super Hot Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 422,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2379690345,
+      "nameEn": "Volcano Veggie Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 421,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2379690346,
+      "nameEn": "Over Done Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 420,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2379690347,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 419,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2379690348,
+      "nameEn": "Burning Curry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 426,
+      "basePrice": 8000
+    },
+    {
+      "gameId": 2379690349,
+      "nameEn": "Lava Mushroom Pot",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 425,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2379690350,
+      "nameEn": "Spicy Fish Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 424,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2379690351,
+      "nameEn": "Red-Hot Ramen",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 423,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2396467926,
+      "nameEn": "Dazzling Carpaccio",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 457,
+      "basePrice": 50000
+    },
+    {
+      "gameId": 2396467927,
+      "nameEn": "Luxury Stew",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 458,
+      "basePrice": 50000
+    },
+    {
+      "gameId": 2396467928,
+      "nameEn": "Nice Mushroom Pasta",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 455,
+      "basePrice": 30000
+    },
+    {
+      "gameId": 2396467929,
+      "nameEn": "Gold Sauce Terrine",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 456,
+      "basePrice": 30000
+    },
+    {
+      "gameId": 2396467930,
+      "nameEn": "Pure White Salad",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 453,
+      "basePrice": 8000
+    },
+    {
+      "gameId": 2396467931,
+      "nameEn": "Paradise Fruit Basket",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 454,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2396467932,
+      "nameEn": "Snowy Rice Cake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 451,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2396467933,
+      "nameEn": "Rainbow Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 452,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2396467934,
+      "nameEn": "Carefree Stick",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 449,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2396467935,
+      "nameEn": "Parade Biscuit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 450,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2413098456,
+      "nameEn": "Digieel",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 401,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2413098457,
+      "nameEn": "Digicatfish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 402,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2413098458,
+      "nameEn": "Black Digitrout",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 399,
+      "basePrice": 1600
+    },
+    {
+      "gameId": 2413098459,
+      "nameEn": "Digiloach",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 400,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2413098460,
+      "nameEn": "Digisnakehead",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 405,
+      "basePrice": 8000
+    },
+    {
+      "gameId": 2413098461,
+      "nameEn": "Digituna",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 406,
+      "basePrice": 10000
+    },
+    {
+      "gameId": 2413098462,
+      "nameEn": "Digiarowana",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 403,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2413098463,
+      "nameEn": "Digipirarucu",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 404,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2413245616,
+      "nameEn": "Fried Food Bucket",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 440,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413245617,
+      "nameEn": "ABC Burger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 439,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413245618,
+      "nameEn": "Absolute Cheeseburger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 442,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2413245619,
+      "nameEn": "Bullet Burger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 441,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2413245620,
+      "nameEn": "Lop Soda",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 444,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2413245621,
+      "nameEn": "Multi-burger",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 443,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2413245622,
+      "nameEn": "Lop Latte",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 446,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413245623,
+      "nameEn": "Lop Shake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 445,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2413245624,
+      "nameEn": "Amazing Chocolate",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 448,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2413245625,
+      "nameEn": "Lop Fruit Pie",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 447,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2429876036,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 418,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2429876037,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 417,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2429876040,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 414,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2429876041,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 413,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2429876042,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 416,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2429876043,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 415,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2429876046,
+      "nameEn": "V Jump Big Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 412,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2430023200,
+      "nameEn": "Super Hot Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 422,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2430023201,
+      "nameEn": "Red-Hot Ramen",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 423,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2430023202,
+      "nameEn": "Spicy Fish Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 424,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2430023203,
+      "nameEn": "Lava Mushroom Pot",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 425,
+      "basePrice": 2500
+    },
+    {
+      "gameId": 2430023204,
+      "nameEn": "Fruit Crepe",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 469,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2430023205,
+      "nameEn": "Soda Float",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 470,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2430023206,
+      "nameEn": "Over Done Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 420,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2430023207,
+      "nameEn": "Volcano Veggie Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 421,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 2430023212,
+      "nameEn": "Burning Curry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 426,
+      "basePrice": 4000
+    },
+    {
+      "gameId": 2430023213,
+      "nameEn": "Thick Hot Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 427,
+      "basePrice": 5000
+    },
+    {
+      "gameId": 2446800784,
+      "nameEn": "Partially Eaten Fish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 466,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800785,
+      "nameEn": "Partially Drunk Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 465,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800786,
+      "nameEn": "Partially Eaten Nut",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 464,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800787,
+      "nameEn": "Partially Eaten Mushroom",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 463,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800788,
+      "nameEn": "Partially Eaten Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 462,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800789,
+      "nameEn": "Partially Eaten Veggies",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 461,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800790,
+      "nameEn": "Partially Eaten Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 460,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2446800791,
+      "nameEn": "Heaven's Gem Sweets",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 459,
+      "basePrice": 100000
+    },
+    {
+      "gameId": 2446800798,
+      "nameEn": "Pop Corn",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 468,
+      "basePrice": 600
+    },
+    {
+      "gameId": 2446800799,
+      "nameEn": "Hot Dog",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 467,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2463578370,
+      "nameEn": "Peeled Chestnut",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 497,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578371,
+      "nameEn": "Whole Orange Banana",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 498,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578376,
+      "nameEn": "Steel Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 491,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578377,
+      "nameEn": "Colorful Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 492,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578378,
+      "nameEn": "Marbled Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 489,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578379,
+      "nameEn": "Cubed Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 490,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578380,
+      "nameEn": "Roasted Golden Acorn",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 495,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578381,
+      "nameEn": "Baby Strawberry Jam",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 496,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578382,
+      "nameEn": "Baked Cheerful Apple",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 493,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2463578383,
+      "nameEn": "Conductor Lemon Slice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 494,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2480356084,
+      "nameEn": "Very Aged Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 488,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2480356085,
+      "nameEn": "Sliced Well Done Meat",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 487,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2480356088,
+      "nameEn": "Simple Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 484,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2480356089,
+      "nameEn": "Marinated Forest Veg",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 432,
+      "basePrice": 3000
+    },
+    {
+      "gameId": 2480356090,
+      "nameEn": "Premium Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 486,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2480356091,
+      "nameEn": "Giant Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 485,
+      "basePrice": 0
+    },
+    {
+      "gameId": 2480356092,
+      "nameEn": "Tofu Sushi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 429,
+      "basePrice": 1000
+    },
+    {
+      "gameId": 2480356093,
+      "nameEn": "Mellow Rock Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 428,
+      "basePrice": 750
+    },
+    {
+      "gameId": 2480356094,
+      "nameEn": "Seasonal Fruit Platter",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 431,
+      "basePrice": 2000
+    },
+    {
+      "gameId": 2480356095,
+      "nameEn": "Catch of the Day",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 430,
+      "basePrice": 1500
+    },
+    {
+      "gameId": 4224684016,
+      "nameEn": "Boiled Scratchy Grass",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 519,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684017,
+      "nameEn": "Salty Candy",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 520,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684018,
+      "nameEn": "Squares",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 521,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684019,
+      "nameEn": "Boiled Surprise",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 522,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684020,
+      "nameEn": "Onigiri Rice Ball",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 523,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684021,
+      "nameEn": "Freshly Baked Bread",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 524,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684022,
+      "nameEn": "Stinky Tofu",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 525,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684023,
+      "nameEn": "Sweet Bean Jelly",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 526,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684024,
+      "nameEn": "Cobb Noodles",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 527,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4224684025,
+      "nameEn": "Refined Oily Fruit",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 528,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461600,
+      "nameEn": "Hot Infini-Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 532,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461601,
+      "nameEn": "File Soda Ice Cream",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 531,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461602,
+      "nameEn": "Chilled Neon Drink",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 530,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461603,
+      "nameEn": "Hot Digital Ion Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 529,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461604,
+      "nameEn": "Deep Sea Rock",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 536,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461605,
+      "nameEn": "Hot Triangular Milk",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 535,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461606,
+      "nameEn": "Absolute Zero Ice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 534,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461607,
+      "nameEn": "Deluxe Hot Water",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 533,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461610,
+      "nameEn": "Digifry Pot",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 538,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4241461611,
+      "nameEn": "Phantom Nectar Sake",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 537,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239184,
+      "nameEn": "Baked Black Digitrout",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 545,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239185,
+      "nameEn": "Steamed Digiloach",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 546,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239186,
+      "nameEn": "Smoked Digisalmon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 543,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239187,
+      "nameEn": "Baked Digitrout",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 544,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239188,
+      "nameEn": "Washed Digicarp",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 541,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239189,
+      "nameEn": "Simmered Digibitterling",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 542,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239190,
+      "nameEn": "Baked Digicrucian",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 539,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239191,
+      "nameEn": "Simmered Digikoi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 540,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239198,
+      "nameEn": "Broiled Digieel",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 547,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4258239199,
+      "nameEn": "Broiled Digicatfish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 548,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016768,
+      "nameEn": "Lemon Steak",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 558,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016769,
+      "nameEn": "Meat and Veggie Stir-Fry",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 557,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016776,
+      "nameEn": "Baked Digipirarucu",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 550,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016777,
+      "nameEn": "Baked Digiarowana",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 549,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016778,
+      "nameEn": "Digituna Sashimi",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 552,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016779,
+      "nameEn": "Baked Digisnakehead",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 551,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016780,
+      "nameEn": "Meat and Potatoes",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 554,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016781,
+      "nameEn": "Meat and Rice",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 553,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016782,
+      "nameEn": "Meatloaf",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 556,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4275016783,
+      "nameEn": "Fried Chicken",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 555,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794484,
+      "nameEn": "Crispy Bacon",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 567,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794485,
+      "nameEn": "Chop Suey",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 568,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794488,
+      "nameEn": "Sukiyaki",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 563,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794489,
+      "nameEn": "Shabushabu",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 564,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794490,
+      "nameEn": "Dumplings",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 565,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794491,
+      "nameEn": "Fighting Spirit Hotpot",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 566,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794492,
+      "nameEn": "Steak and Radish",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 559,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794493,
+      "nameEn": "Junk Food",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 560,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794494,
+      "nameEn": "Risky Full Course",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 561,
+      "basePrice": 0
+    },
+    {
+      "gameId": 4291794495,
+      "nameEn": "Sugar Roast",
+      "kindValue": 4,
+      "kind": "Food",
+      "classValue": 3,
+      "sortId": 562,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1335694715,
+      "nameEn": "DigiGodwood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 813,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027568,
+      "nameEn": "DigiGold Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 787,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027569,
+      "nameEn": "DigiWhitegold Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 788,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027570,
+      "nameEn": "Mithril Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 789,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027571,
+      "nameEn": "Chrome Digizoit Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 790,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027572,
+      "nameEn": "DigiHolywater Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 783,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027573,
+      "nameEn": "DigiCopper Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 784,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027574,
+      "nameEn": "DigiIron Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 785,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027575,
+      "nameEn": "DigiSilver Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 786,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027580,
+      "nameEn": "Black Digizoit Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 791,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1386027581,
+      "nameEn": "Red Digizoit Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 792,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805152,
+      "nameEn": "DigiIonwater Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 780,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805153,
+      "nameEn": "DigiMercury Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 779,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805154,
+      "nameEn": "DigiLatex Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 778,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805155,
+      "nameEn": "DigiSap Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 777,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805156,
+      "nameEn": "DigiOil Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 776,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805157,
+      "nameEn": "DigiAcid Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 775,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805158,
+      "nameEn": "DigiDeepwater Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 774,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805166,
+      "nameEn": "DigiLightningwater Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 782,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1402805167,
+      "nameEn": "DigiRainbowdrop Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 781,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582738,
+      "nameEn": "DigiFelwood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 811,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582739,
+      "nameEn": "DigiStarwood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 812,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582744,
+      "nameEn": "DigiBlackwood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 805,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582745,
+      "nameEn": "DigiPalm Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 806,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582746,
+      "nameEn": "DigiDiamond Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 803,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582747,
+      "nameEn": "DigiWhitewood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 804,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582748,
+      "nameEn": "DigiBamboo Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 809,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582749,
+      "nameEn": "DigiFirewood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 810,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582750,
+      "nameEn": "DigiSnowwood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 807,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1419582751,
+      "nameEn": "DigiGreatwood Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 808,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360324,
+      "nameEn": "DigiRuby Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 802,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360325,
+      "nameEn": "DigiEmerald Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 801,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360328,
+      "nameEn": "DigiNight Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 798,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360329,
+      "nameEn": "DigiLight Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 797,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360330,
+      "nameEn": "DigiOnyx Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 800,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360331,
+      "nameEn": "DigiQuartz Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 799,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360332,
+      "nameEn": "DigiSand Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 794,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360333,
+      "nameEn": "Blue Digizoit Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 793,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360334,
+      "nameEn": "DigiRock Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 796,
+      "basePrice": 0
+    },
+    {
+      "gameId": 1436360335,
+      "nameEn": "DigiStone Bag",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 795,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3695661593,
+      "nameEn": "DigiGodwood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 773,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439172,
+      "nameEn": "DigiFelwood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 771,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439173,
+      "nameEn": "DigiStarwood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 772,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439176,
+      "nameEn": "DigiSnowwood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 767,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439177,
+      "nameEn": "DigiGreatwood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 768,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439178,
+      "nameEn": "DigiBamboo",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 769,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439179,
+      "nameEn": "DigiFirewood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 770,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439180,
+      "nameEn": "DigiDiamond",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 763,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439181,
+      "nameEn": "DigiWhitewood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 764,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439182,
+      "nameEn": "DigiBlackwood",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 765,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3712439183,
+      "nameEn": "DigiPalm",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 766,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216886,
+      "nameEn": "DigiRuby",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 762,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216887,
+      "nameEn": "DigiEmerald",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 761,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216888,
+      "nameEn": "DigiOnyx",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 760,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216889,
+      "nameEn": "DigiQuartz",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 759,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216890,
+      "nameEn": "DigiNight",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 758,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216891,
+      "nameEn": "DigiLight",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 757,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216892,
+      "nameEn": "DigiRock",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 756,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216893,
+      "nameEn": "DigiStone",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 755,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216894,
+      "nameEn": "DigiSand",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 754,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3729216895,
+      "nameEn": "Blue Digizoit",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 753,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994448,
+      "nameEn": "DigiIron",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 745,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994449,
+      "nameEn": "DigiSilver",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 746,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994450,
+      "nameEn": "DigiHolywater",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 743,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994451,
+      "nameEn": "DigiCopper",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 744,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994452,
+      "nameEn": "Mithril",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 749,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994453,
+      "nameEn": "Chrome Digizoit",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 750,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994454,
+      "nameEn": "DigiGold",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 747,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994455,
+      "nameEn": "DigiWhitegold",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 748,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994458,
+      "nameEn": "Black Digizoit",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 751,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3745994459,
+      "nameEn": "Red Digizoit",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 752,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772032,
+      "nameEn": "DigiLatex",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 738,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772033,
+      "nameEn": "DigiSap",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 737,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772034,
+      "nameEn": "DigiIonwater",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 740,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772035,
+      "nameEn": "DigiMercury",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 739,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772036,
+      "nameEn": "DigiDeepwater",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 734,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772038,
+      "nameEn": "DigiOil",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 736,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772039,
+      "nameEn": "DigiAcid",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 735,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772044,
+      "nameEn": "DigiLightningwater",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 742,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3762772045,
+      "nameEn": "DigiRainbowdrop",
+      "kindValue": 5,
+      "kind": "Material",
+      "classValue": 1,
+      "sortId": 741,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834336,
+      "nameEn": "Snake Lure",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 817,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834337,
+      "nameEn": "Frog Lure",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 818,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834338,
+      "nameEn": "Crayfish Lure",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 819,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834339,
+      "nameEn": "Tent",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 820,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834341,
+      "nameEn": "Fishing Rod",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 814,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834342,
+      "nameEn": "Good Fishing Rod",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 815,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834343,
+      "nameEn": "Feather Lure",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 816,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834348,
+      "nameEn": "Premium Tent",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 821,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3302834349,
+      "nameEn": "Master Tent",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 822,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611920,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 830,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611921,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 829,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611922,
+      "nameEn": "UnkwnUltDigivolutionCore",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 828,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611923,
+      "nameEn": "New Antivirus Program",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 827,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611924,
+      "nameEn": "Repair Kit",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 826,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611925,
+      "nameEn": "Prototype Antivirus Prog",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 825,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611926,
+      "nameEn": "Taoistic Charm",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 824,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611927,
+      "nameEn": "Illegal Seed",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 823,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611934,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 832,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3319611935,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 831,
+      "basePrice": 0
+    },
+    {
+      "gameId": 3336389514,
+      "nameEn": "DO NOT TRANSLATE",
+      "kindValue": 6,
+      "kind": "KeyItem",
+      "classValue": 1,
+      "sortId": 833,
+      "basePrice": 0
+    }
+  ]
+}

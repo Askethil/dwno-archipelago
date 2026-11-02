@@ -41,6 +41,9 @@ SHA-256 de l'archive téléchargée (empreinte locale de traçabilité, pas sign
 
 ## Organisation
 
+- [English game item catalogue](docs/game-items.en.md) : 740 entrées de la table générale, avec leurs IDs et noms lus dans le jeu ; [JSON](data/game-items.en.json).
+- [Exporteur du catalogue](docs/export-item-catalog.md) : procédure, compteurs de couverture et séparation avec le futur pool Archipelago.
+
 - [Catalogue du dresseur](docs/tamer-skills-catalogue.md) : 71 compétences observées, noms internes, coûts, flags et correspondances FR/EN des arbres.
 - [Données structurées](data/tamer-skills.json) et [journal des essais](docs/observation-tamer.md).
 
