@@ -14,6 +14,8 @@ internal static class StoryChoiceSkip
     private static readonly Harmony harmony = new(Plugin.Id + ".first-choice");
     private static ManualLogSource? log;
     private static PropertyInfo? ownerProperty, panelProperty, cursorProperty, countProperty;
+    private static PropertyInfo? buttonTimeProperty;
+    private static bool fastConfirmation;
     private static uint confirmButton, navigationButtons;
     private static IntPtr activeChoice;
     private static DateTime attemptStarted;
@@ -22,7 +24,7 @@ internal static class StoryChoiceSkip
     internal static bool Available { get; private set; }
     internal static bool Enabled { get; private set; }
 
-    internal static void Install(Assembly assembly, ManualLogSource logger, bool requested)
+    internal static void Install(Assembly assembly, ManualLogSource logger, bool requested, bool fastRequested)
     {
         log = logger;
         if (!requested) { logger.LogInfo("[CHOICE] DISABLED by Story.AutoSelectFirstChoice"); return; }
@@ -41,6 +43,10 @@ internal static class StoryChoiceSkip
             panelProperty = Required(iterator, "_panel_5__2");
             cursorProperty = Required(talk, "m_cursor");
             countProperty = Required(talk, "m_maxChoiceNum");
+            buttonTimeProperty = iterator.GetProperty("_button_ok_time_5__4", BindingFlags.Public | BindingFlags.Instance);
+            fastConfirmation = fastRequested && buttonTimeProperty?.PropertyType == typeof(float) && buttonTimeProperty.CanWrite;
+            if (fastRequested && !fastConfirmation)
+                logger.LogWarning("[CHOICE] Native button timer not available; original confirmation delay retained.");
             if (ownerProperty.PropertyType != talk || cursorProperty.PropertyType != typeof(int) ||
                 !cursorProperty.CanWrite || countProperty.PropertyType != typeof(int))
                 throw new InvalidOperationException("Choice owner/cursor/count schema differs");
@@ -108,10 +114,21 @@ internal static class StoryChoiceSkip
                 activeChoice = __instance.Pointer;
                 confirmationReported = false;
                 log?.LogInfo($"[CHOICE] {DateTime.UtcNow:O} ARMED firstIndex=0 count={count}");
+                if (buttonTimeProperty?.GetValue(__instance) is float nativeTime)
+                    log?.LogInfo($"[CHOICE] {DateTime.UtcNow:O} NATIVE_TIMER value={nativeTime:F3} unityTime={UnityEngine.Time.time:F3} fastEnabled={fastConfirmation}");
             }
             if (attemptStarted == default) attemptStarted = DateTime.UtcNow;
             if (DateTime.UtcNow - attemptStarted > TimeSpan.FromSeconds(10))
                 throw new TimeoutException("Native choice did not complete within ten seconds of requested skipping");
+            if (fastConfirmation && buttonTimeProperty!.GetValue(__instance) is float deadline)
+            {
+                var now = UnityEngine.Time.time;
+                if (StoryTimingPolicy.TryShortenChoiceDeadline(deadline, now, out var shortened))
+                {
+                    buttonTimeProperty.SetValue(__instance, shortened);
+                    log?.LogInfo($"[CHOICE] {DateTime.UtcNow:O} SHORTEN_CONFIRM_WAIT remaining={deadline - now:F3} to={shortened - now:F3}");
+                }
+            }
             cursorProperty!.SetValue(owner, 0);
             confirmationScope = true;
         }

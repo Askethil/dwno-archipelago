@@ -4,13 +4,13 @@
 
 Find a way to accelerate story presentation while keeping the game interpreter and completion callbacks. This feature is **not yet validated for story progression**. No new game is created and no save slot is selected by the mod.
 
-- Current defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSelectFirstChoice=true`, `Story.AcceleratePresentation=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Automatic story mode enables the master switch at startup. Set AutoSkipStoryDialogue and EnableHoldToSkip false for an observation-only start.
+- Current source defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSelectFirstChoice=true`, `Story.AcceleratePresentation=true`, `Story.FastChoiceConfirmation=true`, `Story.AccelerateDialogueTransitions=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Automatic story mode enables the master switch at startup. Set AutoSkipStoryDialogue and EnableHoldToSkip false for an observation-only start.
 - F9: toggle the master skip switch for the session. Turning it off stops automatic story and held-key skip requests.
 - F8 held: manually request skip while the master is enabled and the game is focused, including contexts outside the observed story list.
 - F10: toggle automatic first responses for the session. Turning this off also pauses the master skip switch so the player can answer manually. F9 resumes dialogue skipping; F10 must be enabled separately to restore automatic responses.
 - Releasing F8 stops manual requests. Automatic story mode does not require F8; use F9 to stop it. Disabling does not undo a response already selected or a scene already advanced.
 
-These controls are an experimental prototype. **Automatic story/choice handling and timed-presentation acceleration were deployed on 2026-11-03; startup installation passed, gameplay behavior remains to validate.** Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game.
+These controls are an experimental prototype. **Automatic story/choice handling and timed-presentation acceleration were deployed and exercised on 2026-11-03. The newer dialogue-transition and fast-choice refinements are compiled but not deployed yet.** Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game. F10 manual recovery and save/reload progression still need explicit validation.
 
 ## Paths inspected
 
@@ -232,3 +232,30 @@ Release build passed with zero warnings/errors. The policy harness now passes **
 ```
 
 Chainloader completion, snapshot heartbeat and catalogue exports followed; the process was responding without an error in the startup log. This validates installation, not native first-response ordering, successful acceleration, story rewards/flags, final camera/actor transforms or persistence. The next test is a player-started intro on a separate test slot without F8, followed by a choice/F10/manual-answer comparison. The agent did not create a new game, select a save slot or confirm a response.
+
+## First live autoskip test and feedback (2026-11-03)
+
+The player started a test intro without F8 and reports that the acceleration works well, including camera/character presentation. Traces show a timed camera request reduced from 2 to 0.2 seconds at 05:06:07.664 (Paris); the next Wait command starts at 05:06:07.885, roughly 0.22 seconds later. That Wait is reduced from 1 to 0.1 seconds; the next camera command starts at 05:06:07.987, roughly 0.10 seconds later. EV_START/EVENT010 emits its normal scenario completion callback at 05:06:10.126. This is runtime evidence for these sampled commands and automatic dialogue requests, not proof that every actor/camera end state is correct. AnimationModel and negative MoveModel timing values are still unmodified.
+
+Two native choice iterators complete after synthetic confirmation:
+
+| Story file | Armed | Request confirmation | Native completed |
+| --- | --- | --- | --- |
+| `EV_MIN_1010` | 05:10:42.487, count 2 | 05:10:43.495 | 05:10:43.497 |
+| `EV_MIN_1030` | 05:11:47.694, count 3 | 05:11:48.696 | 05:11:48.698 |
+
+Subsequent contexts EV_MIN_1020 and EV_TOWN_B001 are recorded, respectively. The player observes the automatic acceptance as slow. These samples establish about one second from arming to the request, followed by native coroutine completion. First displayed response identity, F10/manual branch recovery and persistence are not yet independently checked.
+
+The replay also encountered `event/tutorial/EV_TUTORIAL_000_1`, which remains outside automatic story activation like the other tutorials. Ordinary or unknown contexts including EV_TOWN_B003, EV_SUB_SETU_01 and EV_SUB_0000_010 remain manual. No prefix-based reclassification was added.
+
+### Prepared refinement: dialogue opening and confirmation delay
+
+The user reports another 1–2-second wait while the dialogue environment opens before text appears. Metadata identifies TalkMain.OpenBackGround, CloseBackGround, ChangeUIMode, the background Animator and the EventWindowPanel UI Animator arrays. These are candidates; the remaining visual wait is not yet proven to come entirely from their animations rather than asynchronous loading.
+
+`StoryTransitionSkip` captures the exact TalkMain owner at Initialize using a typed prefix. During an eligible skip request only, it borrows positive speeds from that owner's background/window Animators and applies a factor of 10, capped at 100. Zero/negative/nonfinite/already-high speeds are left intact. It does not modify character Animators, global timeScale, asset loading, scene flags or completion callbacks. Original UI speeds are restored when skipping stops, focus is lost, a choice/movie blocks acceleration, the owner changes/dies or the input component is disabled. Restoration only overwrites a speed still equal to the applied value, preserving intervening external changes. Reflection/layout errors disable this optional feature and attempt restoration.
+
+New `[TRANSITION]` traces mark initialization, background/UI-mode commands, first text-command entry, UI speed changes and restoration. First text-command timing is not a measurement of the first rendered glyph. These traces will distinguish an opening animation that responds to speed changes from remaining loading delays.
+
+`Story.FastChoiceConfirmation` inspects the generated choice iterator's float `_button_ok_time_5__4` when available. It shortens only a plausible absolute deadline lying 0.05–2 seconds ahead of Unity Time.time, to now + 0.05 seconds. Countdown/elapsed/unknown/expired timers are not rewritten, and native confirmation still occurs through the original iterator/input path. Raw native timer and Unity time are logged at arming to verify this hypothesis in the game. Missing timer metadata retains native delay. F10/F9 controls remain available.
+
+The combined refinement builds with zero warnings/errors and **66 policy checks** pass, including deadline bounds and UI speed rules. It is **not deployed in the current run**; the running process still has the prior one-second native choice delay and no UI Animator acceleration. Next deployment requires a normal save/close. A short TalkMain NPC dialogue with deliberate F8 and a choice can exercise the new paths without replaying the full intro; verify F10 manual recovery and restored UI speeds as part of that test.

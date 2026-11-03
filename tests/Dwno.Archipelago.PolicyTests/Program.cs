@@ -47,4 +47,22 @@ foreach (var input in new string?[] { "0", "-1", "-0.5", "0.01", "0.05", "NaN", 
     var changed = StoryTimingPolicy.TryShorten(input, out var output);
     Check($"preserve special/short timing {input}", !changed && output == input, true);
 }
-Console.WriteLine($"Passed {checkedCases} story, stop-control and timing policy checks. Native game behavior is not covered.");
+foreach (var (deadline, now, expected) in new (float Deadline, float Now, float? Expected)[] {
+    (101f, 100f, 100.05f), (102f, 100f, 100.05f), (100.02f, 100f, null),
+    (99f, 100f, null), (1f, 100f, null), (103f, 100f, null),
+    (float.NaN, 100f, null), (float.PositiveInfinity, 100f, null), (101f, float.NaN, null), (1f, -1f, null) })
+{
+    var changed = StoryTimingPolicy.TryShortenChoiceDeadline(deadline, now, out var output);
+    Check($"choice timer {deadline}/{now}", expected.HasValue
+        ? changed && Math.Abs(output - expected.Value) < 0.001f
+        : !changed && output.Equals(deadline), true);
+}
+foreach (var (speed, expected) in new (float Speed, float? Expected)[] {
+    (1f, 10f), (0.5f, 5f), (12f, 100f), (100f, null), (200f, null),
+    (0f, null), (-1f, null), (float.NaN, null), (float.PositiveInfinity, null) })
+{
+    var changed = StoryTimingPolicy.TryScaleUiSpeed(speed, out var output);
+    Check($"UI animation speed {speed}", expected.HasValue
+        ? changed && output == expected.Value : !changed && output.Equals(speed), true);
+}
+Console.WriteLine($"Passed {checkedCases} story, stop-control, timing and transition policy checks. Native game behavior is not covered.");

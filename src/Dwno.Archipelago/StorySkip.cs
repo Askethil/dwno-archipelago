@@ -28,7 +28,8 @@ internal static class StorySkip
     internal static bool CanAcceleratePresentation => SkipRequested && !choiceBlocked && !movieActive;
 
     internal static void Install(ManualLogSource logger, bool initiallyEnabled, bool autoSelectFirstChoice,
-        bool autoSkipStoryDialogue, bool acceleratePresentation)
+        bool autoSkipStoryDialogue, bool acceleratePresentation, bool fastChoiceConfirmation,
+        bool accelerateDialogueTransitions)
     {
         log = logger;
         automaticStory = autoSkipStoryDialogue;
@@ -85,8 +86,9 @@ internal static class StorySkip
         }
         else
         {
-            StoryChoiceSkip.Install(assembly, logger, autoSelectFirstChoice);
+            StoryChoiceSkip.Install(assembly, logger, autoSelectFirstChoice, fastChoiceConfirmation);
             StoryPresentationSkip.Install(assembly, logger, acceleratePresentation);
+            StoryTransitionSkip.Install(assembly, logger, accelerateDialogueTransitions);
         }
         log.LogInfo($"[STORY] READY installed={ok} failed={failed} enabled={enabled} automaticKnownStory={automaticStory}; F9 master toggle, F8 manual, F10 choices; progression callbacks are not replaced.");
     }
@@ -123,6 +125,7 @@ internal static class StorySkip
         try
         {
             var name = __originalMethod.Name;
+            if (name == "DispTextMain") StoryTransitionSkip.TextRequested();
             if (name == "TalkEventEndCB" && __args.Length >= 2 &&
                 string.Equals(__args[0] as string, contextFile, StringComparison.Ordinal) &&
                 string.Equals(__args[1] as string, contextBlock, StringComparison.Ordinal))

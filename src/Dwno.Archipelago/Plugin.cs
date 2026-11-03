@@ -21,7 +21,11 @@ public sealed class Plugin : BasePlugin
             Config.Bind("Story", "AutoSkipStoryDialogue", true,
                 "Active automatiquement le skip du texte dans les contextes histoire explicitement identifiés. F9 coupe tout le skip. Les scènes inconnues restent manuelles.").Value,
             Config.Bind("Story", "AcceleratePresentation", true,
-                "Pendant le skip actif, raccourcit les durées positives de Wait, MoveGameCamera et RotationGameModel (facteur 0.1, minimum 0.05 seconde). Les valeurs spéciales restent intactes. Expérimental.").Value);
+                "Pendant le skip actif, raccourcit les durées positives de Wait, MoveGameCamera et RotationGameModel (facteur 0.1, minimum 0.05 seconde). Les valeurs spéciales restent intactes. Expérimental.").Value,
+            Config.Bind("Story", "FastChoiceConfirmation", true,
+                "Réduit à 0.05 seconde les échéances de validation de choix identifiées comme proches dans le temps Unity. Les temporisateurs inconnus restent intacts. Expérimental.").Value,
+            Config.Bind("Story", "AccelerateDialogueTransitions", true,
+                "Pendant le skip actif, accélère uniquement les Animators du fond et des fenêtres TalkMain, puis restaure leur vitesse à l'arrêt. Ne court-circuite pas le chargement des ressources. Expérimental.").Value);
         AddComponent<StorySkipKeys>();
         if (Config.Bind("Catalog", "ExportItems", true, "Exporte une fois la table des objets et leurs noms localisés, sans modifier le jeu.").Value)
             AddComponent<ItemCatalogExporter>();
