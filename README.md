@@ -44,6 +44,7 @@ SHA-256 de l'archive téléchargée (empreinte locale de traçabilité, pas sign
 - [Story skip prototype](docs/story-skip-prototype.md) : traces de scènes et prototype F9/F8, désactivé par défaut et à valider sur une sauvegarde de test.
 
 - [Town, region and flag test reference](docs/world-catalog.en.md) : définitions anglaises de ville, carte et conditions ; [données](data/world-catalog.en.json), [liens d'améliorations](data/town-links.en.json).
+- [Analyse des conditions de flags](docs/analyze-flags.md) : script hors jeu, références croisées et libellés descriptifs ; [rapport](docs/flag-conditions.en.md), [JSON](data/flag-conditions.en.json).
 
 - [English game item catalogue](docs/game-items.en.md) : 740 entrées de la table générale, avec leurs IDs et noms lus dans le jeu ; [JSON](data/game-items.en.json).
 - [Exporteur du catalogue](docs/export-item-catalog.md) : procédure, compteurs de couverture et séparation avec le futur pool Archipelago.
