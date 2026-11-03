@@ -6,5 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="../../src/Dwno.Archipelago/StoryContextPolicy.cs" Link="StoryContextPolicy.cs" />
+    <Compile Include="../../src/Dwno.Archipelago/StoryTimingPolicy.cs" Link="StoryTimingPolicy.cs" />
   </ItemGroup>
 </Project>

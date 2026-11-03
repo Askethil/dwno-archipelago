@@ -25,9 +25,10 @@ internal static class StorySkip
     internal static bool Focused;
     internal static bool SkipRequested => StoryContextPolicy.ShouldSkip(enabled, Focused, inputFailed,
         Held, automaticStory, contextFile, contextBlock);
+    internal static bool CanAcceleratePresentation => SkipRequested && !choiceBlocked && !movieActive;
 
     internal static void Install(ManualLogSource logger, bool initiallyEnabled, bool autoSelectFirstChoice,
-        bool autoSkipStoryDialogue)
+        bool autoSkipStoryDialogue, bool acceleratePresentation)
     {
         log = logger;
         automaticStory = autoSkipStoryDialogue;
@@ -82,7 +83,11 @@ internal static class StorySkip
             inputFailed = true;
             log.LogError("[STORY] DISABLED: incomplete patch set removed; prototype unavailable this session.");
         }
-        else StoryChoiceSkip.Install(assembly, logger, autoSelectFirstChoice);
+        else
+        {
+            StoryChoiceSkip.Install(assembly, logger, autoSelectFirstChoice);
+            StoryPresentationSkip.Install(assembly, logger, acceleratePresentation);
+        }
         log.LogInfo($"[STORY] READY installed={ok} failed={failed} enabled={enabled} automaticKnownStory={automaticStory}; F9 master toggle, F8 manual, F10 choices; progression callbacks are not replaced.");
     }
 

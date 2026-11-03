@@ -19,7 +19,9 @@ public sealed class Plugin : BasePlugin
             Config.Bind("Story", "AutoSelectFirstChoice", true,
                 "Pendant le skip actif, choisit la première réponse des dialogues TalkMain via leur traitement natif. F10 désactive ce choix automatique. Expérimental.").Value,
             Config.Bind("Story", "AutoSkipStoryDialogue", true,
-                "Active automatiquement le skip du texte dans les contextes histoire explicitement identifiés. F9 coupe tout le skip. Les scènes inconnues restent manuelles.").Value);
+                "Active automatiquement le skip du texte dans les contextes histoire explicitement identifiés. F9 coupe tout le skip. Les scènes inconnues restent manuelles.").Value,
+            Config.Bind("Story", "AcceleratePresentation", true,
+                "Pendant le skip actif, raccourcit les durées positives de Wait, MoveGameCamera et RotationGameModel (facteur 0.1, minimum 0.05 seconde). Les valeurs spéciales restent intactes. Expérimental.").Value);
         AddComponent<StorySkipKeys>();
         if (Config.Bind("Catalog", "ExportItems", true, "Exporte une fois la table des objets et leurs noms localisés, sans modifier le jeu.").Value)
             AddComponent<ItemCatalogExporter>();

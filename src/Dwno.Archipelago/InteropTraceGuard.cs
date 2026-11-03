@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 
 namespace Dwno.Archipelago;
 
-// Conservative screening for optional native traces, not a proof that a detour is safe.
+// Conservative screening for optional native patches, not a proof that a detour is safe.
 internal static class InteropTraceGuard
 {
-    private static readonly HashSet<IntPtr> tracedEntries = new();
+    private static readonly Dictionary<IntPtr, MethodInfo> tracedEntries = new();
 
     internal static bool CanTrace(MethodInfo method, out string reason)
     {
@@ -30,8 +30,13 @@ internal static class InteropTraceGuard
         if (module is null || entry.ToInt64() < module.BaseAddress.ToInt64() ||
             entry.ToInt64() > module.BaseAddress.ToInt64() + module.ModuleMemorySize - 8)
         { reason = "entry outside expected game module"; return false; }
-        if (tracedEntries.Contains(entry))
-        { reason = "entry already used by another optional trace"; return false; }
+        if (tracedEntries.TryGetValue(entry, out var previous))
+        {
+            // Harmony can compose an observer and accelerator for the same managed method.
+            if (previous.Equals(method)) return true;
+            reason = "entry already reserved for a different method; native alias risk";
+            return false;
+        }
 
         var bytes = new byte[8];
         Marshal.Copy(entry, bytes, 0, bytes.Length);
@@ -42,7 +47,7 @@ internal static class InteropTraceGuard
         { reason = "trivial native return stub; shared entry risk"; return false; }
 
         // Reserve before patching; a failed patch must not make an alias eligible later.
-        tracedEntries.Add(entry);
+        tracedEntries.Add(entry, method);
         return true;
     }
 }

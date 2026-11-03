@@ -35,4 +35,16 @@ Check("disabled automatic mode waits for F8", StoryContextPolicy.ShouldSkip(true
 Check("ordinary NPC remains manual", StoryContextPolicy.ShouldSkip(true, true, false, false, true, npc, "TALK_S06"), false);
 Check("held F8 can skip NPC deliberately", StoryContextPolicy.ShouldSkip(true, true, false, true, true, npc, "TALK_S06"), true);
 Check("released F8 stops manual NPC skipping", StoryContextPolicy.ShouldSkip(true, true, false, false, false, npc, "TALK_S06"), false);
-Console.WriteLine($"Passed {checkedCases} story-context and stop-control policy checks. Native game behavior is not covered.");
+foreach (var (input, expected) in new[] { ("3", "0.3"), ("2", "0.2"), ("1.5", "0.15"),
+    ("0.5", "0.05"), ("0.25", "0.05"), ("0.2", "0.05"), ("1e1", "1"), ("120", "12") })
+{
+    var changed = StoryTimingPolicy.TryShorten(input, out var output);
+    Check($"positive timing {input}", changed && output == expected, true);
+}
+foreach (var input in new string?[] { "0", "-1", "-0.5", "0.01", "0.05", "NaN", "Infinity",
+    "1e309", "121", "1,5", "TIME_VARIABLE", "", null })
+{
+    var changed = StoryTimingPolicy.TryShorten(input, out var output);
+    Check($"preserve special/short timing {input}", !changed && output == input, true);
+}
+Console.WriteLine($"Passed {checkedCases} story, stop-control and timing policy checks. Native game behavior is not covered.");

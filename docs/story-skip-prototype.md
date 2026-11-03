@@ -4,13 +4,13 @@
 
 Find a way to accelerate story presentation while keeping the game interpreter and completion callbacks. This feature is **not yet validated for story progression**. No new game is created and no save slot is selected by the mod.
 
-- New source defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSelectFirstChoice=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Automatic story mode enables the master switch at startup. Set AutoSkipStoryDialogue and EnableHoldToSkip false for an observation-only start.
+- Current defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSelectFirstChoice=true`, `Story.AcceleratePresentation=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Automatic story mode enables the master switch at startup. Set AutoSkipStoryDialogue and EnableHoldToSkip false for an observation-only start.
 - F9: toggle the master skip switch for the session. Turning it off stops automatic story and held-key skip requests.
 - F8 held: manually request skip while the master is enabled and the game is focused, including contexts outside the observed story list.
 - F10: toggle automatic first responses for the session. Turning this off also pauses the master skip switch so the player can answer manually. F9 resumes dialogue skipping; F10 must be enabled separately to restore automatic responses.
 - Releasing F8 stops manual requests. Automatic story mode does not require F8; use F9 to stop it. Disabling does not undo a response already selected or a scene already advanced.
 
-These controls are an experimental prototype. **The new automatic story/choice source is compiled but not deployed or runtime-validated yet.** The current running binary still uses manual F8 and pauses at choices. Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game.
+These controls are an experimental prototype. **Automatic story/choice handling and timed-presentation acceleration were deployed on 2026-11-03; startup installation passed, gameplay behavior remains to validate.** Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game.
 
 ## Paths inspected
 
@@ -209,4 +209,26 @@ The context is set by a core TalkMain.Initialize prefix independent of Observati
 
 The replay also confirmed actual SceneMain use: `TalkMain.EventScene(event_name=EV3D_1010_01)` at 20:17:59.730 (Paris), followed by `SceneMain.Initialize` at 20:17:59.938 and StartScene at 20:18:00.054. This is distinct from the earlier TalkMain-driven vignettes. The source does not yet accelerate native SceneMain playback, camera/animation waits, illustrated tutorials or movies with zero skip masks.
 
-Validation completed before deployment: Release build with zero warnings/errors; `dotnet run --project tests/Dwno.Archipelago.PolicyTests -c Release` passed 26 checks covering observed intro pairs, ordinary NPC/tutorial/egg contexts, unknown contexts, null versus empty blocks, F9 master gating, manual F8, focus loss and input failure. These tests do not execute IL2CPP/Harmony or establish native choice behavior. Next required validation is startup installation followed by a test-save first-choice and F10 manual-recovery test. Preserve logs and confirm expected branch, progression and saved state before broadening automatic story coverage.
+Initial validation before deployment: Release build with zero warnings/errors; `dotnet run --project tests/Dwno.Archipelago.PolicyTests -c Release` passed 26 checks covering observed intro pairs, ordinary NPC/tutorial/egg contexts, unknown contexts, null versus empty blocks, F9 master gating, manual F8, focus loss and input failure. These tests do not execute IL2CPP/Harmony or establish native choice behavior. The later timing extension and startup deployment are recorded below. A test-save first-choice and F10 manual-recovery comparison remains required. Preserve logs and confirm expected branch, progression and saved state before broadening automatic story coverage.
+
+## Timed-presentation acceleration and first deployment (2026-11-03)
+
+`Story.AcceleratePresentation=true` installs three optional prefixes on the exact TalkMain commands already observed during the intro: `Wait` (argument 0), `MoveGameCamera` (argument 3) and `RotationGameModel` (argument 2). All six parameters and the expected duration parameter name must match the current string signatures. The screening guard rejects unsafe entries; an incomplete timing patch set is removed independently so original timings remain available.
+
+During an eligible skip request, with no choice or movie active, positive finite invariant-culture durations up to 120 seconds are multiplied by 0.1, with a 0.05-second minimum. Existing durations below that minimum are not increased. Zero, negative values, nonnumeric variables, comma-decimal strings, NaN/infinity and values above 120 are preserved. Logs record every changed command as `[TIMING] SHORTEN ... from=... to=...`. The original native command still executes; no enumerator is replaced or completion callback forced.
+
+This accelerates these presentation waits and camera/rotation commands, not every character animation or cutscene. `MoveModel`, `AnimationModel`, native SceneMain playback, tutorial IsSkip overrides and video masks are unchanged. The relationship between a shortened wait and parallel animation/fade cleanup must still be checked in gameplay. F9 prevents further skip requests; it cannot restore the duration of a command already started. F10 disables first-response automation and pauses skipping for manual recovery.
+
+InteropTraceGuard now records the MethodInfo owning each reserved entry. It permits an observer and accelerator to compose on the **same** method while still rejecting a different method sharing that entry. This is conservative screening, not full ABI/alias validation. Previously excluded EndScene and TutorialMain.OnDisable remain excluded.
+
+Release build passed with zero warnings/errors. The policy harness now passes **47 checks**, including positive timing reductions and preservation of negative/zero/special/short values. The old installed DLL and session log were preserved, then the new DLL deployed while the game was closed. Startup at 05:04:04 (Paris) reported:
+
+```text
+[CHOICE] READY iterator=TalkMain+_DispChoices_d__20 firstIndex=0 confirmMask=128
+[TIMING] READY installed=3 factor=0.1 floorSeconds=0.05
+[STORY] READY installed=19 failed=0 enabled=True automaticKnownStory=True
+[TUTORIAL] READY installed=4 skipped=0 failed=0
+[PRESENTATION] READY installed=14 skipped=0 failed=0
+```
+
+Chainloader completion, snapshot heartbeat and catalogue exports followed; the process was responding without an error in the startup log. This validates installation, not native first-response ordering, successful acceleration, story rewards/flags, final camera/actor transforms or persistence. The next test is a player-started intro on a separate test slot without F8, followed by a choice/F10/manual-answer comparison. The agent did not create a new game, select a save slot or confirm a response.
