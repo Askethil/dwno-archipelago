@@ -51,7 +51,7 @@ switch ($Action) {
         Expand-Archive -LiteralPath $archivePath -DestinationPath $dependencyRoot -Force
         $interopDir = Join-Path $localRoot 'interop'
         New-Item -ItemType Directory -Path $interopDir -Force | Out-Null
-        foreach ($interopName in @('UnityEngine.CoreModule.dll', 'Il2Cppmscorlib.dll')) {
+        foreach ($interopName in @('UnityEngine.CoreModule.dll', 'UnityEngine.InputLegacyModule.dll', 'Il2Cppmscorlib.dll')) {
             $source = Join-Path $GamePath "BepInEx/interop/$interopName"
             if (Test-Path -LiteralPath $source) {
                 Copy-Item -LiteralPath $source -Destination $interopDir

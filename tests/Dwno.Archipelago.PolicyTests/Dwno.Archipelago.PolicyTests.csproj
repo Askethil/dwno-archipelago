@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/Dwno.Archipelago/StoryContextPolicy.cs" Link="StoryContextPolicy.cs" />
+    <Compile Include="../../src/Dwno.Archipelago/StoryTimingPolicy.cs" Link="StoryTimingPolicy.cs" />
+    <Compile Include="../../src/Dwno.Archipelago/StorySkipOptions.cs" Link="StorySkipOptions.cs" />
+  </ItemGroup>
+</Project>
