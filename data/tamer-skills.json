@@ -5,9 +5,7 @@
   "englishHierarchySource": "https://twinfinite.net/guides/all-tamer-skills-in-digimon-world-next-order/",
   "skills": [
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Friandises",
       "subgroupEn": "Treat Type",
       "internalName": "MOOD_UP",
       "nameFr": "Hausse d'humeur",
@@ -16,13 +14,10 @@
       "bitIndex": 1,
       "wordIndex": 0,
       "bitInWord": 1,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Friandises",
       "subgroupEn": "Treat Type",
       "internalName": "BOUNDS_UP",
       "nameFr": null,
@@ -31,13 +26,10 @@
       "bitIndex": 2,
       "wordIndex": 0,
       "bitInWord": 2,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Friandises",
       "subgroupEn": "Treat Type",
       "internalName": "CONFIDENCE_UP",
       "nameFr": null,
@@ -46,13 +38,10 @@
       "bitIndex": 3,
       "wordIndex": 0,
       "bitInWord": 3,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Friandises",
       "subgroupEn": "Treat Type",
       "internalName": "MIND_MASTER",
       "nameFr": null,
@@ -61,13 +50,10 @@
       "bitIndex": 4,
       "wordIndex": 0,
       "bitInWord": 4,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Vie",
       "subgroupEn": "Life Type",
       "internalName": "LONGEVITY_EVOLUTION",
       "nameFr": null,
@@ -76,13 +62,10 @@
       "bitIndex": 5,
       "wordIndex": 0,
       "bitInWord": 5,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Vie",
       "subgroupEn": "Life Type",
       "internalName": "LIFE_UP",
       "nameFr": null,
@@ -91,13 +74,10 @@
       "bitIndex": 6,
       "wordIndex": 0,
       "bitInWord": 6,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Vie",
       "subgroupEn": "Life Type",
       "internalName": "LIFE_LARGE_UP",
       "nameFr": null,
@@ -106,13 +86,10 @@
       "bitIndex": 7,
       "wordIndex": 0,
       "bitInWord": 7,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Porteur",
       "subgroupEn": "Carrier Type",
       "internalName": "HIGH_CARRY",
       "nameFr": null,
@@ -121,13 +98,10 @@
       "bitIndex": 8,
       "wordIndex": 0,
       "bitInWord": 8,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Porteur",
       "subgroupEn": "Carrier Type",
       "internalName": "MEGA_CARRY",
       "nameFr": null,
@@ -136,13 +110,10 @@
       "bitIndex": 9,
       "wordIndex": 0,
       "bitInWord": 9,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Porteur",
       "subgroupEn": "Carrier Type",
       "internalName": "GIGA_CARRY",
       "nameFr": null,
@@ -151,13 +122,10 @@
       "bitIndex": 10,
       "wordIndex": 0,
       "bitInWord": 10,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Porteur",
       "subgroupEn": "Carrier Type",
       "internalName": "MAX_CARRY",
       "nameFr": null,
@@ -166,13 +134,10 @@
       "bitIndex": 11,
       "wordIndex": 0,
       "bitInWord": 11,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Inverse",
       "subgroupEn": "Reverse Type",
       "internalName": "DEJITAMA_SHINE",
       "nameFr": null,
@@ -181,13 +146,10 @@
       "bitIndex": 12,
       "wordIndex": 0,
       "bitInWord": 12,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Inverse",
       "subgroupEn": "Reverse Type",
       "internalName": "PASSION_INJECTION",
       "nameFr": null,
@@ -196,13 +158,10 @@
       "bitIndex": 13,
       "wordIndex": 0,
       "bitInWord": 13,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Inverse",
       "subgroupEn": "Reverse Type",
       "internalName": "LOVE_INJECTION",
       "nameFr": null,
@@ -211,13 +170,10 @@
       "bitIndex": 14,
       "wordIndex": 0,
       "bitInWord": 14,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Basique",
       "categoryEn": "Basic",
-      "subgroupFr": "Inverse",
       "subgroupEn": "Reverse Type",
       "internalName": "BLESSING_HEAVEN",
       "nameFr": null,
@@ -226,13 +182,10 @@
       "bitIndex": 15,
       "wordIndex": 0,
       "bitInWord": 15,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Professeur",
       "subgroupEn": "Teacher Type",
       "internalName": "POWER_TRAINER",
       "nameFr": null,
@@ -241,13 +194,10 @@
       "bitIndex": 16,
       "wordIndex": 0,
       "bitInWord": 16,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Professeur",
       "subgroupEn": "Teacher Type",
       "internalName": "INTELLIGENT_TRAINER",
       "nameFr": null,
@@ -256,13 +206,10 @@
       "bitIndex": 17,
       "wordIndex": 0,
       "bitInWord": 17,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Professeur",
       "subgroupEn": "Teacher Type",
       "internalName": "TOUGHNESS_TRAINER",
       "nameFr": null,
@@ -271,13 +218,10 @@
       "bitIndex": 18,
       "wordIndex": 0,
       "bitInWord": 18,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Professeur",
       "subgroupEn": "Teacher Type",
       "internalName": "CHANCE_UP",
       "nameFr": null,
@@ -286,13 +230,10 @@
       "bitIndex": 20,
       "wordIndex": 0,
       "bitInWord": 20,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Professeur",
       "subgroupEn": "Teacher Type",
       "internalName": "FATIGUE_CARE",
       "nameFr": null,
@@ -301,13 +242,10 @@
       "bitIndex": 21,
       "wordIndex": 0,
       "bitInWord": 21,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Professeur",
       "subgroupEn": "Teacher Type",
       "internalName": "MASTER_TRAINER",
       "nameFr": null,
@@ -316,13 +254,10 @@
       "bitIndex": 19,
       "wordIndex": 0,
       "bitInWord": 19,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Soins vitaux",
       "subgroupEn": "Life-Care Type",
       "internalName": "EAT_CARE",
       "nameFr": null,
@@ -331,13 +266,10 @@
       "bitIndex": 22,
       "wordIndex": 0,
       "bitInWord": 22,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Soins vitaux",
       "subgroupEn": "Life-Care Type",
       "internalName": "TOILET_CARE",
       "nameFr": null,
@@ -346,13 +278,10 @@
       "bitIndex": 23,
       "wordIndex": 0,
       "bitInWord": 23,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Soins vitaux",
       "subgroupEn": "Life-Care Type",
       "internalName": "SLEEP_CARE",
       "nameFr": null,
@@ -361,13 +290,10 @@
       "bitIndex": 24,
       "wordIndex": 0,
       "bitInWord": 24,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Soins vitaux",
       "subgroupEn": "Life-Care Type",
       "internalName": "AFFECTION",
       "nameFr": null,
@@ -376,13 +302,10 @@
       "bitIndex": 25,
       "wordIndex": 0,
       "bitInWord": 25,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Soins vitaux",
       "subgroupEn": "Life-Care Type",
       "internalName": "LIFE_MASTER",
       "nameFr": null,
@@ -391,13 +314,10 @@
       "bitIndex": 26,
       "wordIndex": 0,
       "bitInWord": 26,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Évolution",
       "subgroupEn": "Evolving Type",
       "internalName": "GOOD_EVOLUTION",
       "nameFr": null,
@@ -406,13 +326,10 @@
       "bitIndex": 27,
       "wordIndex": 0,
       "bitInWord": 27,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Évolution",
       "subgroupEn": "Evolving Type",
       "internalName": "EVOLUTION_PROMOTION",
       "nameFr": null,
@@ -421,13 +338,10 @@
       "bitIndex": 28,
       "wordIndex": 0,
       "bitInWord": 28,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Évolution",
       "subgroupEn": "Evolving Type",
       "internalName": "EVOLUTION_VETERAN",
       "nameFr": null,
@@ -436,13 +350,10 @@
       "bitIndex": 29,
       "wordIndex": 0,
       "bitInWord": 29,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Entraîneur",
       "categoryEn": "Trainer",
-      "subgroupFr": "Évolution",
       "subgroupEn": "Evolving Type",
       "internalName": "GREAT_EVOLUTION",
       "nameFr": null,
@@ -451,13 +362,10 @@
       "bitIndex": 30,
       "wordIndex": 0,
       "bitInWord": 30,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Trouver",
       "subgroupEn": "Finder Type",
       "internalName": "WILD_FINDER",
       "nameFr": null,
@@ -466,13 +374,10 @@
       "bitIndex": 31,
       "wordIndex": 0,
       "bitInWord": 31,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Trouver",
       "subgroupEn": "Finder Type",
       "internalName": "FISHERMAN",
       "nameFr": null,
@@ -481,13 +386,10 @@
       "bitIndex": 32,
       "wordIndex": 0,
       "bitInWord": 32,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Trouver",
       "subgroupEn": "Finder Type",
       "internalName": "GURANDA",
       "nameFr": null,
@@ -496,13 +398,10 @@
       "bitIndex": 34,
       "wordIndex": 0,
       "bitInWord": 34,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Trouver",
       "subgroupEn": "Finder Type",
       "internalName": "WILD_SCOUTER",
       "nameFr": null,
@@ -511,13 +410,10 @@
       "bitIndex": 33,
       "wordIndex": 0,
       "bitInWord": 33,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Trouver",
       "subgroupEn": "Finder Type",
       "internalName": "INGREDIENTS_HUNTER",
       "nameFr": null,
@@ -526,13 +422,10 @@
       "bitIndex": 35,
       "wordIndex": 0,
       "bitInWord": 35,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Extracteur",
       "subgroupEn": "Extractor Type",
       "internalName": "METAL_MAN",
       "nameFr": null,
@@ -541,13 +434,10 @@
       "bitIndex": 36,
       "wordIndex": 0,
       "bitInWord": 36,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Extracteur",
       "subgroupEn": "Extractor Type",
       "internalName": "STONE_MAN",
       "nameFr": null,
@@ -556,13 +446,10 @@
       "bitIndex": 37,
       "wordIndex": 0,
       "bitInWord": 37,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Extracteur",
       "subgroupEn": "Extractor Type",
       "internalName": "LIQUID_MAN",
       "nameFr": null,
@@ -571,13 +458,10 @@
       "bitIndex": 38,
       "wordIndex": 0,
       "bitInWord": 38,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Extracteur",
       "subgroupEn": "Extractor Type",
       "internalName": "WOOD_MAN",
       "nameFr": null,
@@ -586,13 +470,10 @@
       "bitIndex": 39,
       "wordIndex": 0,
       "bitInWord": 39,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Extracteur",
       "subgroupEn": "Extractor Type",
       "internalName": "MATERIAL_MASTER",
       "nameFr": null,
@@ -601,13 +482,10 @@
       "bitIndex": 40,
       "wordIndex": 0,
       "bitInWord": 40,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Campeur",
       "subgroupEn": "Camper Type",
       "internalName": "COOKING_BOY",
       "nameFr": null,
@@ -616,13 +494,10 @@
       "bitIndex": 41,
       "wordIndex": 0,
       "bitInWord": 41,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Campeur",
       "subgroupEn": "Camper Type",
       "internalName": "MR_CUISINE",
       "nameFr": null,
@@ -631,13 +506,10 @@
       "bitIndex": 42,
       "wordIndex": 0,
       "bitInWord": 42,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Campeur",
       "subgroupEn": "Camper Type",
       "internalName": "ULTIMATE_COOK",
       "nameFr": null,
@@ -646,13 +518,10 @@
       "bitIndex": 43,
       "wordIndex": 0,
       "bitInWord": 43,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Marcheur",
       "subgroupEn": "Walker Type",
       "internalName": "HEALTH_RUNNER",
       "nameFr": null,
@@ -661,13 +530,10 @@
       "bitIndex": 44,
       "wordIndex": 0,
       "bitInWord": 44,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Marcheur",
       "subgroupEn": "Walker Type",
       "internalName": "MENTAL_TRAINING",
       "nameFr": null,
@@ -676,13 +542,10 @@
       "bitIndex": 45,
       "wordIndex": 0,
       "bitInWord": 45,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Marcheur",
       "subgroupEn": "Walker Type",
       "internalName": "REFRESHING_RUNNER",
       "nameFr": null,
@@ -691,13 +554,10 @@
       "bitIndex": 46,
       "wordIndex": 0,
       "bitInWord": 46,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Survivant",
       "categoryEn": "Survivor",
-      "subgroupFr": "Marcheur",
       "subgroupEn": "Walker Type",
       "internalName": "HALE",
       "nameFr": null,
@@ -706,13 +566,10 @@
       "bitIndex": 47,
       "wordIndex": 0,
       "bitInWord": 47,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "SECOND_ORDER",
       "nameFr": null,
@@ -721,13 +578,10 @@
       "bitIndex": 48,
       "wordIndex": 0,
       "bitInWord": 48,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "DEFENSE_ORDER",
       "nameFr": null,
@@ -736,13 +590,10 @@
       "bitIndex": 49,
       "wordIndex": 0,
       "bitInWord": 49,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "OP_GAIN",
       "nameFr": null,
@@ -751,13 +602,10 @@
       "bitIndex": 50,
       "wordIndex": 0,
       "bitInWord": 50,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "THIRD_ORDER",
       "nameFr": null,
@@ -766,13 +614,10 @@
       "bitIndex": 51,
       "wordIndex": 0,
       "bitInWord": 51,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "HIGH_DEFENSE",
       "nameFr": null,
@@ -781,13 +626,10 @@
       "bitIndex": 52,
       "wordIndex": 0,
       "bitInWord": 52,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "NEXT_ORDER",
       "nameFr": null,
@@ -796,13 +638,10 @@
       "bitIndex": 53,
       "wordIndex": 0,
       "bitInWord": 53,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Ordre",
       "subgroupEn": "Order Type",
       "internalName": "OP_MASTER",
       "nameFr": null,
@@ -811,13 +650,10 @@
       "bitIndex": 54,
       "wordIndex": 0,
       "bitInWord": 54,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Stratégie",
       "subgroupEn": "Tactical Type",
       "internalName": "ASSESS",
       "nameFr": null,
@@ -826,13 +662,10 @@
       "bitIndex": 55,
       "wordIndex": 0,
       "bitInWord": 55,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Stratégie",
       "subgroupEn": "Tactical Type",
       "internalName": "ABSOLUTELY_BLIND_SPOT",
       "nameFr": null,
@@ -841,13 +674,10 @@
       "bitIndex": 56,
       "wordIndex": 0,
       "bitInWord": 56,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Stratégie",
       "subgroupEn": "Tactical Type",
       "internalName": "BUFFER",
       "nameFr": null,
@@ -856,13 +686,10 @@
       "bitIndex": 57,
       "wordIndex": 0,
       "bitInWord": 57,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Stratégie",
       "subgroupEn": "Tactical Type",
       "internalName": "YELL",
       "nameFr": null,
@@ -871,13 +698,10 @@
       "bitIndex": 58,
       "wordIndex": 0,
       "bitInWord": 58,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Stratégie",
       "subgroupEn": "Tactical Type",
       "internalName": "DE_BUFFER",
       "nameFr": null,
@@ -886,13 +710,10 @@
       "bitIndex": 59,
       "wordIndex": 0,
       "bitInWord": 59,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Stratégie",
       "subgroupEn": "Tactical Type",
       "internalName": "ABSOLUTE_CONCENTRATION",
       "nameFr": null,
@@ -901,13 +722,10 @@
       "bitIndex": 60,
       "wordIndex": 0,
       "bitInWord": 60,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Objet",
       "subgroupEn": "Item User Type",
       "internalName": "RANGE_EXPANSION",
       "nameFr": null,
@@ -916,13 +734,10 @@
       "bitIndex": 61,
       "wordIndex": 0,
       "bitInWord": 61,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Objet",
       "subgroupEn": "Item User Type",
       "internalName": "QUICK_PITCHING",
       "nameFr": null,
@@ -931,13 +746,10 @@
       "bitIndex": 62,
       "wordIndex": 0,
       "bitInWord": 62,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Objet",
       "subgroupEn": "Item User Type",
       "internalName": "DIFFERENT_DIMENSION_PITCHING",
       "nameFr": null,
@@ -946,13 +758,10 @@
       "bitIndex": 63,
       "wordIndex": 0,
       "bitInWord": 63,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Objet",
       "subgroupEn": "Item User Type",
       "internalName": "SOUL_PITCHING",
       "nameFr": null,
@@ -961,13 +770,10 @@
       "bitIndex": 64,
       "wordIndex": 1,
       "bitInWord": 0,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Gains",
       "subgroupEn": "Drop Type",
       "internalName": "ITEM_GETTER",
       "nameFr": null,
@@ -976,13 +782,10 @@
       "bitIndex": 65,
       "wordIndex": 1,
       "bitInWord": 1,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Gains",
       "subgroupEn": "Drop Type",
       "internalName": "BIT_GETTER",
       "nameFr": null,
@@ -991,13 +794,10 @@
       "bitIndex": 66,
       "wordIndex": 1,
       "bitInWord": 2,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Gains",
       "subgroupEn": "Drop Type",
       "internalName": "EXPLORER",
       "nameFr": null,
@@ -1006,13 +806,10 @@
       "bitIndex": 67,
       "wordIndex": 1,
       "bitInWord": 3,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Gains",
       "subgroupEn": "Drop Type",
       "internalName": "DROP_MASTER",
       "nameFr": null,
@@ -1021,13 +818,10 @@
       "bitIndex": 68,
       "wordIndex": 1,
       "bitInWord": 4,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Apprentissage",
       "subgroupEn": "Learning Type",
       "internalName": "OBSERVATION_TRICKS",
       "nameFr": null,
@@ -1036,13 +830,10 @@
       "bitIndex": 69,
       "wordIndex": 1,
       "bitInWord": 5,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Apprentissage",
       "subgroupEn": "Learning Type",
       "internalName": "KNOWLEDGE_EXPERIENCE",
       "nameFr": null,
@@ -1051,13 +842,10 @@
       "bitIndex": 70,
       "wordIndex": 1,
       "bitInWord": 6,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     },
     {
-      "categoryFr": "Commandant",
       "categoryEn": "Commander",
-      "subgroupFr": "Apprentissage",
       "subgroupEn": "Learning Type",
       "internalName": "RESEARCH_SKILLS",
       "nameFr": null,
@@ -1066,8 +854,7 @@
       "bitIndex": 71,
       "wordIndex": 1,
       "bitInWord": 7,
-      "evidence": "local-runtime-observation",
-      "uiNamesStatus": "French subgroup reported by user; English subgroup sourced from guide, not checked in local PC UI"
+      "evidence": "local-runtime-observation"
     }
   ]
 }
