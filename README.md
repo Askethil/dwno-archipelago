@@ -41,7 +41,7 @@ SHA-256 de l'archive téléchargée (empreinte locale de traçabilité, pas sign
 
 ## Organisation
 
-- [Story skip prototype](docs/story-skip-prototype.md) : traces de scènes et prototype F9/F8, désactivé par défaut et à valider sur une sauvegarde de test.
+- [Story skip prototype](docs/story-skip-prototype.md) : autoskip des scènes identifiées, mini-histoires/recrutements configurables, dialogues PNJ manuels et ouverture rapide indépendante ; prototype à valider sur une sauvegarde de test.
 
 - [Town, region and flag test reference](docs/world-catalog.en.md) : définitions anglaises de ville, carte et conditions ; [données](data/world-catalog.en.json), [liens d'améliorations](data/town-links.en.json).
 - [Analyse des conditions de flags](docs/analyze-flags.md) : script hors jeu, références croisées et libellés descriptifs ; [rapport](docs/flag-conditions.en.md), [JSON](data/flag-conditions.en.json).

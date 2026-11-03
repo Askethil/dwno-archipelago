@@ -14,18 +14,26 @@ public sealed class Plugin : BasePlugin
     public override void Load()
     {
         Log.LogInfo($"[DWNO-001] {Name} {Version} loaded successfully.");
-        StorySkip.Install(Log, Config.Bind("Story", "EnableHoldToSkip", false,
-            "Prototype expérimental : F9 active/désactive pour la session ; maintenir F8 demande le passage natif. Désactivé par défaut.").Value,
-            Config.Bind("Story", "AutoSelectFirstChoice", true,
-                "Pendant le skip actif, choisit la première réponse des dialogues TalkMain via leur traitement natif. F10 désactive ce choix automatique. Expérimental.").Value,
-            Config.Bind("Story", "AutoSkipStoryDialogue", true,
-                "Active automatiquement le skip du texte dans les contextes histoire explicitement identifiés. F9 coupe tout le skip. Les scènes inconnues restent manuelles.").Value,
-            Config.Bind("Story", "AcceleratePresentation", true,
-                "Pendant le skip actif, raccourcit les durées positives de Wait, MoveGameCamera et RotationGameModel (facteur 0.1, minimum 0.05 seconde). Les valeurs spéciales restent intactes. Expérimental.").Value,
-            Config.Bind("Story", "FastChoiceConfirmation", true,
-                "Réduit à 0.05 seconde les échéances de validation de choix identifiées comme proches dans le temps Unity. Les temporisateurs inconnus restent intacts. Expérimental.").Value,
-            Config.Bind("Story", "AccelerateDialogueTransitions", true,
-                "Pendant le skip actif, accélère uniquement les Animators du fond et des fenêtres TalkMain, puis restaure leur vitesse à l'arrêt. Ne court-circuite pas le chargement des ressources. Expérimental.").Value);
+        var story = new StorySkipOptions
+        {
+            EnableManualOnStart = Config.Bind("Story", "EnableHoldToSkip", false,
+                "Active le skip manuel au lancement ; F9 contrôle le skip et F8 le demande manuellement.").Value,
+            AutoSkipStoryDialogue = Config.Bind("Story", "AutoSkipStoryDialogue", true,
+                "Skip automatique des scènes d'histoire identifiées. F9 coupe le skip ; les dialogues inconnus restent manuels.").Value,
+            AutoSkipMiniStoryDialogue = Config.Bind("Story", "AutoSkipMiniStoryDialogue", false,
+                "Skip automatique des mini-histoires/recrutements identifiés. Séparé de l'histoire principale ; désactivé par défaut.").Value,
+            AutoSelectFirstChoice = Config.Bind("Story", "AutoSelectFirstChoice", true,
+                "Pendant le skip actif, choisit la première réponse TalkMain via le traitement natif. F10 rend les choix manuels.").Value,
+            AcceleratePresentation = Config.Bind("Story", "AcceleratePresentation", true,
+                "Pendant le skip actif, raccourcit les durées positives des pauses, caméras, rotations et fondus. Les valeurs spéciales restent intactes.").Value,
+            FastChoiceConfirmation = Config.Bind("Story", "FastChoiceConfirmation", true,
+                "Réduit les échéances proches de validation pendant le skip. Les temporisateurs inconnus restent intacts.").Value,
+            AccelerateDialogueTransitions = Config.Bind("Story", "AccelerateDialogueTransitions", true,
+                "Pendant le skip actif, accélère les Animators du fond et des fenêtres TalkMain, puis restaure leur vitesse.").Value,
+            FastDialogueOpening = Config.Bind("Dialogue", "FastOpening", true,
+                "Accélère toujours l'ouverture des dialogues (fondu, apparition et cadrage), même sans skip. Ne valide ni texte ni réponse et ne court-circuite pas le chargement.").Value
+        };
+        StorySkip.Install(Log, story);
         AddComponent<StorySkipKeys>();
         if (Config.Bind("Catalog", "ExportItems", true, "Exporte une fois la table des objets et leurs noms localisés, sans modifier le jeu.").Value)
             AddComponent<ItemCatalogExporter>();

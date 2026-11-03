@@ -17,6 +17,7 @@ internal static class StorySkip
     private static uint movieButton;
     private static bool inputFailed;
     private static bool automaticStory;
+    private static bool automaticMiniStory;
     private static string? contextFile;
     private static string? contextBlock;
     private static DateTime nextSkipLog;
@@ -24,16 +25,16 @@ internal static class StorySkip
     internal static bool Held;
     internal static bool Focused;
     internal static bool SkipRequested => StoryContextPolicy.ShouldSkip(enabled, Focused, inputFailed,
-        Held, automaticStory, contextFile, contextBlock);
+        Held, automaticStory, contextFile, contextBlock, automaticMiniStory);
     internal static bool CanAcceleratePresentation => SkipRequested && !choiceBlocked && !movieActive;
+    internal static bool CanAccelerateOpening => Focused && !inputFailed && !choiceBlocked && !movieActive;
 
-    internal static void Install(ManualLogSource logger, bool initiallyEnabled, bool autoSelectFirstChoice,
-        bool autoSkipStoryDialogue, bool acceleratePresentation, bool fastChoiceConfirmation,
-        bool accelerateDialogueTransitions)
+    internal static void Install(ManualLogSource logger, StorySkipOptions options)
     {
         log = logger;
-        automaticStory = autoSkipStoryDialogue;
-        enabled = initiallyEnabled || automaticStory;
+        automaticStory = options.AutoSkipStoryDialogue;
+        automaticMiniStory = options.AutoSkipMiniStoryDialogue;
+        enabled = options.EnableManualOnStart || automaticStory || automaticMiniStory;
         var assembly = Assembly.Load("Assembly-CSharp");
         var ok = 0;
         var failed = 0;
@@ -86,11 +87,11 @@ internal static class StorySkip
         }
         else
         {
-            StoryChoiceSkip.Install(assembly, logger, autoSelectFirstChoice, fastChoiceConfirmation);
-            StoryPresentationSkip.Install(assembly, logger, acceleratePresentation);
-            StoryTransitionSkip.Install(assembly, logger, accelerateDialogueTransitions);
+            StoryChoiceSkip.Install(assembly, logger, options.AutoSelectFirstChoice, options.FastChoiceConfirmation);
+            StoryPresentationSkip.Install(assembly, logger, options.AcceleratePresentation, options.FastDialogueOpening);
+            StoryTransitionSkip.Install(assembly, logger, options.AccelerateDialogueTransitions, options.FastDialogueOpening);
         }
-        log.LogInfo($"[STORY] READY installed={ok} failed={failed} enabled={enabled} automaticKnownStory={automaticStory}; F9 master toggle, F8 manual, F10 choices; progression callbacks are not replaced.");
+        log.LogInfo($"[STORY] READY installed={ok} failed={failed} enabled={enabled} automaticKnownStory={automaticStory} automaticMiniStory={automaticMiniStory}; F9 skip toggle, F8 manual, F10 choices; fast opening is independent.");
     }
 
     internal static void Toggle()
@@ -118,7 +119,7 @@ internal static class StorySkip
         contextFile = __args.Length > 0 ? __args[0] as string : null;
         contextBlock = __args.Length > 1 ? __args[1] as string : null;
         choiceBlocked = false;
-        log?.LogInfo($"[STORY] {DateTime.UtcNow:O} CONTEXT knownStory={StoryContextPolicy.IsKnownStory(contextFile, contextBlock)} automatic={automaticStory} file={contextFile} block={contextBlock ?? "<null>"}");
+        log?.LogInfo($"[STORY] {DateTime.UtcNow:O} CONTEXT kind={StoryContextPolicy.Classify(contextFile, contextBlock)} knownStory={StoryContextPolicy.IsKnownStory(contextFile, contextBlock)} automaticStory={automaticStory} automaticMiniStory={automaticMiniStory} file={contextFile} block={contextBlock ?? "<null>"}");
     }
     private static void Trace(MethodBase __originalMethod, object[] __args)
     {
@@ -129,7 +130,7 @@ internal static class StorySkip
             if (name == "TalkEventEndCB" && __args.Length >= 2 &&
                 string.Equals(__args[0] as string, contextFile, StringComparison.Ordinal) &&
                 string.Equals(__args[1] as string, contextBlock, StringComparison.Ordinal))
-            { contextFile = null; contextBlock = null; }
+            { contextFile = null; contextBlock = null; StoryTransitionSkip.ContextEnded(); }
             if (name == "DispChoices")
             {
                 choiceBlocked = true;

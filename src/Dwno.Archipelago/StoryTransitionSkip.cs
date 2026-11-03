@@ -20,11 +20,17 @@ internal static class StoryTransitionSkip
     private static PropertyInfo? backgroundProperty, rootsProperty;
     private static DateTime started, nextScan;
     private static bool available, textReported;
+    private static bool fastOpenings, duringSkip, dialogueOpening;
+    private static DateTime openingEnd;
+    internal static bool IsFastOpening => available && fastOpenings && dialogueOpening &&
+        StorySkip.CanAccelerateOpening && DateTime.UtcNow < openingEnd && Alive(owner);
 
-    internal static void Install(Assembly assembly, ManualLogSource logger, bool requested)
+    internal static void Install(Assembly assembly, ManualLogSource logger, bool requested, bool fastOpeningRequested)
     {
         log = logger;
-        if (!requested) { logger.LogInfo("[TRANSITION] DISABLED by Story.AccelerateDialogueTransitions"); return; }
+        duringSkip = requested;
+        fastOpenings = fastOpeningRequested;
+        if (!requested && !fastOpenings) { logger.LogInfo("[TRANSITION] DISABLED: no UI acceleration requested"); return; }
         try
         {
             var talk = assembly.GetType("TalkMain", true)!;
@@ -54,7 +60,7 @@ internal static class StoryTransitionSkip
                 }
                 catch (Exception ex) { logger.LogWarning($"[TRANSITION] TRACE_FAILED {name}: {ex.GetBaseException().Message}"); }
             }
-            logger.LogInfo($"[TRANSITION] READY ownerHook=1 commandTraces={observed} UIAnimatorFactor=10; runtime behavior unverified; original speeds restored on stop.");
+            logger.LogInfo($"[TRANSITION] READY ownerHook=1 commandTraces={observed} UIAnimatorFactor=10 fastOpening={fastOpenings}; opening acceleration does not require dialogue skipping.");
         }
         catch (Exception ex)
         {
@@ -64,14 +70,16 @@ internal static class StoryTransitionSkip
         }
     }
 
-    private static void CaptureOwner<T>(T __instance) where T : Il2CppObjectBase
+    private static void CaptureOwner<T>(T __instance, object[] __args) where T : Il2CppObjectBase
     {
         Release();
         owner = __instance;
         started = DateTime.UtcNow;
         nextScan = default;
         textReported = false;
-        log?.LogInfo($"[TRANSITION] {started:O} CONTEXT_BEGIN");
+        dialogueOpening = __args.Length > 0 && StoryContextPolicy.HasDialogueOpening(__args[0] as string);
+        openingEnd = DateTime.MaxValue;
+        log?.LogInfo($"[TRANSITION] {started:O} CONTEXT_BEGIN dialogueOpening={dialogueOpening}");
     }
 
     private static void TransitionCommand<T>(T __instance, MethodBase __originalMethod) where T : Il2CppObjectBase
@@ -86,23 +94,25 @@ internal static class StoryTransitionSkip
     {
         if (!available || owner is null || textReported) return;
         textReported = true;
+        openingEnd = DateTime.UtcNow.AddMilliseconds(350);
         log?.LogInfo($"[TRANSITION] {DateTime.UtcNow:O} FIRST_TEXT_COMMAND elapsedMs={(DateTime.UtcNow - started).TotalMilliseconds:F0}; command entry, not visual-render timing");
     }
 
     internal static void Tick()
     {
-        if (!available || !StorySkip.CanAcceleratePresentation || !Alive(owner)) { Release(); return; }
+        if (!available || (!(duringSkip && StorySkip.CanAcceleratePresentation) && !IsFastOpening) || !Alive(owner))
+        { Release(); return; }
         if (DateTime.UtcNow < nextScan) return;
         nextScan = DateTime.UtcNow.AddMilliseconds(100);
         try
         {
-            Borrow(backgroundProperty!.GetValue(owner));
+            Borrow(backgroundProperty!.GetValue(owner), "background");
             var roots = rootsProperty!.GetValue(owner);
             foreach (var panel in Elements(roots, 16))
             {
                 if (!Alive(panel)) continue;
                 var animators = panel!.GetType().GetProperty("m_animators")?.GetValue(panel);
-                foreach (var animator in Elements(animators, 32)) Borrow(animator);
+                foreach (var animator in Elements(animators, 32)) Borrow(animator, "dialogue-window");
             }
         }
         catch (Exception ex)
@@ -113,7 +123,7 @@ internal static class StoryTransitionSkip
         }
     }
 
-    private static void Borrow(object? animator)
+    private static void Borrow(object? animator, string target)
     {
         if (!Alive(animator) || animator is not Il2CppObjectBase native || borrowed.ContainsKey(native.Pointer)) return;
         var speed = animator.GetType().GetProperty("speed");
@@ -122,7 +132,13 @@ internal static class StoryTransitionSkip
         // Record before writing so a setter failure can still attempt restoration.
         borrowed.Add(native.Pointer, new BorrowedSpeed(animator, speed, original, applied));
         speed.SetValue(animator, applied);
-        log?.LogInfo($"[TRANSITION] {DateTime.UtcNow:O} UI_SPEED from={original} to={applied}");
+        log?.LogInfo($"[TRANSITION] {DateTime.UtcNow:O} UI_SPEED target={target} from={original} to={applied} opening={IsFastOpening}");
+    }
+
+    internal static void ContextEnded()
+    {
+        dialogueOpening = false;
+        Release();
     }
 
     internal static void Release()

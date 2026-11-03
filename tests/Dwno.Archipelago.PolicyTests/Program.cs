@@ -65,4 +65,27 @@ foreach (var (speed, expected) in new (float Speed, float? Expected)[] {
     Check($"UI animation speed {speed}", expected.HasValue
         ? changed && output == expected.Value : !changed && output.Equals(speed), true);
 }
-Console.WriteLine($"Passed {checkedCases} story, stop-control, timing and transition policy checks. Native game behavior is not covered.");
+const string recruitment = "Event/Talk/EV_SUB_0000_010";
+Check("main story category", StoryContextPolicy.Classify(story, "EVENT010") == DialogueKind.Story, true);
+Check("Patamon vignette category", StoryContextPolicy.Classify(recruitment, "EVENT") == DialogueKind.MiniStory, true);
+Check("basic NPC category", StoryContextPolicy.Classify(npc, "TALK_S09") == DialogueKind.BasicNpc, true);
+Check("unknown subquest not guessed from prefix", StoryContextPolicy.Classify("Event/Talk/EV_SUB_UNKNOWN", "EVENT") == DialogueKind.Unclassified, true);
+Check("normal Patamon topic not inferred from recruitable NPC identity", StoryContextPolicy.Classify(recruitment, "OTHER") == DialogueKind.Unclassified, true);
+Check("main story option excludes recruitment", StoryContextPolicy.ShouldSkip(true, true, false, false, true, recruitment, "EVENT"), false);
+Check("mini-story option explicitly enables recruitment", StoryContextPolicy.ShouldSkip(true, true, false, false, false, recruitment, "EVENT", true), true);
+Check("basic NPC remains manual with both options on", StoryContextPolicy.ShouldSkip(true, true, false, false, true, npc, "TALK_S09", true), false);
+Check("master stops mini-story too", StoryContextPolicy.ShouldSkip(false, true, false, false, false, recruitment, "EVENT", true), false);
+Check("held F8 overrides recruitment manually", StoryContextPolicy.ShouldSkip(true, true, false, true, false, recruitment, "EVENT"), true);
+Check("unclassified subquest remains manual", StoryContextPolicy.ShouldSkip(true, true, false, false, true, "Event/Talk/EV_SUB_UNKNOWN", "EVENT", true), false);
+Check("basic dialogue can open quickly without text skip", StoryContextPolicy.HasDialogueOpening(npc) &&
+    !StoryContextPolicy.ShouldSkip(true, true, false, false, true, npc, "TALK_S09"), true);
+Check("recruitment can open quickly without text skip", StoryContextPolicy.HasDialogueOpening(recruitment) &&
+    !StoryContextPolicy.ShouldSkip(true, true, false, false, true, recruitment, "EVENT"), true);
+Check("tutorial not treated as ordinary dialogue opening", StoryContextPolicy.HasDialogueOpening("event/tutorial/EV_TUTORIAL_000"), false);
+Check("egg selection not treated as dialogue opening", StoryContextPolicy.HasDialogueOpening("event/event_digitama_partner"), false);
+Check("null file has no opening", StoryContextPolicy.HasDialogueOpening(null), false);
+var defaults = new StorySkipOptions();
+Check("default story autoskip on", defaults.AutoSkipStoryDialogue, true);
+Check("default recruitment autoskip off", defaults.AutoSkipMiniStoryDialogue, false);
+Check("default fast opening independent option on", defaults.FastDialogueOpening, true);
+Console.WriteLine($"Passed {checkedCases} story, category, timing, opening and stop-control checks. Native game behavior is not covered.");

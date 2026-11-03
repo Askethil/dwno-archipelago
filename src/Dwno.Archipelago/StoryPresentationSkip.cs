@@ -10,18 +10,21 @@ internal static class StoryPresentationSkip
 {
     private static readonly Harmony harmony = new(Plugin.Id + ".timed-presentation");
     private static ManualLogSource? log;
+    private static bool skipTiming;
 
-    internal static void Install(Assembly assembly, ManualLogSource logger, bool requested)
+    internal static void Install(Assembly assembly, ManualLogSource logger, bool requested, bool fastOpenings)
     {
         log = logger;
-        if (!requested) { logger.LogInfo("[TIMING] DISABLED by Story.AcceleratePresentation"); return; }
+        skipTiming = requested;
+        if (!requested && !fastOpenings) { logger.LogInfo("[TIMING] DISABLED: no timing acceleration requested"); return; }
         try
         {
             var talk = assembly.GetType("TalkMain", true)!;
             foreach (var (methodName, parameterName, parameterIndex, patch) in new[] {
                 ("Wait", "dummy0", 0, nameof(Duration0)),
                 ("MoveGameCamera", "time", 3, nameof(Duration3)),
-                ("RotationGameModel", "time", 2, nameof(Duration2)) })
+                ("RotationGameModel", "time", 2, nameof(Duration2)),
+                ("FadeModel", "time", 2, nameof(Duration2)) })
             {
                 var method = talk.GetMethods(BindingFlags.Public | BindingFlags.NonPublic |
                     BindingFlags.Instance | BindingFlags.DeclaredOnly).Single(m => m.Name == methodName);
@@ -34,7 +37,7 @@ internal static class StoryPresentationSkip
                 harmony.Patch(method, prefix: new HarmonyMethod(typeof(StoryPresentationSkip), patch));
                 logger.LogInfo($"[TIMING] PATCHED TalkMain.{methodName}");
             }
-            logger.LogInfo("[TIMING] READY installed=3 factor=0.1 floorSeconds=0.05; positive numeric durations <=120 only; native commands still execute; runtime behavior unverified.");
+            logger.LogInfo($"[TIMING] READY installed=4 factor=0.1 floorSeconds=0.05 skipTiming={skipTiming} fastOpenings={fastOpenings}; positive numeric durations <=120 only; native commands still execute.");
         }
         catch (Exception ex)
         {
@@ -48,9 +51,11 @@ internal static class StoryPresentationSkip
     private static void Duration3(ref string? __3, MethodBase __originalMethod) => Shorten(ref __3, __originalMethod);
     private static void Shorten(ref string? duration, MethodBase method)
     {
-        if (!StorySkip.CanAcceleratePresentation || !StoryTimingPolicy.TryShorten(duration, out var shortened)) return;
+        var opening = StoryTransitionSkip.IsFastOpening;
+        if ((!opening && !(skipTiming && StorySkip.CanAcceleratePresentation)) ||
+            !StoryTimingPolicy.TryShorten(duration, out var shortened)) return;
         var original = duration;
         duration = shortened;
-        log?.LogInfo($"[TIMING] {DateTime.UtcNow:O} SHORTEN {method.DeclaringType?.Name}.{method.Name} from={original} to={shortened}");
+        log?.LogInfo($"[TIMING] {DateTime.UtcNow:O} SHORTEN {method.DeclaringType?.Name}.{method.Name} from={original} to={shortened} opening={opening}");
     }
 }

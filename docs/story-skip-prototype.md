@@ -4,13 +4,15 @@
 
 Find a way to accelerate story presentation while keeping the game interpreter and completion callbacks. This feature is **not yet validated for story progression**. No new game is created and no save slot is selected by the mod.
 
-- Current source defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSelectFirstChoice=true`, `Story.AcceleratePresentation=true`, `Story.FastChoiceConfirmation=true`, `Story.AccelerateDialogueTransitions=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Automatic story mode enables the master switch at startup. Set AutoSkipStoryDialogue and EnableHoldToSkip false for an observation-only start.
-- F9: toggle the master skip switch for the session. Turning it off stops automatic story and held-key skip requests.
+- Current source defaults: `Story.AutoSkipStoryDialogue=true`, `Story.AutoSkipMiniStoryDialogue=false`, `Story.AutoSelectFirstChoice=true`, `Story.AcceleratePresentation=true`, `Story.FastChoiceConfirmation=true`, `Story.AccelerateDialogueTransitions=true`, `Dialogue.FastOpening=true`, legacy manual startup setting `Story.EnableHoldToSkip=false`. Any enabled automatic dialogue category enables the master switch at startup.
+- F9: toggle the master skip switch for the session. Turning it off stops automatic dialogue and held-key skip requests. Independent fast opening remains enabled when `Dialogue.FastOpening=true`.
 - F8 held: manually request skip while the master is enabled and the game is focused, including contexts outside the observed story list.
 - F10: toggle automatic first responses for the session. Turning this off also pauses the master skip switch so the player can answer manually. F9 resumes dialogue skipping; F10 must be enabled separately to restore automatic responses.
 - Releasing F8 stops manual requests. Automatic story mode does not require F8; use F9 to stop it. Disabling does not undo a response already selected or a scene already advanced.
 
-These controls are an experimental prototype. **Automatic story/choice handling and timed-presentation acceleration were deployed and exercised on 2026-11-03. The newer dialogue-transition and fast-choice refinements are also deployed; manual F8 on NPC dialogue has been exercised, while the shorter confirmation timer still needs a choice test.** Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game. F10 manual recovery and save/reload progression still need explicit validation.
+These controls are an experimental prototype. **Automatic story/choice handling and timed-presentation acceleration were deployed and exercised on 2026-11-03. The skip-scoped dialogue-transition and fast-choice refinements are also deployed; manual F8 on NPC dialogue has been exercised, while the shorter confirmation timer still needs a choice test. The newer category separation and always-fast opening are compiled but not deployed yet.** Use a separate test save created manually by the player. Automatic story classification currently covers only the explicitly observed intro contexts listed below, not every story dialogue in the game. F10 manual recovery and save/reload progression still need explicit validation.
+
+For an observation-only startup, disable AutoSkipStoryDialogue, AutoSkipMiniStoryDialogue, EnableHoldToSkip and Dialogue.FastOpening. Setting Dialogue.FastOpening false restores the dependency on an actual skip request for UI acceleration.
 
 ## Paths inspected
 
@@ -267,3 +269,27 @@ The player reiterates that ordinary NPC conversations must remain normal, then r
 At 05:19:03.570, EV_TOWN_B003/TALK_S09 initializes with `knownStory=False`; its first text-command entry follows at 05:19:04.145, and CloseBackGround at 05:19:05.732. No UI_SPEED or REQUEST_SKIP occurs in that captured interaction, consistent with a normal NPC conversation without the manual override. No classification was broadened to town/NPC filenames. The generic F8 route was used for testing; automatic activation remains limited to the explicit story file/block pairs.
 
 No choice was encountered in the captured post-refinement NPC test, so the new bounded confirmation-timer adjustment is still unverified in-game. A short TalkMain choice with deliberate F8 can exercise it without replaying the intro; check NATIVE_TIMER, SHORTEN_CONFIRM_WAIT, native completion and F10 manual recovery. Unknown/deadline formats must retain their native delay.
+
+## Three dialogue categories and independently fast openings
+
+The player identifies Patamon as recruitable and confirms that its larger dialogue vignette passes with F8. The last captured vignette uses `Event/Talk/EV_SUB_0000_010`, block EVENT, with model c004, TalkMain.OpenBackGround, character fades and regular TalkMain.DispTextMain calls. Its first text command arrives about 2.427 seconds after initialization in the captured manual-skip sample. The larger visual layout does not by itself identify a different text engine. No global common-message window was forced or changed.
+
+The player requests three categories, classified by the dialogue event rather than by NPC identity:
+
+| Category | Default text/choice behavior | Current evidence coverage |
+| --- | --- | --- |
+| Story | Automatic when the skip master is enabled | Eight observed intro file/block pairs |
+| Mini-story / recruitment | Manual; optional `Story.AutoSkipMiniStoryDialogue=true` | Patamon-correlated EV_SUB_0000_010 / EVENT only |
+| Basic NPC dialogue | Manual; deliberate F8 override remains available | Observed B002 TALK_000/001, B003 TALK_S06/S09, B011 TALK_000/002 |
+
+Unclassified is an evidence status, not a fourth narrative category. Unknown blocks and files remain manual. No EV_SUB or town filename-prefix rule is used to infer narrative category. A recruitable Digimon can have basic conversations as well as recruitment mini-story events; recruitment effects/flags are not established by this classifier. CONTEXT logs now include the category and both independent automatic-category settings. `StorySkipOptions` groups configuration values so these policies are not coupled to positional booleans.
+
+### Always-fast visual opening
+
+The user explicitly requests shortening the black-edge fade and character/window appearance **even when dialogue is read normally**. `Dialogue.FastOpening=true` is independent of text/choice autoskip and remains effective when F9 turns skipping off. It never enables native synthetic confirmation or changes the category of a dialogue.
+
+The opening phase starts at TalkMain.Initialize for Event/Talk files and ends 350 ms after the first text-command request, or at the matching scenario completion. During that phase, while focused and with no choice/movie blocking it, the owner's UI/background Animators can run at the bounded faster speed. Positive Wait, MoveGameCamera, RotationGameModel and newly added FadeModel durations can also be shortened by the existing factor/floor policy. Model animation commands and negative movement timings remain intact. This covers appearance fades without globally increasing character/game time or bypassing asset requests.
+
+The Event/Talk prefix is accepted here only to identify a visual opening, not to enable narrative autoskip. Tutorial files and egg selection are excluded from this always-fast phase. After the short opening grace, a basic NPC's text waits for normal player input and UI speeds return to their original values. If actual skip remains requested, the separate skip-scoped acceleration can continue. Asset loading can still contribute delay; the source does not promise zero wall-clock opening time. New logs identify the accelerated target as background or dialogue-window and whether the change occurs during opening.
+
+The source builds without warnings/errors and **85 policy checks pass**, covering category boundaries, recruitment default-off, basic NPC text remaining manual despite opening eligibility, timer bounds and speed preservation. These category/always-fast-opening changes are not yet in the currently running process. The next test is an ordinary NPC conversation **without F8**: observe opening acceleration but no REQUEST_SKIP, automatic response or shortened reading interval. Then verify F9 stops automatic story while the independent visual-opening option still works.
