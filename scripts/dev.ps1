@@ -49,6 +49,16 @@ switch ($Action) {
         }
         # Extraire uniquement les références locales ; ne jamais écraser le chargeur du jeu.
         Expand-Archive -LiteralPath $archivePath -DestinationPath $dependencyRoot -Force
+        $interopDir = Join-Path $localRoot 'interop'
+        New-Item -ItemType Directory -Path $interopDir -Force | Out-Null
+        foreach ($interopName in @('UnityEngine.CoreModule.dll', 'Il2Cppmscorlib.dll')) {
+            $source = Join-Path $GamePath "BepInEx/interop/$interopName"
+            if (Test-Path -LiteralPath $source) {
+                Copy-Item -LiteralPath $source -Destination $interopDir
+            } else {
+                Write-Warning "Interop $interopName absent : lancer BepInEx une fois puis relancer Setup."
+            }
+        }
         @{ GamePath = (Resolve-Path -LiteralPath $GamePath).Path } |
             ConvertTo-Json | Set-Content -LiteralPath $configPath -Encoding UTF8
         Write-Output 'Dépendances préparées et chemin local enregistré. Configuration exclue de Git.'
